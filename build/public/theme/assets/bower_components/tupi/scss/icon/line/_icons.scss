@@ -1,0 +1,149 @@
+/*
+* Line Icons
+*/
+
+$line-var-advertising-megaphone:     "\e000";
+$line-var-analytics-chart-graph:     "\e003";
+$line-var-airplane:                  "\e002";
+
+$line-var-banknote:                  "\e004";
+$line-var-bubble:                    "\e009";
+$line-var-bulb:                      "\e005";
+
+$line-var-calendar:                  "\e006";
+$line-var-camera:                    "\e01b";
+$line-var-clip:                      "\e01c";
+$line-var-clock:                     "\e01d";
+$line-var-cloud:                     "\e030";
+$line-var-css-3:                     "\e001";
+$line-var-cup:                       "\e02f";
+
+$line-var-data:                      "\e031";
+$line-var-diamond:                   "\e032";
+$line-var-display:                   "\e033";
+
+$line-var-eye:                       "\e034";
+
+$line-var-fire:                      "\e011";
+$line-var-food:                      "\e019";
+
+$line-var-heart:                     "\e018";
+
+$line-var-mail:                      "\e02e";
+$line-var-megaphone:                 "\e02d";
+$line-var-music:                     "\e02c";
+
+$line-var-news:                      "\e02b";
+$line-var-note:                      "\e02a";
+
+$line-var-key:                       "\e007";
+
+$line-var-lab:                       "\e008";
+$line-var-like:                      "\e01a";
+$line-var-location:                  "\e01e";
+$line-var-lock:                      "\e00e";
+
+$line-var-paperplane:                "\e012";
+$line-var-params:                    "\e015";
+$line-var-pen:                       "\e016";
+$line-var-phone:                     "\e00a";
+$line-var-photo:                     "\e00f";
+
+$line-var-search:                    "\e01f";
+$line-var-settings:                  "\e023";
+$line-var-shop:                      "\e024";
+$line-var-sound:                     "\e025";
+$line-var-stack:                     "\e026";
+$line-var-star:                      "\e027";
+$line-var-study:                     "\e028";
+
+$line-var-tag:                       "\e013";
+$line-var-trash:                     "\e014";
+$line-var-truck:                     "\e017";
+$line-var-t-shirt:                   "\e029";
+$line-var-tv:                        "\e00b";
+
+$line-var-user:                      "\e020";
+
+$line-var-vallet:                    "\e021";
+$line-var-video:                     "\e022";
+
+$line-var-world:                     "\e00c";
+
+$line-var-vynil:                     "\e00d";
+
+$line-var-yang-ying:                 "\e010";
+
+
+
+.#{$line-css-prefix}-advertising-megaphone:before    { content: $line-var-advertising-megaphone; }
+.#{$line-css-prefix}-analytics-chart-graph:before    { content: $line-var-analytics-chart-graph; }
+.#{$line-css-prefix}-airplane:before                 { content: $line-var-airplane; }
+
+.#{$line-css-prefix}-banknote:before                 { content: $line-var-banknote; }
+.#{$line-css-prefix}-bubble:before                   { content: $line-var-bubble; }
+.#{$line-css-prefix}-bulb:before                     { content: $line-var-bulb; }
+
+.#{$line-css-prefix}-calendar:before                 { content: $line-var-calendar; }
+.#{$line-css-prefix}-camera:before                   { content: $line-var-camera; }
+.#{$line-css-prefix}-clip:before                     { content: $line-var-clip; }
+.#{$line-css-prefix}-clock:before                    { content: $line-var-clock; }
+.#{$line-css-prefix}-cloud:before                    { content: $line-var-cloud; }
+.#{$line-css-prefix}-css-3:before                    { content: $line-var-css-3; }
+.#{$line-css-prefix}-cup:before                      { content: $line-var-cup; }
+
+.#{$line-css-prefix}-data:before                     { content: $line-var-data; }
+.#{$line-css-prefix}-diamond:before                  { content: $line-var-diamond; }
+.#{$line-css-prefix}-display:before                  { content: $line-var-display; }
+
+.#{$line-css-prefix}-eye:before                      { content: $line-var-eye; }
+
+.#{$line-css-prefix}-fire:before                     { content: $line-var-fire; }
+.#{$line-css-prefix}-food:before                     { content: $line-var-food; }
+
+.#{$line-css-prefix}-heart:before                    { content: $line-var-heart; }
+
+.#{$line-css-prefix}-mail:before                     { content: $line-var-mail; }
+.#{$line-css-prefix}-megaphone:before                { content: $line-var-megaphone; }
+.#{$line-css-prefix}-music:before                    { content: $line-var-music; }
+
+.#{$line-css-prefix}-news:before                     { content: $line-var-news; }
+.#{$line-css-prefix}-note:before                     { content: $line-var-note; }
+
+.#{$line-css-prefix}-key:before                      { content: $line-var-key; }
+
+.#{$line-css-prefix}-lab:before                      { content: $line-var-lab; }
+.#{$line-css-prefix}-like:before                     { content: $line-var-like; }
+.#{$line-css-prefix}-location:before                 { content: $line-var-location; }
+.#{$line-css-prefix}-lock:before                     { content: $line-var-lock; }
+
+.#{$line-css-prefix}-paperplane:before               { content: $line-var-paperplane; }
+.#{$line-css-prefix}-params:before                   { content: $line-var-params; }
+.#{$line-css-prefix}-pen:before                      { content: $line-var-pen; }
+.#{$line-css-prefix}-phone:before                    { content: $line-var-phone; }
+.#{$line-css-prefix}-photo:before                    { content: $line-var-photo; }
+
+.#{$line-css-prefix}-search:before                   { content: $line-var-search; }
+.#{$line-css-prefix}-settings:before                 { content: $line-var-settings; }
+.#{$line-css-prefix}-shop:before                     { content: $line-var-shop; }
+.#{$line-css-prefix}-sound:before                    { content: $line-var-sound; }
+.#{$line-css-prefix}-stack:before                    { content: $line-var-stack; }
+.#{$line-css-prefix}-star:before                     { content: $line-var-star; }
+.#{$line-css-prefix}-study:before                    { content: $line-var-study; }
+
+.#{$line-css-prefix}-tag:before                      { content: $line-var-tag; }
+.#{$line-css-prefix}-trash:before                    { content: $line-var-trash; }
+.#{$line-css-prefix}-truck:before                    { content: $line-var-truck; }
+.#{$line-css-prefix}-t-shirt:before                  { content: $line-var-t-shirt; }
+.#{$line-css-prefix}-tv:before                       { content: $line-var-tv; }
+
+.#{$line-css-prefix}-user:before                     { content: $line-var-user; }
+
+.#{$line-css-prefix}-vallet:before                   { content: $line-var-vallet; }
+.#{$line-css-prefix}-video:before                    { content: $line-var-video; }
+
+.#{$line-css-prefix}-world:before                    { content: $line-var-world; }
+
+.#{$line-css-prefix}-vynil:before                    { content: $line-var-vynil; }
+
+.#{$line-css-prefix}-yang-ying:before                { content: $line-var-yang-ying; }

@@ -1,0 +1,102 @@
+/*
+* CdP Icons
+*/
+
+$cdp-var-badge:            "\e013";
+$cdp-var-bell:             "\e007";
+
+$cdp-var-cdp-logo:         "\e021";
+$cdp-var-chart:            "\e018";
+$cdp-var-compass:          "\e020";
+$cdp-var-contacts:         "\e014";
+
+$cdp-var-edit:             "\e011";
+$cdp-var-edit-marked:      "\e012";
+$cdp-var-erase:            "\e016";
+
+$cdp-var-filter:           "\e00d";
+
+$cdp-var-graph:            "\e00e";
+
+$cdp-var-help:             "\e000";
+
+$cdp-var-link:             "\e01e";
+$cdp-var-love:             "\e00c";
+
+$cdp-var-message:          "\e010";
+$cdp-var-mobile:           "\e008";
+$cdp-var-moon:             "\e00f";
+
+$cdp-var-people:           "\e005";
+$cdp-var-pin:              "\e004";
+$cdp-var-print:            "\e01a";
+
+$cdp-var-question:         "\e013";
+
+$cdp-var-refresh:          "\e01f";
+$cdp-var-reload:           "\e01b";
+
+$cdp-var-search:           "\e017";
+$cdp-var-settings:         "\e015";
+$cdp-var-share:            "\e019";
+$cdp-var-star-full:        "\e009";
+$cdp-var-star-open:        "\e00a";
+$cdp-var-sun:              "\e002";
+
+$cdp-var-time:             "\e001";
+$cdp-var-timeline-full:    "\e01c";
+$cdp-var-timeline-open:    "\e01d";
+
+$cdp-var-user:             "\e006";
+
+$cdp-var-warning:          "\e00b";
+
+
+.#{$cdp-css-prefix}-badge:before               { content: $cdp-var-badge; }
+.#{$cdp-css-prefix}-bell:before                { content: $cdp-var-bell; }
+
+.#{$cdp-css-prefix}-cdp-logo:before            { content: $cdp-var-cdp-logo; }
+.#{$cdp-css-prefix}-chart:before               { content: $cdp-var-chart; }
+.#{$cdp-css-prefix}-compass:before             { content: $cdp-var-compass; }
+.#{$cdp-css-prefix}-contacts:before            { content: $cdp-var-contacts; }
+
+.#{$cdp-css-prefix}-edit:before                { content: $cdp-var-edit; }
+.#{$cdp-css-prefix}-edit-marked:before         { content: $cdp-var-edit-marked; }
+.#{$cdp-css-prefix}-erase:before               { content: $cdp-var-erase; }
+
+.#{$cdp-css-prefix}-filter:before              { content: $cdp-var-filter; }
+
+.#{$cdp-css-prefix}-graph:before               { content: $cdp-var-graph; }
+
+.#{$cdp-css-prefix}-help:before                { content: $cdp-var-help; }
+
+.#{$cdp-css-prefix}-link:before                { content: $cdp-var-link; }
+.#{$cdp-css-prefix}-love:before                { content: $cdp-var-love; }
+
+.#{$cdp-css-prefix}-message:before             { content: $cdp-var-message; }
+.#{$cdp-css-prefix}-mobile:before              { content: $cdp-var-mobile; }
+.#{$cdp-css-prefix}-moon:before                { content: $cdp-var-moon; }
+
+.#{$cdp-css-prefix}-people:before              { content: $cdp-var-people; }
+.#{$cdp-css-prefix}-pin:before                 { content: $cdp-var-pin; }
+.#{$cdp-css-prefix}-print:before               { content: $cdp-var-print; }
+
+.#{$cdp-css-prefix}-question:before            { content: $cdp-var-question; }
+
+.#{$cdp-css-prefix}-refresh:before             { content: $cdp-var-refresh; }
+.#{$cdp-css-prefix}-reload:before              { content: $cdp-var-reload; }
+
+.#{$cdp-css-prefix}-search:before              { content: $cdp-var-search; }
+.#{$cdp-css-prefix}-settings:before            { content: $cdp-var-settings; }
+.#{$cdp-css-prefix}-share:before               { content: $cdp-var-share; }
+.#{$cdp-css-prefix}-star-full:before           { content: $cdp-var-star-full; }
+.#{$cdp-css-prefix}-star-open:before           { content: $cdp-var-star-open; }
+.#{$cdp-css-prefix}-sun:before                 { content: $cdp-var-sun; }
+
+.#{$cdp-css-prefix}-time:before                { content: $cdp-var-time; }
+.#{$cdp-css-prefix}-timeline-full:before       { content: $cdp-var-timeline-full; }
+.#{$cdp-css-prefix}-timeline-open:before       { content: $cdp-var-timeline-open; }
+
+.#{$cdp-css-prefix}-user:before                { content: $cdp-var-user; }
+
+.#{$cdp-css-prefix}-warning:before             { content: $cdp-var-warning; }

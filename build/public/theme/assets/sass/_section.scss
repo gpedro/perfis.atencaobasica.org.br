@@ -1,0 +1,578 @@
+//
+// Section
+// --------------------------------------------------
+
+
+.section {
+  padding: $section-padding;
+  /*margin-bottom: $section-padding;*/
+  color: $section-color;
+  background-color: $section-bg;
+
+  h1,
+  .h1 {
+    color: $section-heading-color;
+  }
+  p {
+    margin-bottom: ($section-padding / 2);
+    font-size: $section-font-size;
+    font-weight: 200;
+  }
+
+  > hr {
+  }
+
+  .container & {
+    border-radius: $border-radius-large; // Only round corners at higher resolutions if contained in a container
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  @media screen and (min-width: $screen-sm-min) {
+    padding-top:    ($section-padding * 1.6);
+    padding-bottom: ($section-padding * 1.6);
+
+    .container & {
+      padding-left:  ($section-padding * 2);
+      padding-right: ($section-padding * 2);
+    }
+
+    h1,
+    .h1 {
+      font-size: ($font-size-base * 4.5);
+    }
+  }
+
+  .people-list--header-search,
+  .group-list--header-search {
+    @include search-header-section;
+  }
+}
+
+
+// Group list
+//
+// ---------------------------------
+
+#group-list {
+  @include section-list;
+  #group-list--header {
+    height: 48px;
+    margin-bottom: 10px;
+    .group-list--header-brand {
+      @include make-xs-column(4);
+      padding: 0 10px 0 0;
+      float: left;
+      .group-list--header-brand-icon {
+        width: 20%;
+        color: $color-group;
+        float: left;
+        font-size: 1.6em;
+        // Hack for solve specific icon inconsistence
+        .cdp-cdp-logo {
+          position: relative;
+          top: 1px;
+        }
+      }
+      .group-list--header-brand-text {
+        padding: 0;
+        position: relative;
+        top: -8px;
+        right: 5px;
+        width: 78%;
+        float: right;
+        .group-list--header-brand-text--title {
+          display: block;
+          line-height: 0.4em;
+          padding: 0;
+          width: 100%;
+          color: $gray;
+          position: relative;
+          top: 0;
+          font-size: 1.4em;
+        }
+        .group-list--header-brand-text--small {
+          display: block;
+          line-height: 0.4em;
+          width: 100%;
+          color: $gray;
+        }
+      }
+    }
+  }
+
+  .group-list-widget {
+    width: 100%;
+    height: 230px;
+    clear: both;
+    .group-list-img {
+      width: 220px;
+      height: 220px;
+      margin-right: 1em;
+      float: left;
+    }
+    .caption {
+      @include make-xs-column(8);
+      float: right;
+    }
+    .group-list-name {
+      position: relative;
+      top: -0.8em;
+      font-size: 1.7em;
+    }
+    .group-list-desc {
+      position: relative;
+      top: -1.2em;
+      font-size: 1.15em;
+    }
+    .group-list-nav {
+      position: absolute;
+      top: 13.5em;
+      right: 1.8em;
+    }
+  }
+}
+
+
+// People list
+//
+// --------------------------------
+
+#people-list {
+  @include section-list;
+  #people-list--header {
+    @include make-row;
+    height: 45px;
+    margin-bottom: 10px;
+    .people-list--header-brand {
+      width: 260px;
+      float: left;
+      .people-list--header-brand-icon {
+        width: 20%;
+        color: $color-people;
+        float: left;
+        font-size: 1.6em;
+        // Hack for solve specific icon inconsistence
+        .cdp-cdp-logo {
+          position: relative;
+          top: 1px;
+        }
+      }
+      .people-list--header-brand-text {
+        padding: 0;
+        position: relative;
+        top: -8px;
+        right: 5px;
+        width: 78%;
+        float: right;
+        .people-list--header-brand-text--title {
+          display: block;
+          line-height: 0.4em;
+          padding: 0;
+          width: 100%;
+          color: $gray;
+          position: relative;
+          top: 0;
+          font-size: 1.4em;
+        }
+        .people-list--header-brand-text--small {
+          display: block;
+          line-height: 0.4em;
+          width: 100%;
+          color: $gray;
+        }
+      }
+    }
+
+  }
+
+  .user-list-widget {
+    @include make-xs-column(6);
+    @include make-sm-column(6);
+    @include make-md-column(3);
+    @include make-lg-column(3);
+    .user-list-widget--item {
+      background: $brand-white;
+      margin-bottom: 25px;
+      padding: 9px 15px;
+      overflow: hidden;
+      border-top: 1px solid darken($gray-lighter, 5%);
+      border-left: 1px solid darken($gray-lighter, 5%);
+      border-right: 1px solid darken($gray-lighter, 5%);
+      border-bottom: 2px solid darken($gray-lighter, 5%);
+      border-radius: $border-radius-small;
+    }
+    .user-list-img {
+      @extend .img-circle;
+      background: $brand-white;
+    }
+    .user-list-name {
+      font-size: $font-size-small;
+    }
+  }
+}
+
+
+// Notification list
+//
+// ----------------------------
+
+#notification-list {
+  @include section-list;
+  .btn-primary {
+    position: absolute;
+    right: 0;
+  }
+  .table {
+    position: relative;
+    top: 0px;
+    td { border-top: none; }
+  }
+  .fa-bell-slash {
+    margin-top: 30px;
+    font-size: 4em;
+    display: block;
+    color: darken($gray-lighter, 10%);
+  }
+  #notification-list--header {
+    height: 48px;
+    margin-bottom: 10px;
+    .notification-list--header-brand {
+      @include make-xs-column(4);
+      padding: 0 10px 0 0;
+      float: left;
+      .notification-list--header-brand-icon {
+        width: 20%;
+        color: $color-notification;
+        float: left;
+        font-size: 1.6em;
+        // Hack for solve specific icon inconsistence
+        .cdp-cdp-logo {
+          position: relative;
+          top: 1px;
+        }
+      }
+      .notification-list--header-brand-text {
+        padding: 0;
+        position: relative;
+        top: -8px;
+        right: 5px;
+        width: 78%;
+        float: right;
+        .notification-list--header-brand-text--title {
+          display: block;
+          line-height: 0.4em;
+          padding: 0;
+          width: 100%;
+          color: $gray;
+          position: relative;
+          top: 0;
+          font-size: 1.4em;
+        }
+        .notification-list--header-brand-text--small {
+          display: block;
+          line-height: 0.4em;
+          width: 100%;
+          color: $gray;
+        }
+      }
+    }
+    .notification-list--header-button {
+      @include make-xs-column(4);
+      padding: 0;
+      float: right;
+      margin: 8px 0 0 0;
+    }
+  }
+
+}
+#sidebar-notifications {
+  @include make-xs-column(3);
+  position: relative;
+  top: 60px;
+  padding-left: 0;
+}
+
+// Home
+//
+// ----------------------------
+
+.timeline-wrapper {
+  @include make-xs-column(10);
+  float: right;
+}
+
+#draggable-widgets {
+  width: 215px;
+  padding-left: 0;
+  float: left;
+}
+@media (max-width: $screen-xs-max) {
+  #draggable-widgets {
+    display: none;
+  }
+  #people-list--header {
+    margin-top: -18px;
+  }
+  .user-list-widget {
+    .user-list-widget--item {
+      width: 142px;
+      height: 272px;
+      margin-left: -4px;
+      .user-list-nav {
+        width: 108px;
+        .btn-xs {
+          display: block;
+          margin: 5px 0;
+        }
+      }
+      .user-list-img {
+        width: 65px;
+        height: 65px;
+        margin-left: 22px;
+      }
+      .user-list-name {
+        text-align: center;
+      }
+      .user-list-desc {
+        font-size: $font-size-small;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  #draggable-widgets {
+    @include make-md-column-offset(1);
+    margin-left: ($grid-md-gutter-width / 2);
+  }
+  .user-list-widget {
+    .user-list-widget--item {
+      width: 206px;
+      height: 130px;
+      margin-left: -6px;
+      margin-bottom: 25px;
+      padding: 9px 15px;
+      .user-list-img {
+        float: left;
+        width: 60px;
+        height: 60px;
+        margin-left: 0;
+      }
+      .caption {
+        width: 108px;
+        float: right;
+      }
+      .user-list-name {
+        margin-top: -0;
+        text-align: left;
+      }
+      .user-list-desc {
+        margin: -5px 0 8px 0;
+        font-size: ($font-size-small * 0.95);
+      }
+      .user-list-nav {
+        clear: both;
+        .btn-xs {
+          font-size: ($font-size-small * 0.9);
+        }
+      }
+    }
+  }
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  #draggable-widgets {
+    margin-left: ($grid-md-gutter-width / 2);
+  }
+  .user-list-widget {
+    .user-list-widget--item {
+      width: 142px;
+      height: 198px;
+      .user-list-nav { display: none; }
+      &:hover {
+        background: lighten($gray-lighter, 1.5%);
+        .user-list-desc {
+          display: none;
+        }
+        .user-list-nav {
+          width: 108px;
+          display: block;
+          position: absolute;
+          top: 108px;
+          .btn-xs {
+            margin: 5px 0;
+            display: block;
+          }
+        }
+      }
+      .user-list-img {
+        width: 65px;
+        height: 65px;
+        margin-left: 22px;
+      }
+      .user-list-desc {
+        font-size: $font-size-small;
+        text-align: center;
+      }
+    }
+  }
+}
+@media (min-width: $screen-lg-min) {
+  #draggable-widgets {
+    @include make-lg-column-offset(1);
+  }
+  .user-list-widget {
+    .user-list-widget--item {
+      width: 142px;
+      height: 198px;
+      .user-list-nav { display: none; }
+      &:hover {
+        background: lighten($gray-lighter, 1.5%);
+        .user-list-desc {
+          display: none;
+        }
+        .user-list-nav {
+          width: 108px;
+          display: block;
+          position: absolute;
+          top: 108px;
+          .btn-xs {
+            margin: 5px 0;
+            display: block;
+          }
+        }
+      }
+      .user-list-img {
+        width: 65px;
+        height: 65px;
+        margin-left: 22px;
+      }
+      .user-list-name {
+        text-align: center;
+      }
+      .user-list-desc {
+        font-size: $font-size-small;
+      }
+    }
+  }
+}
+
+// Register
+//
+// ---------------------------
+
+#register-section {
+  padding: 2em 0 10em 0;
+}
+#signin-form {
+  @include make-lg-column(12);
+  float: right;
+
+  #signin-list--header {
+    height: 48px;
+    margin-bottom: 10px;
+    .signin-list--header-brand {
+      @include make-xs-column(4);
+      padding: 0 10px 0 0;
+      float: left;
+      .signin-list--header-brand-icon {
+        width: 13%;
+        float: left;
+        font-size: 1.6em;
+        .fa-circle {
+          color: $brand-info;
+        }
+      }
+      .signin-list--header-brand-text {
+        padding: 0;
+        position: relative;
+        top: -8px;
+        right: 6%;
+        width: 78%;
+        float: right;
+        .signin-list--header-brand-text--title {
+          display: block;
+          line-height: 0.4em;
+          padding: 0;
+          width: 100%;
+          color: $gray;
+          position: relative;
+          top: 0;
+          font-size: 1.4em;
+        }
+        .signin-list--header-brand-text--small {
+          display: block;
+          line-height: 0.4em;
+          width: 100%;
+          color: $gray;
+        }
+      }
+    }
+  }
+
+  .form-signin--input-name,
+  .form-signin--input-password {
+    width: 48.5%;
+    float: left;
+    margin: 10px 0;
+  }
+  .form-signin--input-email,
+  .form-signin--input-password-confirm {
+    width: 48.5%;
+    margin: 10px 0;
+    float: right;
+  }
+  .form-signin--select-language {
+    width: 30%;
+    float: left;
+    margin: 10px 0;
+  }
+  .form-signin--select-birthdate {
+    width: 48.5%;
+    float: right;
+    margin: 10px 0 0 20%;
+    .form-control {
+      float: left;
+      &.month {
+        width: 40%;
+        margin-left: 0;
+      }
+      &.day {
+        width: 28%;
+        margin-left: 3.2%;
+      }
+      &.year {
+        width: 25%;
+        margin-left: 3.2%;
+      }
+    }
+  }
+  .form-signin--radio-gender {
+    width: 25%;
+    margin-top: 15px;
+    float: left;
+    .radio-male {
+      display: block;
+      width: 45%;
+      float: left;
+    }
+    .radio-female {
+      width: 49%;
+      float: right;
+    }
+  }
+  .form-signin--agree-terms {
+    width: 100%;
+    font-size: 0.85em;
+    float: left;
+    text-align: left;
+    margin-top: 2.5em;
+  }
+  .btn {
+    width: 30%;
+    margin-top: 20px;
+    float: left;
+  }
+}

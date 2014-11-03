@@ -1,0 +1,69 @@
+{
+  "name": "we-project-accounts",
+  "private": true,
+  "description": "We.js project",
+  "version": "0.0.0",
+  "main": "./app.js",
+  "scripts": {
+    "start": "supervisor -i .tmp/,.git/,bower_components/,views/,assets/ -w node_modules app.js ",
+    "debug": "node debug app.js",
+    "test": "./node_modules/.bin/mocha test/bootstrap.js test/**/*.test.js"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "author": {},
+  "maintainers": [],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "dependencies": {
+    "async": "^0.9.0",
+    "connect-redis": "1.4.5",
+    "ejs": "^0.8.4",
+    "gm": "^1.16.0",
+    "grunt": "0.4.2",
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-contrib-copy": "~0.4.1",
+    "lodash": "^2.4.1",
+    "mkdirp": "^0.5.0",
+    "sails": "^0.10.5",
+    "sails-disk": "^0.10.4",
+    "sails-mysql": "^0.10.6",
+    "sanitize-html": "^1.4.2",
+    "sget": "^0.1.5",
+    "we-grunt-tasks": "0.0.9",
+    "we-helpers": "0.0.5",
+    "we-oauth2": "0.0.12",
+    "we-plugin": "0.0.4",
+    "we-plugin-auth": "0.0.3",
+    "we-plugin-core": "0.0.11",
+    "we-plugin-file": "0.0.5",
+    "we-plugin-user": "0.0.2",
+    "we-send-email": "0.0.5",
+    "we-theme-accounts-default": "0.0.1",
+    "we-theme-admin-default": "0.0.1",
+    "we-theme-engine": "0.0.12",
+    "wejs-theme-default": "0.0.12"
+  },
+  "devDependencies": {
+    "grunt-bump": "0.0.13",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-cssmin": "~0.6.1",
+    "grunt-contrib-less": "~0.9.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-ember-template-compiler": "~1.5.0",
+    "grunt-fileindex": "^0.1.0",
+    "grunt-shell": "^0.7.0",
+    "grunt-sync": "0.0.7",
+    "grunt-we-ember-template": "0.0.2",
+    "mocha": ">= 2.0.1",
+    "sails-memory": "^0.10.1",
+    "sinon": "~1.8.1",
+    "supertest": ">= 0",
+    "supervisor": "~0.6.0",
+    "zombie": "^2.1.1"
+  },
+  "license": "MIT"
+}

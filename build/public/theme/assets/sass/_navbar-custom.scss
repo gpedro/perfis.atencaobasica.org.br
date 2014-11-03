@@ -1,0 +1,406 @@
+//
+// Main navbar
+// --------------------------------------------------
+
+$header-main-bar-bottom:   4px;
+$header-main-bar-color:    lighten($gray-light, 35%);
+$header-main-height:       62px;
+$header-main-logo-width:   132px;
+
+#header-main {
+  outline: $header-main-bar-bottom solid $header-main-bar-color;
+  background-color: $gray-lighter;
+  height: $header-main-height;
+  .header-main-brand {
+    @include make-xs-column(2);
+    @include make-sm-column(1);
+    @include make-md-column(2);
+    @include make-lg-column(2);
+    height: $header-main-height;
+    .app-main-logo {
+      width: $header-main-logo-width + 4;
+      height: $header-main-height;
+      padding-top: $header-main-height * 0.1;
+      position: relative;
+      display: block;
+      &:hover {
+        background: #fff;
+      }
+      #logo-cdp-main {
+        width: $header-main-logo-width;
+      }
+    }
+  }
+  .bar-colored {
+    background-image: url('../img/bar-colored.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    height: $header-main-bar-bottom;
+    bottom: -$header-main-height;
+    position: relative;
+    right: ($grid-lg-gutter-width / 2);
+  }
+}
+
+#menu-main {
+  @include make-lg-column(5);
+  .navbar-menu-item {
+    width: 83px;
+    height: $header-main-height + $header-main-bar-bottom;
+    line-height: 40px;
+    position: relative;
+    display: block;
+    text-align:left;
+    margin: auto;
+    .cdp {
+      width: 100%;
+      height: 34px;
+      font-size: 2.3em;
+      margin: 0 auto;
+      text-align: center;
+      position: absolute;
+      top: 10px;
+      left: 0;
+    }
+    .text-menu {
+      width: 100%;
+      font-size: 0.75em;
+      font-weight: 500;
+      position: absolute;
+      top: 36px;
+      left: 0;
+      margin: 0 auto;
+      text-align: center;
+    }
+    &:hover,
+    &.active {
+      background: #fff;
+      &.item-people {
+        .cdp,
+        .text-menu {
+          color: $color-people!important;
+        }
+        box-shadow: inset 0 -4px 0 $color-people;
+        transition: all .25s ease-in-out;
+      }
+      &.item-feed {
+        .cdp,
+        .text-menu {
+          color: $color-feed!important;
+        }
+        box-shadow: inset 0 -4px 0 $color-feed;
+        transition: all .25s ease-in-out;
+      }
+      &.item-group {
+        .cdp,
+        .text-menu {
+          color: $color-group!important;
+        }
+        box-shadow: inset 0 -4px 0 $color-group;
+        transition: all .25s ease-in-out;
+      }
+      &.item-course {
+        .cdp,
+        .text-menu {
+          color: $color-course!important;
+        }
+        box-shadow: inset 0 -4px 0 $color-course;
+        transition: all .25s ease-in-out;
+      }
+      &.item-notifications {
+        .cdp,
+        .text-menu {
+          color: $brand-danger!important;
+        }
+        box-shadow: inset 0 -4px 0 $brand-danger;
+        transition: all .25s ease-in-out;
+      }
+    }
+  }
+}
+
+#search-main {
+  @include make-xs-column(7);
+  @include make-sm-column(4);
+  @include make-md-column(3);
+  @include make-lg-column(4);
+  height: $header-main-height;
+  padding-top: $header-main-height * 0.225;
+  .form-group {
+    width: 100%;
+    .icon-search {
+      top: -1.75em;
+      right: 0.8em;
+      color: $gray-light;
+      float: right;
+    }
+  }
+  .search-btn {
+    background: darken($gray-lighter, 4%);
+    color: $gray-light;
+    border-width: 1px;
+    border-style: solid;
+    border-color: darken($gray-lighter, 4%);
+    .icon-search {
+      top: 3px;
+      position: relative;
+      color: $brand-primary;
+      font-size: 16px;
+    }
+  }
+  .search-input {
+    width: 100%;
+    padding-right: 30px;
+    background: darken($gray-lighter, 4%);
+    border-color: darken($gray-lighter, 4%);
+    font-size: 11px;
+    &::-webkit-input-placeholder { /* WebKit browsers */
+      color: lighten($gray, 30%);
+    }
+    &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: lighten($gray, 30%);
+        opacity:  1;
+    }
+    &::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: lighten($gray, 30%);
+        opacity:  1;
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: lighten($gray, 30%);
+    }
+  }
+}
+
+.login-menu-dropdown {
+  @include make-lg-column(1);
+  height: $header-main-height;
+  padding-right: 0; /* normalize */
+  float: right !important;
+  #dropdown-login-menu {
+    margin-top: $header-main-height * 0.93;
+  }
+  .navbar-login-button {
+    @include make-row;
+    cursor: pointer;
+    font-weight: bold;
+    float: right;
+  }
+  #menu-user-dropdown {
+    list-style: none;
+    padding-top: $header-main-height * 0.165;
+    .dropdown-menu {
+      width: 240px;
+      background: #f8f8f8;
+    }
+  }
+  #form-login {
+    position: relative;
+    top: 5px;
+    .input-group {
+      width: 218px;
+      position: relative;
+      left: -13px;
+    }
+    .checkbox {
+      width: 100px;
+      font-size: 0.8em;
+      line-height: 1.75em;
+      float: left;
+      padding-top: 0;
+      position: relative;
+      left: -12px;
+      .link {
+        position: relative;
+        top: -5px;
+      }
+    }
+    .login-btn {
+      width: 90px;
+      float: right;
+      position: relative;
+      right: -10px;
+      .btn {
+        width: 100%;
+      }
+    }
+    .container-button-signin {
+      width: 216px;
+      clear: both;
+      position: relative;
+      top: 5px;
+      left: -12px;
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+// Media Queries
+//
+// -------------------------------
+
+// Phones
+//
+@media (max-width: $screen-xs-max) {
+  #header-main {
+    height: auto;
+    .row, .container {
+      margin: 0; padding: 0;
+    }
+    .header-main-brand {
+      .app-main-logo {
+        width: $header-main-logo-width - 73;
+        #logo-cdp-main {
+          left: -3px;
+          position: relative;
+          .logo-text {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  #menu-main {
+    clear: both;
+    margin: 0;
+    padding: 0;
+    .navbar-menu-item {
+      width: 100%;
+      padding: 2px 0;
+      margin: 0;
+      border-bottom: 1px solid lighten($gray-light, 45%);
+      .cdp {
+        width: 50px;
+        margin: 5px 10px;
+        text-align: left;
+        left: 0;
+        display: block;
+      }
+      .text-menu {
+        width: 70%;
+        font-size: 1.3em;
+        top: 20px;
+        left: 55px;
+        text-align: left;
+      }
+    }
+  }
+  .toggle-button {
+    top: 0;
+    right: 50px;
+    position: absolute;
+  }
+  #search-main {
+    top: 0;
+    left: 55px;
+    position: absolute;
+    .search-input {
+      font-size: 0.78em;
+    }
+  }
+  .login-menu-dropdown {
+    top: 0;
+    right: 15px;
+    position: absolute;
+  }
+  .navbar-collapse {
+    border-top: 4px solid $header-main-bar-color;
+  }
+  .bar-colored {
+    display: none;
+  }
+  .login-menu-dropdown {
+    #form-login {
+      .input-group {
+        left: 2px;
+      }
+      .checkbox {
+        left: 2px;
+      }
+      .login-btn {
+        right: 4px;
+      }
+      .container-button-signin {
+        left: 2px;
+      }
+    }
+  }
+}
+
+
+// Tablets
+//
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  #header-main {
+    .header-main-brand {
+      .app-main-logo {
+        width: $header-main-logo-width - 73;
+        #logo-cdp-main {
+          left: -3px;
+          position: relative;
+          .logo-text {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  #menu-main {
+    .navbar-menu-item {
+      width: 50px;
+      line-height: 55px;
+      .cdp {
+        font-size: 2em;
+        top: 18px;
+      }
+      .text-menu {
+        display: none;
+      }
+    }
+  }
+  .login-menu-dropdown {
+    #form-login {
+      .input-group {
+        left: -6px;
+      }
+      .checkbox {
+        left: -6px;
+      }
+      .login-btn {
+        right: -3px;
+      }
+      .container-button-signin {
+        left: -6px;
+      }
+    }
+  }
+}
+
+
+// Medium screens
+//
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  #menu-main {
+    .navbar-menu-item {
+      width: 76px;
+    }
+  }
+  .login-menu-dropdown {
+    #form-login {
+      .input-group {
+        left: -8px;
+      }
+      .checkbox {
+        left: -8px;
+      }
+      .login-btn {
+        right: -6px;
+      }
+      .container-button-signin {
+        left: -8px;
+      }
+    }
+  }
+}

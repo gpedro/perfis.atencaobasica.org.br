@@ -1,0 +1,201 @@
+/*
+* Line Icons
+*/
+
+// Variables
+// --------------------------
+
+$line-font-path:        "../../icon/line" !default;
+//$-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts" !default; // for referencing Bootstrap CDN font files directly
+$line-css-prefix:       line !default;
+$line-version:          "4.2.0" !default;
+$line-border-color:     #eee !default;
+$line-inverse:          #fff !default;
+$line-li-width:         (30em / 14) !default;
+
+// Mixins
+// --------------------------
+
+@mixin line-icon() {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome; // shortening font declaration
+  font-size: inherit; // can't have font-size inherit on line above, so need to override
+  text-rendering: auto; // optimizelegibility throws things off #1094
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin line-icon-rotate($degrees, $rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
+  -webkit-transform: rotate($degrees);
+      -ms-transform: rotate($degrees);
+          transform: rotate($degrees);
+}
+
+@mixin line-icon-flip($horiz, $vert, $rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
+  -webkit-transform: scale($horiz, $vert);
+      -ms-transform: scale($horiz, $vert);
+          transform: scale($horiz, $vert);
+}
+
+/* FONT PATH
+ * -------------------------- */
+
+@font-face {
+  font-family: 'linecons';
+  src: url('#{$line-font-path}/linecons.eot?v=#{$line-version}');
+  src: url('#{$line-font-path}/linecons.eot?#iefix&v=#{$line-version}') format('embedded-opentype'),
+    url('#{$line-font-path}/linecons.woff?v=#{$line-version}') format('woff'),
+    url('#{$line-font-path}/linecons.ttf?v=#{$line-version}') format('truetype'),
+    url('#{$line-font-path}/linecons.svg?v=#{$line-version}#lineconsregular') format('svg');
+  //src: url('#{$-font-path}/cons.otf') format('opentype'); // used when developing fonts
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Base Class Definition
+// -------------------------
+
+.#{$line-css-prefix} {
+  display: inline-block;
+  font: normal normal normal 14px/1 cons; // shortening font declaration
+  font-size: inherit; // can't have font-size inherit on line above, so need to override
+  text-rendering: auto; // optimizelegibility throws things off #1094
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Icon Sizes
+// -------------------------
+
+/* makes the font 33% larger relative to the icon container */
+.#{$line-css-prefix}-lg {
+  font-size: (4em / 3);
+  line-height: (3em / 4);
+  vertical-align: -15%;
+}
+.#{$line-css-prefix}-2x { font-size: 2em; }
+.#{$line-css-prefix}-3x { font-size: 3em; }
+.#{$line-css-prefix}-4x { font-size: 4em; }
+.#{$line-css-prefix}-5x { font-size: 5em; }
+
+// Fixed Width Icons
+// -------------------------
+.#{$line-css-prefix}-fw {
+  width: (18em / 14);
+  text-align: center;
+}
+
+// List Icons
+// -------------------------
+
+.#{$line-css-prefix}-ul {
+  padding-left: 0;
+  margin-left: $line-li-width;
+  list-style-type: none;
+  > li { position: relative; }
+}
+.#{$line-css-prefix}-li {
+  position: absolute;
+  left: -$line-li-width;
+  width: $line-li-width;
+  top: (2em / 14);
+  text-align: center;
+  &.#{$line-css-prefix}-lg {
+    left: -$line-li-width + (4em / 14);
+  }
+}
+
+// Bordered & Pulled
+// -------------------------
+
+.#{$line-css-prefix}-border {
+  padding: .2em .25em .15em;
+  border: solid .08em $line-border-color;
+  border-radius: .1em;
+}
+
+.pull-right { float: right; }
+.pull-left { float: left; }
+
+.#{$line-css-prefix} {
+  &.pull-left { margin-right: .3em; }
+  &.pull-right { margin-left: .3em; }
+}
+
+// Spinning Icons
+// --------------------------
+
+.#{$line-css-prefix}-spin {
+  -webkit-animation: -spin 2s infinite linear;
+          animation: -spin 2s infinite linear;
+}
+
+@-webkit-keyframes line-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes line-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+// Rotated & Flipped Icons
+// -------------------------
+
+.#{$line-css-prefix}-rotate-90  { @include line-icon-rotate(90deg, 1);  }
+.#{$line-css-prefix}-rotate-180 { @include line-icon-rotate(180deg, 2); }
+.#{$line-css-prefix}-rotate-270 { @include line-icon-rotate(270deg, 3); }
+
+.#{$line-css-prefix}-flip-horizontal { @include line-icon-flip(-1, 1, 0); }
+.#{$line-css-prefix}-flip-vertical   { @include line-icon-flip(1, -1, 2); }
+
+// Hook for IE8-9
+// -------------------------
+
+:root .#{$line-css-prefix}-rotate-90,
+:root .#{$line-css-prefix}-rotate-180,
+:root .#{$line-css-prefix}-rotate-270,
+:root .#{$line-css-prefix}-flip-horizontal,
+:root .#{$line-css-prefix}-flip-vertical {
+  filter: none;
+}
+
+// Stacked Icons
+// -------------------------
+
+.#{$line-css-prefix}-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+.#{$line-css-prefix}-stack-1x, .#{$line-css-prefix}-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.#{$line-css-prefix}-stack-1x { line-height: inherit; }
+.#{$line-css-prefix}-stack-2x { font-size: 2em; }
+.#{$line-css-prefix}-inverse { color: $line-inverse; }
+
+// Unicode Icons
+// -------------------------
+@import "icons";

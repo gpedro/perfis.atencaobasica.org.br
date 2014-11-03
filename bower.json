@@ -1,0 +1,33 @@
+{
+  "name": "we-project-accounts",
+  "version": "0.0.0",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "bower_components",
+    "test",
+    "tests",
+    "assets/bower_components"
+  ],
+  "license": "MIT",
+  "author": [],
+  "resolutions": {
+    "bootstrap": "~3.3.0"
+  },
+  "dependencies": {
+    "select2": "~3.5.2",
+    "jquery-validation": "~1.13.0",
+    "bootstrapValidator": "~0.5.1",
+    "Jcrop": "~0.9.12",
+    "bootstrap": "~3.3.0",
+    "font-awesome": "~4.2.0",
+    "summernote": "~0.5.10",
+    "codemirror": "~4.7.0"
+  },
+  "devDependencies": {
+    "jquery": "2.1.1",
+    "bootstrap": "~3.0.3"
+  }
+}

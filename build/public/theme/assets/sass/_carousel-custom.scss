@@ -1,0 +1,398 @@
+// Custom Home carousel
+//
+// ------------------------------
+
+#home-carousel {
+  background: #eaeaea;
+  margin-top: 4px;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 9;
+  .item {
+    height: 470px;
+    background-image: url('../img/slider-img-example-01.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .carousel-control {
+    &.left {
+      width: 60px;
+    }
+    &.right {
+      width: 60px;
+    }
+  }
+  .home-carousel--text {
+    @include make-lg-column(4);
+    /*height: 220px;
+    color: #fff;
+    line-height: 1.5em;
+    position: absolute;
+    top: -400px;
+    bottom: 0;
+    margin: auto;
+    font-size: 1.5em;*/
+    &.text-left {
+      float: left;
+      text-align: left;
+    }
+    &.text-right {
+      float: right;
+      text-align: right;
+    }
+  }
+  .transition-timer-carousel-progress-bar {
+    height: 8px;
+    background-color: $brand-success;
+    width: 0%;
+    margin: 0;
+    border: none;
+    z-index: 11;
+    position: relative;
+  }
+  .carousel-indicators {
+    width: 100%;
+    height: 113px;
+    background: #eaeaea;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .carousel-indicators li {
+    text-indent: 0;
+    color: #fff;
+    &.carousel-indicators--black {
+      background: #133540;
+      font-size: 5em;
+      line-height: 1.7em;
+      &.active {
+        background: darken(#133540, 20%);
+      }
+    }
+    &.carousel-indicators--green {
+      background: #74c125;
+      font-size: 5em;
+      line-height: 1.7em;
+      &.active {
+        background: darken(#74c125, 20%);
+      }
+    }
+    &.carousel-indicators--blue {
+      background: #4f87d2;
+      font-size: 5em;
+      line-height: 1.7em;
+      &.active {
+        background: darken(#4f87d2, 20%);
+      }
+    }
+    &.carousel-indicators--purple {
+      background: #7e4eb0;
+      font-size: 5em;
+      line-height: 1.7em;
+      &.active {
+        background: darken(#7e4eb0, 20%);
+      }
+    }
+    &.carousel-indicators--red {
+      background: #b0452b;
+      font-size: 5em;
+      line-height: 1.7em;
+      &.active {
+        background: darken(#b0452b, 20%);
+      }
+    }
+    &.carousel-indicators--lime {
+      background: #85f6ab;
+      font-size: 5em;
+      line-height: 1.7em;
+      &.active {
+        background: darken(#85f6ab, 20%);
+      }
+    }
+    &.carousel-indicators--yellow {
+      background: #e9b314;
+      font-size: 5em;
+      line-height: 1.7em;
+      &.active {
+        background: darken(#e9b314, 20%);
+      }
+    }
+  }
+  .carousel-indicators li,
+  .carousel-indicators li.active {
+    float: left;
+    width: 228px;
+    height: 105px;
+    border-radius: 0!important;
+    border: none;
+    margin-right: 4px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+
+// Media Queries
+//
+// -------------------------------
+
+@media (max-width: $screen-xs-max) {
+  #home-carousel {
+    height: 384px;
+    position: relative;
+    line-height: 192px;
+    .item {
+      height: 310px;
+      padding: 100px 0;
+    }
+    .carousel-control {
+      &.left,
+      &.right {
+        vertical-align: middle;
+        padding-top: 75px;
+      }
+    }
+    .home-carousel--text {
+      line-height: 26px;
+      &.text-left,
+      &.text-right {
+        vertical-align: middle;
+      }
+      &.text-left {
+        padding: 0 60px;
+        float: none;
+        text-align: center;
+        left: 0;
+      }
+      &.text-right {
+        padding: 0 60px;
+        float: none;
+        text-align: center;
+        right: 0;
+      }
+      .home-carousel--text-title {
+        font-size: $font-size-large * 1.2;
+      }
+      .home-carousel--text-subtitle {
+        font-size: $font-size-large;
+      }
+    }
+    .carousel-indicators {
+      height: 60px;
+      top: 8px;
+      position: relative;
+    }
+    .carousel-indicators li,
+    .carousel-indicators li.active {
+      height: 60px;
+      width: 19%;
+      margin: 0 1.25% 0 0;
+      &:last-child {
+        margin: 0;
+      }
+      &.carousel-indicators--black,
+      &.carousel-indicators--green,
+      &.carousel-indicators--blue,
+      &.carousel-indicators--purple,
+      &.carousel-indicators--red,
+      &.carousel-indicators--lime,
+      &.carousel-indicators--yellow {
+        font-size: 3em;
+        line-height: 1.7em;
+      }
+    }
+  }
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  #home-carousel {
+    height: 616px;
+    position: relative;
+    line-height: 308px;
+    .item {
+      height: 500px;
+      padding: 210px 0;
+    }
+    .carousel-control {
+      &.left,
+      &.right {
+        padding-top: 120px;
+      }
+    }
+    .home-carousel--text {
+      line-height: 26px;
+      .home-carousel--text-title {
+        font-size: $font-size-large * 1.2;
+      }
+      .home-carousel--text-subtitle {
+        font-size: $font-size-large;
+      }
+      .home-carousel--text {
+        &.text-left,
+        &.text-right {
+          padding: 0 100px;
+          vertical-align: middle;
+        }
+        &.text-left {
+          vertical-align: middle;
+        }
+        &.text-right {
+          vertical-align: middle;
+        }
+      }
+    }
+    .carousel-indicators {
+      @include make-sm-column(12);
+      height: 100px;
+      top: 8px;
+      position: relative;
+    }
+    .carousel-indicators li,
+    .carousel-indicators li.active {
+      height: 100px;
+      width: 130px;
+      margin: 0 7px 0 0;
+      &:last-child {
+        margin: 0;
+      }
+      &.carousel-indicators--black,
+      &.carousel-indicators--green,
+      &.carousel-indicators--blue,
+      &.carousel-indicators--purple,
+      &.carousel-indicators--red,
+      &.carousel-indicators--lime,
+      &.carousel-indicators--yellow {
+        font-size: $font-size-base * 4;
+        line-height: 2em;
+      }
+    }
+  }
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  #home-carousel {
+    height: 636px;
+    position: relative;
+    line-height: 308px;
+    .item {
+      height: 500px;
+      padding: 210px 0;
+    }
+    .carousel-control {
+      &.left,
+      &.right {
+        padding-top: 120px;
+      }
+    }
+    .home-carousel--text {
+      line-height: 26px;
+      .home-carousel--text-title {
+        font-size: $font-size-large * 1.2;
+      }
+      .home-carousel--text-subtitle {
+        font-size: $font-size-large;
+      }
+      .home-carousel--text {
+        &.text-left,
+        &.text-right {
+          vertical-align: middle;
+        }
+        &.text-left {
+          padding: 0 140px;
+        }
+        &.text-right {
+          padding: 0 140px;
+        }
+      }
+    }
+    .carousel-indicators {
+      @include make-sm-column(12);
+      height: 120px;
+      top: 8px;
+      position: relative;
+    }
+    .carousel-indicators li,
+    .carousel-indicators li.active {
+      width: 168px;
+      height: 120px;
+      margin: 0 8px 0 0;
+      &:last-child {
+        margin: 0;
+      }
+      &.carousel-indicators--black,
+      &.carousel-indicators--green,
+      &.carousel-indicators--blue,
+      &.carousel-indicators--purple,
+      &.carousel-indicators--red,
+      &.carousel-indicators--lime,
+      &.carousel-indicators--yellow {
+        font-size: $font-size-base * 5;
+        line-height: 2em;
+      }
+    }
+  }
+}
+@media (min-width: $screen-lg-min) {
+  #home-carousel {
+    height: 678px;
+    position: relative;
+    line-height: 308px;
+    .item {
+      height: 532px;
+      padding: 206px 0;
+    }
+    .carousel-control {
+      &.left,
+      &.right {
+        padding-top: 120px;
+      }
+    }
+    .home-carousel--text {
+      line-height: 26px;
+      .home-carousel--text-title {
+        font-size: $font-size-large * 1.3;
+      }
+      .home-carousel--text-subtitle {
+        font-size: $font-size-large;
+      }
+      .home-carousel--text {
+        &.text-left,
+        &.text-right {
+          width: 180px;
+          vertical-align: middle;
+        }
+        &.text-left {
+          padding: 0 140px;
+        }
+        &.text-right {
+          padding: 0 140px;
+        }
+      }
+    }
+    .carousel-indicators {
+      @include make-sm-column(12);
+      height: 120px;
+      top: 8px;
+      position: relative;
+    }
+    .carousel-indicators li,
+    .carousel-indicators li.active {
+      width: 209px;
+      height: 130px;
+      margin: 0 8px 0 0;
+      &:last-child {
+        margin: 0;
+      }
+      &.carousel-indicators--black,
+      &.carousel-indicators--green,
+      &.carousel-indicators--blue,
+      &.carousel-indicators--purple,
+      &.carousel-indicators--red,
+      &.carousel-indicators--lime,
+      &.carousel-indicators--yellow {
+        font-size: $font-size-base * 5;
+        line-height: 2em;
+      }
+    }
+  }
+}
