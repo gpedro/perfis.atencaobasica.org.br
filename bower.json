@@ -21,7 +21,8 @@
     "bootstrap": "~3.3.0",
     "font-awesome": "~4.2.0",
     "summernote": "~0.5.10",
-    "codemirror": "~4.7.0"
+    "codemirror": "~4.7.0",
+    "tupi": "~0.1.32"
   },
   "devDependencies": {
     "jquery": "2.1.1",

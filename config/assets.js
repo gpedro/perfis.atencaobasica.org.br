@@ -14,7 +14,13 @@ module.exports.assets = {
     'bower_components/codemirror/lib/codemirror.css'
   ],
   // user app css files only
-  cssApp: [],
+  cssApp: [
+    'bower_components/tupi/css/build.css',
+    'bower_components/tupi/css/icon/tupi-icon.awesome.css',
+    'bower_components/tupi/css/icon/tupi-icon.line.css',
+    'bower_components/tupi/css/icon/tupi-icon.cdp.css'
+  ],
+
   // admin pages ( /admin ) css files
   cssAdmin: [],
 
@@ -41,6 +47,8 @@ module.exports.assets = {
     'bower_components/bootstrap/dist/css/*',
     'bower_components/select2/*.png',
     'bower_components/select2/*.gif',
-    'bower_components/lightbox/img/**/*'
+    'bower_components/lightbox/img/**/*',
+    'bower_components/tupi/css/**/*',
+    'bower_components/tupi/icon/**/*'
   ]
 };
