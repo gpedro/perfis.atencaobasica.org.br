@@ -13,9 +13,6 @@
   ],
   "license": "MIT",
   "author": [],
-  "resolutions": {
-    "bootstrap": "~3.3.0"
-  },
   "dependencies": {
     "select2": "~3.5.2",
     "jquery-validation": "~1.13.0",

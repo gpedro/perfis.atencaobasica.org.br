@@ -41,10 +41,9 @@
     "we-plugin-file": "0.0.5",
     "we-plugin-user": "0.0.2",
     "we-send-email": "0.0.5",
-    "we-theme-accounts-default": "0.0.1",
+    "we-theme-accounts-default": "0.0.2",
     "we-theme-admin-default": "0.0.1",
-    "we-theme-engine": "0.0.12",
-    "wejs-theme-default": "0.0.12"
+    "we-theme-engine": "0.0.14"
   },
   "devDependencies": {
     "grunt-bump": "0.0.13",
