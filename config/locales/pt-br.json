@@ -62,5 +62,8 @@
   "auth.login.password.wrong": "A senha ou email estão errados.",
   "auth.login.user.get.error": "Erro ao tentar encontrar o usuário no sistema, por favor entre em contato com um administrador do sistema ou tente novamente mais tarde.",
   "auth.login.user.not.found": "Não existe usuário registrado no sistema para o email{{email}}.",
-  "auth.register.error.cpf.ivalid": "O CFP é invalido ou já está registrado no sistema"
+  "auth.register.error.cpf.ivalid": "O CFP é invalido ou já está registrado no sistema",
+  "user.forgot-password.title": "Formulário de criar nova senha.",
+  "user.forgot-password.help": "Digite o seu email no campo abaixo para receber um email com link de trocar a senha.",
+  "auth.forgot-password.form.email": "Digite seu email aqui ..."
 }
