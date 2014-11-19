@@ -5,6 +5,7 @@ module.exports = function loadSails(cb){
     port: 1930,
     hooks: {
       grunt: false,
+      socket: false,
       pubsub: false
     }
   },function(err, sails) {

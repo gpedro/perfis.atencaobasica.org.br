@@ -33,19 +33,20 @@
     "sanitize-html": "^1.4.2",
     "sget": "^0.1.5",
     "we-grunt-tasks": "0.0.9",
-    "we-helpers": "0.0.5",
+    "we-helpers": "^0.0.6",
     "we-oauth2": "0.0.12",
-    "we-plugin": "0.0.4",
-    "we-plugin-auth": "0.0.6",
-    "we-plugin-core": "0.0.12",
-    "we-plugin-file": "0.0.5",
-    "we-plugin-user": "0.0.2",
+    "we-plugin": "0.0.9",
+    "we-plugin-auth": "0.0.8",
+    "we-plugin-core": "0.0.13",
+    "we-plugin-file": "0.0.8",
+    "we-plugin-user": "0.0.4",
     "we-send-email": "0.0.5",
     "we-theme-accounts-perfis": "0.0.2",
     "we-theme-admin-default": "0.0.1",
     "we-theme-engine": "0.0.14"
   },
   "devDependencies": {
+    "chance": "^0.6.1",
     "grunt-bump": "0.0.13",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-cssmin": "~0.6.1",
@@ -61,8 +62,7 @@
     "sails-memory": "^0.10.1",
     "sinon": "~1.8.1",
     "supertest": ">= 0",
-    "supervisor": "~0.6.0",
-    "zombie": "^2.1.1"
+    "supervisor": "~0.6.0"
   },
   "license": "MIT"
 }

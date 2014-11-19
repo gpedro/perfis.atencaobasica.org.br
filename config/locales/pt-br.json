@@ -15,7 +15,7 @@
   "auth.login.link.forgot.password": "Relembrar a senha",
   "auth.login.link.forgot.email": "Relembrar o email",
   "auth.login.link.create.account": "Registrar-se",
-  "user.account.title": "Editar / ver conta de usuário",
+  "user.account.title": "Editar dados de acesso",
   "user.account.update.success": "{{displayName}} sua conta foi atualizada com sucesso",
   "auth.register.requires.email.validation.message": "{{displayName}} a sua conta de usuário foi criada mas é nescessário validar o seu email!<br>Enviamos um email de validação para <strong>{{email}}</strong> com as instruções de como validar a conta de usuário",
   "auth.register.form.biography.placeholder": " ",
@@ -25,7 +25,7 @@
   "navbar.link.return.network": "Ir para a rede social",
   "navbar.link.register": "Registrar",
   "navbar.link.login": "Autenticar",
-  "navbar.link.user.account": "Editar / ver conta de usuário",
+  "navbar.link.user.account": "Editar dados de acesso",
   "navbar.link.user.logout": "deslogar",
   "user.form.interests.label": "Interesses:",
   "user.form.interests.description": "O que é interesante para você? selecione algumas opções do campo acima",
@@ -61,5 +61,6 @@
   "User not found": "O usuário não foi encontrado",
   "auth.login.password.wrong": "A senha ou email estão errados.",
   "auth.login.user.get.error": "Erro ao tentar encontrar o usuário no sistema, por favor entre em contato com um administrador do sistema ou tente novamente mais tarde.",
-  "auth.login.user.not.found": "Não existe usuário registrado no sistema para o email{{email}}."
+  "auth.login.user.not.found": "Não existe usuário registrado no sistema para o email{{email}}.",
+  "auth.register.error.cpf.ivalid": "O CFP é invalido ou já está registrado no sistema"
 }

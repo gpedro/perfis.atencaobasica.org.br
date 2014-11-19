@@ -14,7 +14,7 @@ $( document ).ready(function() {
         message: 'O nome de usuário não é valido',
         validators: {
           notEmpty: {
-            message: 'O nome de usuário não está disponível'
+            message: 'Campo nome de usuário é obrigatório'
           },
           stringLength: {
             min: 4,
@@ -27,6 +27,56 @@ $( document ).ready(function() {
           },
           username: {
             message: 'O nome de usuário não está disponível'
+          }
+        }
+      },
+      cpf: {
+        validators: {
+          notEmpty: {
+            message: 'Campo cpf é obrigatório'
+          },
+          id: {
+            country: 'BR',
+            message: 'Número de CPF inválido.'
+          }
+        }
+      },
+
+      email: {
+        validators: {
+          notEmpty: {
+            message: 'Campo email é obrigatório'
+          }
+        }
+      },
+
+      password: {
+        validators: {
+          notEmpty: {
+            message: 'Campo senha é obrigatório'
+          },
+          identical: {
+            field: 'confirmPassword',
+            message: 'O campo de senha precisa ser igual ao campo de repetir senha'
+          }
+        }
+      },
+      confirmPassword: {
+        validators: {
+          notEmpty: {
+            message: 'Campo repetir senha é obrigatório'
+          },
+          identical: {
+            field: 'password',
+            message: 'O campo de confirmar senha precisa ser igual ao campo de senha'
+          }
+        }
+      },
+
+      termos: {
+        validators: {
+          notEmpty: {
+            message: 'Para criar uma conta você deve aceitar os termos de uso.'
           }
         }
       }
