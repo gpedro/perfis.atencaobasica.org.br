@@ -22,7 +22,7 @@ before(function(callback) {
   configs = _.merge(configs, {
     requireAccountActivation: false,
     log: {
-      level: 'warn'
+      level: 'info'
     },
     models: {
       migrate: 'drop',

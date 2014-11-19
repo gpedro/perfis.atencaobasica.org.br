@@ -82,7 +82,6 @@ describe('Oauth', function() {
     // after authenticated requests login the user
     before(function(done) {
       agent = request.agent(sails.hooks.http.app);
-
       agent.post('/auth/login')
       .send({
         email: user.email,

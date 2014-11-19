@@ -131,5 +131,28 @@ describe('Auth', function() {
         });
       });
     })
+
+    describe('Request password', function() {
+      it('/auth/forgot-password should send reset password email with valid email', function (done) {
+
+        request(sails.hooks.http.app)
+        .post('/auth/forgot-password')
+        .send({
+          email: user.email
+        })
+        .expect(200)
+        .end(function(err, res){
+          if (err) throw err;
+
+          assert.ok(res.body);
+          assert.ok(res.body.success);
+          assert.equal(res.body.success[0].type, 'email_send');
+
+          done();
+        });
+
+      });
+    });
+
   })
 });
