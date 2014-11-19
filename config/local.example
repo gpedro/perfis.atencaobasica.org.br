@@ -112,19 +112,27 @@ module.exports = {
   },
 
   connections: {
-    mysql1: {
+    dev: {
       module   : 'sails-mysql',
       host     : 'localhost',
       port     : 3306,
       user     : 'dbuser',
       password : 'password',
       database : 'cdp'
+    },
+    test: {
+      module   : 'sails-mysql',
+      host     : 'localhost',
+      port     : 3306,
+      user     : 'dbuser',
+      password : 'password',
+      database : 'cdp_perfis_test'
     }
   },
 
   models: {
     migrate: 'alter', // alter | drop | safe
-    connection: 'mysql1'
+    connection: 'dev'
   },
 
   session: {
