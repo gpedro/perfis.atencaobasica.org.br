@@ -12,8 +12,8 @@ global.DOMAIN = 'http://localhost';
 global.PORT = 1420;
 global.HOST = DOMAIN + ':' + PORT;
 
-before(function(done) {
-  this.timeout(7000);
+before(function(callback) {
+  this.timeout(10000);
 
   var configs = WP.getDefaultSailsConfigForCLI();
 
@@ -24,13 +24,9 @@ before(function(done) {
     log: {
       level: 'warn'
     },
-    connections: {
-      memory: {
-        adapter   : 'sails-memory'
-      }
-    },
     models: {
-      connection: 'memory'
+      migrate: 'drop',
+      connection: 'test'
     },
     port: PORT,
     environment: 'test',
@@ -44,16 +40,18 @@ before(function(done) {
     paths: {
       'fallbackEmailTemplateFolder': __dirname + '/node_modules/wejs-theme-default/templates/email'
     },
-    i18n: {
-      // Where are your locale translations located?
-      localesDirectory: '/config/locales'
+    session: {
+      adapter: 'memory',
+      cookie: {
+        maxAge: 60 * 24 * 60 * 60 * 1000 // 60 days
+      }
     },
     wejs: {
       providers: {
-        wembed: 'http://wembed.wejs.dev',
+        wembed: 'http://wembed.wejs.org',
         accounts: HOST,
         api: HOST,
-        cookieDomain: '.cdp.dev'
+        cookieDomain: HOST
       }
     }
   });
@@ -61,11 +59,10 @@ before(function(done) {
   Sails.load(configs, function(err, sails) {
     if (err) {
       console.error(err);
-      return done(err);
+      return callback(err);
     }
-
     // here you can load fixtures, etc.
-    done(err, sails);
+    callback(err, sails);
   });
 });
 
