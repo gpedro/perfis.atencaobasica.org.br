@@ -65,5 +65,13 @@
   "auth.register.error.cpf.ivalid": "O CFP é invalido ou já está registrado no sistema",
   "user.forgot-password.title": "Formulário de criar nova senha.",
   "user.forgot-password.help": "Digite o seu email no campo abaixo para receber um email com link de trocar a senha.",
-  "auth.forgot-password.form.email": "Digite seu email aqui ..."
+  "auth.forgot-password.form.email": "Digite seu email aqui ...",
+  "auth.forgot-password.email.send": "Oi {{displayName}}, um email com link foi enviado para o email <strong>{{email}}</strong> , verifique o seu email e siga as instruções para gerar uma nova senha.",
+  "navbar.link.forgot-password": "Relembrar senha",
+  "auth.forgot-password.user.not-found": "O email não está registrado no sistema.",
+  "user.change-password.title": "Alterar a senha",
+  "auth.change-password.form.password": "Senha atual",
+  "auth.change-password.form.newPassword": "Nova senha",
+  "auth.change-password.form.confirmPassword": "Digite a nova senha novamente",
+  "user.change-password.help": "Preencha os campos abaixo e clique em enviar para alterar a senha do perfil"
 }
