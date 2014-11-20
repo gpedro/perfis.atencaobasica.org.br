@@ -155,4 +155,87 @@ describe('Auth', function() {
     });
 
   })
+
+  describe('Authenticated', function() {
+    var agent;
+    // after authenticated requests login the user
+    before(function(done) {
+      agent = request.agent(sails.hooks.http.app);
+      agent.post('/auth/login')
+      .send({
+        email: user.email,
+        password: user.password
+      })
+      .end(function(err) {
+        if (err) throw err;
+        done()
+      });
+    })
+
+    describe('Change Password', function() {
+      it('POST /auth/1/change-password should return error with diferent newPassword and rNewPassword', function (done) {
+
+        agent.post('/auth/'+user.id+'/change-password')
+        .send({
+          password: user.password,
+          newPassword: 'asdadafsfasasdasd',
+          rNewPassword: 'thisIsDiferent'
+        })
+        .end(function(err, res) {
+          if (err) throw err;
+
+          assert.ok(res.body.messages);
+          assert.equal(res.body.messages.length, 1);
+          assert.equal(res.body.messages[0].rule, 'required');
+          assert.equal(res.body.messages[0].type, 'validation');
+          done()
+        });
+      });
+
+      it('POST /auth/1/change-password should return error with wrong password', function (done) {
+        agent.post('/auth/'+user.id+'/change-password')
+        .send({
+          password: 'wrong password',
+          newPassword: '12345',
+          rNewPassword: '12345'
+        })
+        .end(function(err, res) {
+          if (err) throw err;
+          assert.ok(res.body.messages);
+          assert.equal(res.body.messages.length, 1);
+          assert.equal(res.body.messages[0].rule, 'wrong');
+          assert.equal(res.body.messages[0].type, 'validation');
+          done()
+        });
+      });
+
+      it('POST /auth/1/change-password should change user password and return success', function (done) {
+
+        var newPassword = '222';
+        agent.post('/auth/'+user.id+'/change-password')
+        .send({
+          password: user.password,
+          newPassword: newPassword,
+          rNewPassword: newPassword
+        })
+        .end(function(err, res) {
+          if (err) throw err;
+
+          assert.ok(res.body.messages);
+          assert.equal(res.body.messages.length, 1);
+          assert.equal(res.body.messages[0].status, 'success');
+          assert.equal(res.body.messages[0].type, 'updated');
+
+          User.findOneById(user.id, function(err, u){
+            if (err) throw err;
+            u.verifyPassword(newPassword, function(err, isValid) {
+              if(err) throw err;
+              assert.ok(isValid);
+              done()
+            })
+          })
+        });
+      });
+    })
+  })
 });
