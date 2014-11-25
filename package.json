@@ -36,7 +36,7 @@
     "we-helpers": "^0.0.6",
     "we-oauth2": "0.0.13",
     "we-plugin": "0.0.9",
-    "we-plugin-auth": "0.0.9",
+    "we-plugin-auth": "0.0.10",
     "we-plugin-core": "0.0.14",
     "we-plugin-file": "0.0.8",
     "we-plugin-oauth-provider": "0.0.2",
