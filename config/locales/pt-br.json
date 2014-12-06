@@ -76,5 +76,7 @@
 	"user.change-password.help": "Preencha os campos abaixo e clique em enviar para alterar a senha do perfil",
 	"Reset password": "Reset password",
 	"The <strong>current password</strong> is invalid.": "The <strong>current password</strong> is invalid.",
-	"Password changed successfully.": "Password changed successfully."
+	"Password changed successfully.": "Password changed successfully.",
+	"we.email.AccontActivationEmail.subject": "we.email.AccontActivationEmail.subject",
+	"Account created but is need an email validation\n, One email was send to %s with instructions to validate your account": "Account created but is need an email validation\n, One email was send to %s with instructions to validate your account"
 }
