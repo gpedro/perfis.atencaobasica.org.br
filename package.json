@@ -1,7 +1,7 @@
 {
-  "name": "we-project-accounts",
+  "name": "perfis.atencaobasica.org.br",
   "private": true,
-  "description": "We.js project",
+  "description": "Oauth da comunidade de Práticas",
   "version": "0.0.2",
   "main": "./app.js",
   "scripts": {
@@ -41,7 +41,7 @@
     "we-plugin-oauth-provider": "0.0.3",
     "we-plugin-user": "0.0.8",
     "we-send-email": "0.0.8",
-    "we-theme-accounts-perfis": "0.0.6",
+    "we-theme-accounts-perfis": "0.0.7",
     "we-theme-admin-default": "0.0.1",
     "we-theme-engine": "0.0.15"
   },
