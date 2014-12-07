@@ -26,7 +26,7 @@
 	"navbar.link.register": "Registrar",
 	"navbar.link.login": "Autenticar",
 	"navbar.link.user.account": "Editar dados de acesso",
-	"navbar.link.user.logout": "deslogar",
+	"navbar.link.user.logout": "Sair",
 	"user.form.interests.label": "Interesses:",
 	"user.form.interests.description": "O que é interesante para você? selecione algumas opções do campo acima",
 	"user.form.competences.label": "Competencias:",
