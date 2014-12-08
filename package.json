@@ -38,7 +38,7 @@
     "we-plugin-auth": "0.0.18",
     "we-plugin-core": "0.0.15",
     "we-plugin-file": "0.0.8",
-    "we-plugin-migrate-cdp": "0.0.6",
+    "we-plugin-migrate-cdp": "0.0.7",
     "we-plugin-oauth-provider": "0.0.4",
     "we-plugin-user": "0.0.9",
     "we-send-email": "0.0.8",
