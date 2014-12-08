@@ -73,16 +73,17 @@
 	"auth.change-password.form.password": "Senha atual",
 	"auth.change-password.form.newPassword": "Nova senha",
 	"auth.change-password.form.confirmPassword": "Confirmar senha",
-	"user.new-password.help": "Preencha os campos abaixo e clique em enviar para alterar a senha do perfil",
+	"user.new-password.help": "Preencha os campos abaixo e clique em enviar para definir uma nova senha para o seu perfil",
 	"user.new-password.title": "Definir nova senha",
 	"auth.new-password.form.newPassword": "Nova senha",
 	"auth.new-password.form.confirmPassword": "Confirmar senha",
-	"user.new-password.help": "Preencha os campos abaixo e clique em enviar para definir uma nova senha para o seu perfil",	
 	"Reset password": "Reset password",
 	"The <strong>current password</strong> is invalid.": "The <strong>current password</strong> is invalid.",
 	"Password changed successfully.": "Password changed successfully.",
 	"New password set successfully": "Nova senha definida com sucesso",
 	"we.email.AccontActivationEmail.subject": "Email de validação de conta | Comunidade de Práticas",
 	"Account created but is need an email validation\n, One email was send to %s with instructions to validate your account": "Sua conta de usuário foi criada mas é necessário validar o email informado\n, Um email foi enviado para %s com instruções para finalizar a validação da conta de usuário",
-	"auth.login.user.not.active": "É necessário ativar a sua conta de usuário clicando no email de valiação, caso deseje mais informações acesse o link https://ajuda.atencaobasica.org.br/ "
+	"auth.login.user.not.active": "É necessário ativar a sua conta de usuário clicando no email de valiação, caso deseje mais informações acesse o link https://ajuda.atencaobasica.org.br/ ",
+	"navbar.link.user.change-password": "Mudar senha",
+	"user.change-password.help": " "
 }
