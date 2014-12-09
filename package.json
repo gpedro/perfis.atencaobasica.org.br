@@ -35,7 +35,7 @@
     "we-helpers": "^0.0.7",
     "we-oauth2": "0.0.15",
     "we-plugin": "0.0.13",
-    "we-plugin-auth": "0.0.25",
+    "we-plugin-auth": "0.0.26",
     "we-plugin-core": "0.0.15",
     "we-plugin-file": "0.0.8",
     "we-plugin-migrate-cdp": "0.0.11",
