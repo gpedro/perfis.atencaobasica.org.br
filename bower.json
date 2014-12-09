@@ -22,7 +22,7 @@
     "font-awesome": "~4.2.0",
     "summernote": "~0.5.10",
     "codemirror": "~4.7.0",
-    "tupi": ">=0.1.62"
+    "tupi": ">=0.1.65"
   },
   "devDependencies": {
     "jquery": "2.1.1",
