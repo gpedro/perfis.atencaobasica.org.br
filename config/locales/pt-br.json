@@ -60,9 +60,9 @@
 	"auth.register.send.email.error": "Erro ao tentar enviar o email de validação de conta, por favor entre em contato com os administradores do sistema",
 	"Password and email is required": "Senha e email são nescessários para se autenticar no sistema",
 	"User not found": "O usuário não foi encontrado",
-	"auth.login.password.wrong": "A senha ou email estão errados.",
+	"auth.login.password.wrong": "Senha inválida.",
 	"auth.login.user.get.error": "Erro ao tentar encontrar o usuário no sistema, por favor entre em contato com um administrador do sistema ou tente novamente mais tarde.",
-	"auth.login.user.not.found": "O email <strong>{{email}}</strong> não está cadastrado no sistema.",
+	"auth.login.user.not.found": "O email <strong>{{email}}</strong> não está cadastrado no sistema. <a href='https://ajuda.atencaobasica.org.br/central-de-ajuda/acessando-a-nova-cdp-como-criar-uma-nova-senha/'>Seu cadastro é antigo? Talvez seja necessário criar uma nova senha</a>",
 	"auth.register.error.cpf.ivalid": "O CFP é invalido ou já está registrado no sistema",
 	"user.forgot-password.title": "Atualizar senha",
 	"user.forgot-password.help": "Digite o seu email no campo abaixo para receber um link para trocar a senha.",
@@ -87,5 +87,6 @@
 	"Account created but is need an email validation\n, One email was send to %s with instructions to validate your account": "Sua conta de usuário foi criada mas é necessário validar o email informado\n, Um email foi enviado para %s com instruções para finalizar a validação da conta de usuário",
 	"auth.login.user.not.active": "É necessário ativar a sua conta de usuário clicando no email de valiação, caso deseje mais informações acesse o link https://ajuda.atencaobasica.org.br/ ",
 	"navbar.link.user.change-password": "Mudar senha",
-	"user.change-password.help": " "
+	"user.change-password.help": " ",
+	"updateAccountData.success": "Dados de acesso atualizados com sucesso"
 }
