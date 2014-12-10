@@ -88,5 +88,6 @@
 	"auth.login.user.not.active": "É necessário ativar a sua conta de usuário clicando no email de valiação, caso deseje mais informações acesse o link https://ajuda.atencaobasica.org.br/ ",
 	"navbar.link.user.change-password": "Mudar senha",
 	"user.change-password.help": " ",
-	"updateAccountData.success": "Dados de acesso atualizados com sucesso"
+	"updateAccountData.success": "Dados de acesso atualizados com sucesso",
+	"auth.consumeForgotPasswordToken.token.invalid": "O link ou código para alteração de senha já foi usado ou é invalido, faça o pedido de um novo link de trocar a senha ou entre em contato com o suport no email: contato@atencaobasica.org.br"
 }
