@@ -46,9 +46,25 @@ $( document ).ready(function() {
         validators: {
           notEmpty: {
             message: 'Campo email é obrigatório'
+          },
+          identical: {
+            field: 'confirmEmail',
+            message: 'O campo de email precisa ser igual ao campo de repetir email'
           }
         }
       },
+
+      confirmEmail: {
+        validators: {
+          notEmpty: {
+            message: 'Campo repetir email é obrigatório'
+          },
+          identical: {
+            field: 'email',
+            message: 'O campo de repetir email precisa ser igual ao campo de email'
+          }          
+        }
+      },      
 
       password: {
         validators: {

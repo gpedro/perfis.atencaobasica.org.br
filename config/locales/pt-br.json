@@ -7,6 +7,7 @@
 	"auth.register.form.displayName": "Seu nome de exibição",
 	"auth.register.form.username": "digite um nome único",
 	"auth.register.form.email": "Seu email",
+	"auth.register.form.confirmEmail": "Repetir email",
 	"auth.register.form.password": "Digite uma senha",
 	"auth.register.form.confirmPassword": "Repetir a senha",
 	"auth.register.form.error.unknow": "Erro desconhecido ao tentar registrar a conta de usuário, por favor tente mais tarde ",
