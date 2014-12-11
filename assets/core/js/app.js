@@ -19,11 +19,11 @@ $( document ).ready(function() {
           stringLength: {
             min: 4,
             max: 30,
-            message: 'o nome de usuário deve ter entre 4 e 30 letras'
+            message: 'o nome de usuário deve ter entre 4 e 30 letras, todas minúsculas'
           },
           regexp: {
-            regexp: /^[a-zA-Z0-9_]+$/,
-            message: 'O nome de usuário só pode ter letras, numeros e sublinhado'
+            regexp: /^[a-z0-9_]+$/,
+            message: 'O nome de usuário só pode ter letras minúsculas, numeros e sublinhado'
           },
           username: {
             message: 'O nome de usuário não está disponível'
