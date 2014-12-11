@@ -63,7 +63,7 @@
 	"auth.login.password.wrong": "Senha inválida.",
 	"auth.login.user.get.error": "Erro ao tentar encontrar o usuário no sistema, por favor entre em contato com um administrador do sistema ou tente novamente mais tarde.",
 	"auth.login.user.not.found": "O email <strong>{{email}}</strong> não está cadastrado no sistema. <a href='https://ajuda.atencaobasica.org.br/central-de-ajuda/acessando-a-nova-cdp-como-criar-uma-nova-senha/'>Seu cadastro é antigo? Talvez seja necessário criar uma nova senha</a>",
-	"auth.register.error.cpf.ivalid": "O CFP é invalido ou já está registrado no sistema",
+	"auth.register.error.cpf.ivalid": "O CPF informado é inválido ou já está cadastrado no sistema",
 	"user.forgot-password.title": "Atualizar senha",
 	"user.forgot-password.help": "Digite o seu email no campo abaixo para receber um link para trocar a senha.",
 	"auth.forgot-password.form.email": "Digite seu email aqui ...",
