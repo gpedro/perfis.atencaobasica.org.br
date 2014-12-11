@@ -24,7 +24,7 @@
 	"auth.register.form.fields.optional.title": "Informações opcionais:",
 	"navbar.link.return.network": "Ir para a rede social",
 	"navbar.link.register": "Registrar",
-	"navbar.link.login": "Autenticar",
+	"navbar.link.login": "Entrar",
 	"navbar.link.user.account": "Editar Conta",
 	"navbar.link.user.change-password": "Alterar senha",
 	"navbar.link.user.logout": "Sair",
