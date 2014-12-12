@@ -33,7 +33,7 @@
     "sget": "^0.1.5",
     "we-grunt-tasks": "0.0.9",
     "we-helpers": "^0.0.7",
-    "we-oauth2": "0.0.16",
+    "we-oauth2": "0.0.17",
     "we-plugin": "0.0.13",
     "we-plugin-auth": "0.0.29",
     "we-plugin-core": "0.0.15",
