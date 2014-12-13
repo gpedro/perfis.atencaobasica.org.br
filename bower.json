@@ -27,5 +27,8 @@
   "devDependencies": {
     "jquery": "2.1.1",
     "bootstrap": "~3.0.3"
+  },
+  "resolutions": {
+    "bootstrap": ">= 3.0.1"
   }
 }
