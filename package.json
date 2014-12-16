@@ -42,7 +42,7 @@
     "we-plugin-oauth-provider": "0.0.8",
     "we-plugin-user": "0.0.11",
     "we-send-email": "0.0.8",
-    "we-theme-accounts-perfis": "0.0.18",
+    "we-theme-accounts-perfis": "0.0.19",
     "we-theme-admin-default": "0.0.1",
     "we-theme-engine": "0.0.15"
   },
