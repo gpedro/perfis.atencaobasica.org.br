@@ -2,7 +2,7 @@
   "name": "perfis.atencaobasica.org.br",
   "private": true,
   "description": "Oauth da comunidade de Práticas",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "./app.js",
   "scripts": {
     "start": "supervisor -i .tmp/,.git/,bower_components/,views/,assets/ -w node_modules app.js ",
