@@ -5,8 +5,8 @@
  * -------------------------- */
 @font-face {
   font-family: 'icons-cdp';
-  src: url('../../icon/cdp/icons-cdp.eot?v=4.2.0');
-  src: url('../../icon/cdp/icons-cdp.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('../../icon/cdp/icons-cdp.woff?v=4.2.0') format('woff'), url('../../icon/cdp/icons-cdp.ttf?v=4.2.0') format('truetype'), url('../../icon/cdp/icons-cdp.svg?v=4.2.0#fontawesomeregular') format('svg');
+  src: url('/bower_components/tupi/icon/cdp/icons-cdp.eot?v=4.2.0');
+  src: url('/bower_components/tupi/icon/cdp/icons-cdp.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('/bower_components/tupi/icon/cdp/icons-cdp.woff?v=4.2.0') format('woff'), url('/bower_components/tupi/icon/cdp/icons-cdp.ttf?v=4.2.0') format('truetype'), url('/bower_components/tupi/icon/cdp/icons-cdp.svg?v=4.2.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal; }
 
@@ -149,6 +149,118 @@
 
 .cdp-inverse {
   color: #fff; }
+
+/*
+* CdP Icons
+*/
+/****/
+.cdp-badge:before {
+  content: "\e016"; }
+
+.cdp-bell:before {
+  content: "\e009"; }
+
+.cdp-cdp-logo:before {
+  content: "\e012"; }
+
+.cdp-chat:before {
+  content: "\e01a"; }
+
+.cdp-compass:before {
+  content: "\e011"; }
+
+.cdp-contacts:before {
+  content: "\e017"; }
+
+.cdp-edit:before {
+  content: "\e015"; }
+
+.cdp-edit-marked:before {
+  content: "\e012"; }
+
+.cdp-erase:before {
+  content: "\e00c"; }
+
+.cdp-filter:before {
+  content: "\e008"; }
+
+.cdp-graph:before {
+  content: "\e00b"; }
+
+.cdp-help:before {
+  content: "\e001"; }
+
+.cdp-link:before {
+  content: "\e00f"; }
+
+.cdp-love:before {
+  content: "\e007"; }
+
+.cdp-message:before {
+  content: "\e013"; }
+
+.cdp-mobile:before {
+  content: "\e004"; }
+
+.cdp-moon:before {
+  content: "\e003"; }
+
+.cdp-people:before {
+  content: "\e022"; }
+
+.cdp-pin:before {
+  content: "\e01d"; }
+
+.cdp-print:before {
+  content: "\e01c"; }
+
+.cdp-question:before {
+  content: "\e021"; }
+
+.cdp-load:before {
+  content: "\e010"; }
+
+.cdp-reload:before {
+  content: "\e01e"; }
+
+.cdp-services:before {
+  content: "\e000"; }
+
+.cdp-report:before {
+  content: "\e023"; }
+
+.cdp-search:before {
+  content: "\e01b"; }
+
+.cdp-settings:before {
+  content: "\e018"; }
+
+.cdp-share:before {
+  content: "\e019"; }
+
+.cdp-star-full:before {
+  content: "\e002"; }
+
+.cdp-star-open:before {
+  content: "\e005"; }
+
+.cdp-sun:before {
+  content: "\e01f"; }
+
+.cdp-time:before {
+  content: "\e00d"; }
+
+.cdp-timeline-full:before {
+  content: "\e020"; }
+
+.cdp-timeline:before {
+  content: "\e00e"; }
+
+.cdp-user:before {
+  content: "\e00a"; }
+
+.cdp-alert:before {
+  content: "\e006"; }
 
 /*
 * CdP Icons

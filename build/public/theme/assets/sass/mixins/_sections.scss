@@ -1,8 +1,0 @@
-@mixin section-list {
-  @include make-xs-column(12);
-  @include make-sm-column(8);
-  @include make-md-column(9);
-  @include make-lg-column(8);
-  float: right !important;
-  padding: 0;
-}
