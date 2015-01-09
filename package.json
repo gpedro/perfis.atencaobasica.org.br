@@ -40,10 +40,10 @@
     "we-plugin-file": "0.0.8",
     "we-plugin-migrate-cdp": "0.0.31",
     "we-plugin-oauth-provider": "0.0.8",
-    "we-plugin-user": "0.0.11",
+    "we-plugin-user": "0.0.13",
     "we-send-email": "0.0.8",
     "we-theme-accounts-perfis": "0.0.19",
-    "we-theme-admin-default": "0.0.1",
+    "we-theme-admin-default": "0.0.3",
     "we-theme-engine": "0.0.15",
     "sails-generate-role": "^0.2.4"
   },
