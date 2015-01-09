@@ -4,7 +4,7 @@ module.exports.auth = {
   isConsumer: false,
   enableLogin: true,
 
-  cookieDomain: 'localhost',
+  cookieDomain: null,
   cookieName: 'wetoken',
   cookieMaxAge: 900000,
   cookieSecure: false,

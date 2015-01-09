@@ -17,9 +17,9 @@ module.exports.policies = {
   // (`true` allows public access)
   '*':[true],
 
-  'UserController': {
-  	'*': false
-  }
+  // 'UserController': {
+  // 	'*': false
+  // }
 };
 
 
