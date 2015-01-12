@@ -29,19 +29,19 @@ module.exports.routes = {
 
   'put /user/:id':{
 		cors: {
-      origin: 'http://novo.atencaobasica.org.br/, https://novo.atencaobasica.org.br/',
+      origin: 'https://novo.atencaobasica.org.br,http://novo.atencaobasica.org.br',
    	},
   },
 
   'get /user/:id':{
 		cors: {
-      origin: 'http://novo.atencaobasica.org.br/, https://novo.atencaobasica.org.br/',
+      origin: 'https://novo.atencaobasica.org.br,http://novo.atencaobasica.org.br',
    	},
   },
 
   'get /user':{
 		cors: {
-      origin: 'http://novo.atencaobasica.org.br/, https://novo.atencaobasica.org.br/',
+      origin: 'https://novo.atencaobasica.org.br,http://novo.atencaobasica.org.br',
    	},
   }    
 }
