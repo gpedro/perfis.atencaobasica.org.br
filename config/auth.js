@@ -5,6 +5,7 @@ module.exports.auth = {
   enableLogin: true,
 
   cookieDomain: 'localhost',
+  // cookieDomain: null,
   cookieName: 'wetoken',
   cookieMaxAge: 900000,
   cookieSecure: false,
