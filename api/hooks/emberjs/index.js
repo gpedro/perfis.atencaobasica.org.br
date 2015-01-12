@@ -57,18 +57,23 @@ function parseSailsResponseToEmberResponse(req, data) {
     var model = req.options.model || req.options.controller;
 
     var dataToSend = {};
+    var preserve = false;
+
+    if (req.isAuthenticated() && req.user.isAdmin) preserve = true;  
 
     if ( _.isArray(data) ) {
       if (req.options.associations) {
       // list response
         dataToSend[model] = [];
         for (var i = data.length - 1; i >= 0; i--) {
-          dataToSend[model].push(parseSailsRecordToEmberRecord (data[i], req.options.associations, dataToSend));
+          // dataToSend[model].push(parseSailsRecordToEmberRecord (data[i], req.options.associations, dataToSend));
+          dataToSend[model].push(parseSailsRecordToEmberRecord (data[i], req.options.associations, dataToSend, preserve));
         }
       }
     } else {
     // single item response
-      dataToSend[model] = parseSailsRecordToEmberRecord (data, req.options.associations, dataToSend);
+      // dataToSend[model] = parseSailsRecordToEmberRecord (data, req.options.associations, dataToSend);
+      dataToSend[model] = parseSailsRecordToEmberRecord (data, req.options.associations, dataToSend, preserve);
     }
 
     // converts associated model list to array
@@ -103,7 +108,7 @@ function getModelName(association) {
  * @param  {object} dataToSend    object used to store fetched data
  * @return {object}               parsed record
  */
-function parseSailsRecordToEmberRecord (dataRecord, associations, dataToSend) {
+function parseSailsRecordToEmberRecord (dataRecord, associations, dataToSend, preserve) {
 
   var attribute;
   var assocModelName;
@@ -113,7 +118,8 @@ function parseSailsRecordToEmberRecord (dataRecord, associations, dataToSend) {
   // if has toJSON function
   if ( dataRecord.toJSON ) {
     // clone to remove default waterline model toJSON how removes associations from arrays
-    record = _.clone(dataRecord.toJSON());
+    // record = _.clone(dataRecord.toJSON());
+    record = _.clone(dataRecord.toJSON(preserve));
   } else {
     record = dataRecord;
   }
