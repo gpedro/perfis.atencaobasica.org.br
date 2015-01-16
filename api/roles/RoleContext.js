@@ -16,6 +16,7 @@ module.exports = {
         if (!req.isAuthenticated()) return next(['anonymous']);
 
         if (req.user.isAdmin) return next(['admin', 'authenticated']);
+        if (req.user.isModerator) return next(['moderator', 'authenticated']);
         
         var contextModel = {};
         try {

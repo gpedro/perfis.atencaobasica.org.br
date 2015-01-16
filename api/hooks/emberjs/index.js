@@ -59,7 +59,7 @@ function parseSailsResponseToEmberResponse(req, data) {
     var dataToSend = {};
     var preserve = false;
 
-    if (req.isAuthenticated() && req.user.isAdmin) preserve = true;  
+    if (req.isAuthenticated() && (req.user.isAdmin || req.user.isModerator)) preserve = true;  
 
     if ( _.isArray(data) ) {
       if (req.options.associations) {
