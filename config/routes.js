@@ -43,5 +43,11 @@ module.exports.routes = {
 		cors: {
       origin: 'https://novo.atencaobasica.org.br,http://novo.atencaobasica.org.br',
    	},
-  }    
+  },
+
+  'post /auth/auth-token':{
+    cors: {
+      origin: 'https://novo.atencaobasica.org.br,http://novo.atencaobasica.org.br',
+    },
+  }     
 }
