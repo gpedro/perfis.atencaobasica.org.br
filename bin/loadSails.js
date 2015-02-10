@@ -7,6 +7,9 @@ module.exports = function loadSails(cb){
       grunt: false,
       socket: false,
       pubsub: false
+    },
+    orm: {
+      _hookTimeout: 30000
     }
   },function(err, sails) {
   if (err) {

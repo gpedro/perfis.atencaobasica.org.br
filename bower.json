@@ -1,6 +1,6 @@
 {
-  "name": "we-project-accounts",
-  "version": "0.0.0",
+  "name": "perfis.atencaobasica.org.br",
+  "version": "0.2.0",
   "private": true,
   "ignore": [
     "**/.*",
@@ -11,8 +11,6 @@
     "tests",
     "assets/bower_components"
   ],
-  "license": "MIT",
-  "author": [],
   "dependencies": {
     "select2": "~3.5.2",
     "jquery-validation": "~1.13.0",
@@ -22,13 +20,11 @@
     "font-awesome": "~4.2.0",
     "summernote": "~0.5.10",
     "codemirror": "~4.7.0",
-    "tupi": ">=0.1.65"
+    "tupi": "^0.1.83"
   },
-  "devDependencies": {
-    "jquery": "2.1.1",
-    "bootstrap": "~3.0.3"
-  },
+  "license": "MIT",
+  "devDependencies": {},
   "resolutions": {
-    "bootstrap": ">= 3.0.1"
+    "bootstrap": "~3.3.0"
   }
 }

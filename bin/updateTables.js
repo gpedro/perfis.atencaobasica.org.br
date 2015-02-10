@@ -11,6 +11,9 @@ function init() {
     models: {
       migrate: 'alter'
     },
+    orm: {
+      _hookTimeout: 50000
+    },
     environment: 'development'
   }, doneAll);
 }

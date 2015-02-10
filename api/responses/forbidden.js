@@ -3,7 +3,7 @@
  *
  * Usage:
  * return res.forbidden('Access denied.');
- * 
+ *
  * @param {String|Object|Array} message
  *      optional message to inject into view locals or JSON response
  *
@@ -30,7 +30,7 @@ module.exports = function forbidden(message) {
 
   // If the user-agent wants a JSON response, send json
   if (req.wantsJSON) {
-    return res.json(result, result.status);
+    return res.status(result.status).json(result);
   }
 
   // Set status code and view locals

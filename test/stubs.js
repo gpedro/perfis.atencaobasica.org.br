@@ -14,9 +14,9 @@ stubs.userStub = function userStub() {
     biography:  randString + ' is a auto generated user!',
     email:  randString + '@albertosouza.net',
     password: '123',
-    cpf: chancejs.cpf(),
     displayName: 'Afro Samuray',
-    language: 'pt-br'
+    language: 'pt-br',
+    active: true
   }
 }
 
@@ -40,6 +40,11 @@ stubs.categoryStub = function categoryStub(userId, vocabularyId) {
     text: 'Educação',
     creator: userId,
     vocabulary: vocabularyId
+  },
+  {
+    text: 'Humanização',
+    creator: userId,
+    vocabulary: vocabularyId
   }]
 }
 
@@ -51,6 +56,10 @@ stubs.tagStub = function tagStub(userId) {
   {
     text: 'Educação',
     creator: userId
+  },
+  {
+    text: 'Otra tag',
+    creator: userId
   }]
 }
 
@@ -58,12 +67,12 @@ stubs.relatoperguntaStubs = function relatoperguntaStubs(userId) {
   return [{
     creator: userId,
     body: 'Qual foi a experiência desenvolvida? Sobre o que foi?',
-    'categorias':[1]
+    'categorias':[1,2]
   },
   {
     creator: userId,
     body: 'Como funciona(ou) a experiência?',
-    'categorias':[2]
+    'categorias':[2,3]
   }
   ];
 };
@@ -84,7 +93,7 @@ stubs.relatorespostaStubs = function relatorespostaStubs(userId, relatoId, pergu
   ];
 };
 
-stubs.relatoStub = function relatoStub(userId, categorias) {
+stubs.relatoStub = function relatoStub(userId, categorias, tags) {
   var relato = {
     'creator': userId,
     'published': false,
@@ -103,7 +112,48 @@ stubs.relatoStub = function relatoStub(userId, categorias) {
     relato.categorias = categorias;
   }
 
+  if (tags) {
+    relato.tags = tags;
+  }
+
   return relato;
+};
+
+stubs.groups = function groups(userId){
+  return [
+  {
+    name: chancejs.sentence({words: 3}),
+    privacity: 'public',
+    creator: userId
+  },
+  {
+    name: chancejs.sentence({words: 3}),
+    privacity: 'restrict',
+    creator: userId
+  },
+  {
+    name: chancejs.sentence({words: 3}),
+    privacity: 'hidden',
+    creator: userId
+  }
+  ];
+};
+
+stubs.group = function groupStup(userId) {
+  return {
+    name: chancejs.sentence({words: 6}),
+    description: chancejs.paragraph(),
+    type: 'group',
+    creator: userId,
+    privacity: 'public'
+  }
+}
+
+stubs.post = function(creatorId) {
+  return {
+    creator: creatorId,
+    body: chancejs.paragraph()
+  }
 }
 
 module.exports = stubs;

@@ -7,13 +7,14 @@ var Sails = require('sails');
 var themeEngine = require('we-theme-engine');
 var WP = require('we-plugin');
 var _ = require('lodash')
+var testUtils = require('./testUtils');
 
 global.DOMAIN = 'http://localhost';
 global.PORT = 1420;
 global.HOST = DOMAIN + ':' + PORT;
 
 before(function(callback) {
-  this.timeout(10000);
+  this.timeout(35000);
 
   var configs = WP.getDefaultSailsConfigForCLI();
 
@@ -28,6 +29,9 @@ before(function(callback) {
       migrate: 'drop',
       connection: 'test'
     },
+    auth: {
+      cookieDomain: null,
+    },
     port: PORT,
     environment: 'test',
     // @TODO needs suport to csrf token
@@ -37,21 +41,18 @@ before(function(callback) {
       socket: false,
       pubsub: false
     },
+    email: {
+      defaultService: 'test'
+    },
     paths: {
       'fallbackEmailTemplateFolder': __dirname + '/node_modules/wejs-theme-default/templates/email'
     },
-    session: {
-      adapter: 'memory',
-      cookie: {
-        maxAge: 60 * 24 * 60 * 60 * 1000 // 60 days
-      }
-    },
     wejs: {
       providers: {
-        wembed: 'http://wembed.wejs.org',
+        wembed: 'http://wembed.wejs.dev',
         accounts: HOST,
         api: HOST,
-        cookieDomain: HOST
+        cookieDomain: null
       }
     }
   });
@@ -61,12 +62,12 @@ before(function(callback) {
       console.error(err);
       return callback(err);
     }
+
     // here you can load fixtures, etc.
     callback(err, sails);
   });
 });
 
 after(function(done) {
-  // here you can clear fixtures, etc.
   sails.lower(done);
 });

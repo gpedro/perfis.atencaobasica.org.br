@@ -25,6 +25,9 @@ function init() {
       models: {
         migrate: 'drop'
       },
+      orm: {
+        _hookTimeout: 50000
+      },
       environment: 'development'
     },function loadSailsToDropDB(err, sails) {
     if (err) {

@@ -5,13 +5,14 @@
 module.exports.assets = {
   // css files shared in admin and app pages
   css: [
-    'bower_components/bootstrap/dist/css/bootstrap.css',
-    'bower_components/bootstrap/dist/css/bootstrap-theme.css',
-    'bower_components/select2/select2.css',
-    'bower_components/Jcrop/css/jquery.Jcrop.css',
-    'bower_components/font-awesome/css/font-awesome.css',
-    'bower_components/summernote/dist/summernote.css',
-    'bower_components/codemirror/lib/codemirror.css'
+    // 'bower_components/font-awesome/css/font-awesome.css',
+    // 'bower_components/summernote/dist/summernote.css',
+    // 'bower_components/select2/select2.css',
+    // 'bower_components/codemirror/lib/codemirror.css',
+
+    // 'bower_components/nprogress/nprogress.css',
+
+    // 'bower_components/At.js/dist/css/jquery.atwho.css',
   ],
   // user app css files only
   cssApp: [
@@ -20,35 +21,54 @@ module.exports.assets = {
     'bower_components/tupi/css/icon/tupi-icon.line.css',
     'bower_components/tupi/css/icon/tupi-icon.cdp.css'
   ],
-
   // admin pages ( /admin ) css files
-  cssAdmin: [],
-
-  js: [
-    'bower_components/jquery/dist/jquery.js',
-    'bower_components/jquery.cookie/jquery.cookie.js',
-    'bower_components/bootstrap/dist/js/bootstrap.js',
-    'bower_components/select2/select2.js',
-    'bower_components/codemirror/lib/codemirror.js',
-    'bower_components/summernote/dist/summernote.js',
-    'bower_components/jquery-validation/dist/jquery.validate.js',
-    'bower_components/bootstrapValidator/dist/js/bootstrapValidator.js',
-    'bower_components/Jcrop/js/jquery.color.js',
-    'bower_components/Jcrop/js/jquery.Jcrop.js'
+  cssAdmin: [
+    'bower_components/metisMenu/dist/metisMenu.css'
   ],
 
-  emberApp: [],
+  emberApp: [
+    'node_modules/*/client/app/beforeAll/*.js',
+    'node_modules/*/client/app/libs/*.js',
 
-  emberAdminApp: [],
+    'client/app/emberApp.js',
+
+    'node_modules/*/client/app/mixins/*.js',
+    'node_modules/*/client/app/helpers/*.js',
+    'node_modules/*/client/app/adapters/*.js',
+    'node_modules/*/client/app/routes/*.js',
+    'node_modules/*/client/app/controllers/*.js',
+    'node_modules/*/client/app/models/*.js',
+    'node_modules/*/client/app/views/*.js',
+    'node_modules/*/client/app/components/*.js',
+
+    'client/app/afterEmberFilesLoaded.js'
+  ],
+
+  emberAdminApp: [
+    'node_modules/*/client/app/beforeAll/*.js',
+    // load client libs for admin
+    'node_modules/*/client/app/libs/*.js',
+    'node_modules/*/client/appAdmin/libs/*.js',
+
+    'node_modules/*/client/appAdmin/emberApp.js',
+    'node_modules/*/client/appAdmin/mixins/*.js',
+    'node_modules/*/client/appAdmin/helpers/*.js',
+    'node_modules/*/client/appAdmin/adapters/*.js',
+    'node_modules/*/client/appAdmin/routes/*.js',
+    'node_modules/*/client/appAdmin/controllers/*.js',
+    'node_modules/*/client/appAdmin/models/*.js',
+    'node_modules/*/client/appAdmin/views/*.js',
+    // load client components
+    'node_modules/*/client/app/components/*.js',
+
+    'node_modules/*/client/appAdmin/components/*.js',
+    'node_modules/*/client/appAdmin/afterEmberFilesLoaded.js'
+  ],
 
   bowerComponentsFoldersToCopy: [
-    'bower_components/font-awesome/fonts/**',
-    'bower_components/bootstrap/dist/fonts/**/*',
-    'bower_components/bootstrap/dist/css/*',
-    'bower_components/select2/*.png',
-    'bower_components/select2/*.gif',
     'bower_components/lightbox/img/**/*',
     'bower_components/tupi/css/**/*',
     'bower_components/tupi/icon/**/*'
   ]
+
 };

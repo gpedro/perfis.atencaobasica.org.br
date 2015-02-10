@@ -60,7 +60,9 @@ testUtils.dlog = function dlog() {
   console.log(label+ds, realArgs)
 };
 
-
+testUtils.getRandomCategory = function(categories) {
+  return categories[Math.floor(Math.random()*categories.length)].id
+};
 
 /**
  * Load sails.js server with globals and memory database

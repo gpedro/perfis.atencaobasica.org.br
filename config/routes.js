@@ -21,33 +21,14 @@
  */
 
 module.exports.routes = {
-  // homepage route
-  '/': {
+  // homepage
+  'get /': {
     controller: 'main',
     action: 'index'
   },
 
-  'put /user/:id':{
-		cors: {
-      origin: 'https://novo.atencaobasica.org.br,http://novo.atencaobasica.org.br',
-   	},
-  },
-
-  'get /user/:id':{
-		cors: {
-      origin: 'https://novo.atencaobasica.org.br,http://novo.atencaobasica.org.br',
-   	},
-  },
-
-  'get /user':{
-		cors: {
-      origin: 'https://novo.atencaobasica.org.br,http://novo.atencaobasica.org.br',
-   	},
-  },
-
-  'post /auth/auth-token':{
-    cors: {
-      origin: 'https://novo.atencaobasica.org.br,http://novo.atencaobasica.org.br',
-    },
-  }     
+  'get /emberjs/app.js': {
+    controller: 'main',
+    action: 'getEmberApp'
+  }
 }

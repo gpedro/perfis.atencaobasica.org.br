@@ -11,6 +11,7 @@
  * Unless you know what you're doing, you shouldn't change this file.
  * Check out the `tasks` directory instead.
  */
+var _ = require('lodash');
 
 module.exports = function(grunt) {
 
@@ -28,6 +29,7 @@ module.exports = function(grunt) {
    * a Grunt task.
    */
   var loadTasks = weGruntTasks.loadTasks;
+  var loadProjectTask = weGruntTasks.loadSubProjectTasks;
 
   /**
    * Invokes the function from a Grunt configuration module with
@@ -44,6 +46,9 @@ module.exports = function(grunt) {
   // Load task functions
   var taskConfigurations = loadTasks('./tasks/config', grunt),
     registerDefinitions = loadTasks('./tasks/register', grunt);
+
+  taskConfigurations = _.merge(taskConfigurations, loadProjectTask('./tasks/config', grunt));
+  registerDefinitions = _.merge(registerDefinitions, loadProjectTask('./tasks/register', grunt));
 
   // (ensure that a default task exists)
   if (!registerDefinitions.default) {
