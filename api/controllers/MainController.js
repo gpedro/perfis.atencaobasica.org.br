@@ -16,7 +16,7 @@ module.exports = {
     if(req.isAuthenticated()){
       res.redirect('/user/' + req.user.id + '/edit');
     }else{
-      res.redirect('/auth/login');
+      res.redirect('login');
     }
   },
 

@@ -19,7 +19,8 @@ module.exports.assets = {
     'bower_components/tupi/css/build.css',
     'bower_components/tupi/css/icon/tupi-icon.awesome.css',
     'bower_components/tupi/css/icon/tupi-icon.line.css',
-    'bower_components/tupi/css/icon/tupi-icon.cdp.css'
+    'bower_components/tupi/css/icon/tupi-icon.cdp.css',
+    'bower_components/bootstrapValidator/src/css/bootstrapValidator.css'
   ],
   // admin pages ( /admin ) css files
   cssAdmin: [
@@ -30,16 +31,22 @@ module.exports.assets = {
     'node_modules/*/client/app/beforeAll/*.js',
     'node_modules/*/client/app/libs/*.js',
 
+    'client/app/beforeAll/*.js',
     'client/app/emberApp.js',
 
     'node_modules/*/client/app/mixins/*.js',
     'node_modules/*/client/app/helpers/*.js',
     'node_modules/*/client/app/adapters/*.js',
-    'node_modules/*/client/app/routes/*.js',
+    // 'node_modules/*/client/app/routes/*.js',
+    'node_modules/we-plugin-core/client/app/routes/*.js',
     'node_modules/*/client/app/controllers/*.js',
     'node_modules/*/client/app/models/*.js',
     'node_modules/*/client/app/views/*.js',
     'node_modules/*/client/app/components/*.js',
+
+    'client/app/controllers/*.js',
+    'client/app/routes/*.js',
+    'client/app/views/*.js',    
 
     'client/app/afterEmberFilesLoaded.js'
   ],

@@ -2,8 +2,6 @@
  * this file runs after load all app files
  */
 
-App.HomeRoute = App.ArticlesIndexRoute;
-
 // wait document ready ...
 $( document ).ready(function() {
 

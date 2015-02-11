@@ -55,6 +55,13 @@
 	"Ok": "Ok",
 	"Follow": "Seguir",
 	"follow": "seguir",
+
+	"The email address is already registered in the system": "Email já cadastrado no sistema",
+	"<strong>Email</strong> and <strong>Confirm email</strong> are different": "Os dados do <strong>Email</strong> e <strong>Repetir Email</strong> não conferem",
+	"Field <strong>Confirm new password</strong> is required": "Campo <strong>Repetir senha</strong> é necessário",
+	"Field <strong>password</strong> is required": "Campo <strong>Senha</strong> é necessário",
+	"Field <strong>Confirm email</strong> is required": "Campo <strong>Repetir email</strong> é necessário",
+	"Field <strong>email</strong> is required": "Campo <strong>Email</strong> é necessário",
 	"comments.title": "Comentários",
 	"comments.notAuthenticated": "<a href='{{loginUrl}}'>Login</a> ou <a href='{{registerUrl}}'>registre-se</a> para postar comentários",
 	"comments.empty": "",
@@ -182,6 +189,13 @@
 
   "user.forgot-password.title": "Atualizar senha",
   "user.forgot-password.help": "Digite o seu email no campo abaixo para receber um link para trocar a senha",
+  "user.new-password.title": "Definir nova senha",
+  "user.new-password.help": "Preencha os campos abaixo e clique em enviar para definir uma nova senha para o seu perfil",
+
+  "auth.new-password.form.newPassword": "Nova Senha",
+  "auth.new-password.form.confirmPassword": "Confirmar Senha",
+
+  "auth.forgot-password.email.send": "Solicitação realizada com sucesso. Verifique sua caixa de emails para realizar os próximos passos.",
 
 	"auth.register.email.label": "Seu email",
 	"auth.register.confirmEmail.label": "Repetir o email",

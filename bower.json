@@ -12,15 +12,9 @@
     "assets/bower_components"
   ],
   "dependencies": {
-    "select2": "~3.5.2",
-    "jquery-validation": "~1.13.0",
-    "bootstrapValidator": "~0.5.1",
-    "Jcrop": "~0.9.12",
-    "bootstrap": "~3.3.0",
-    "font-awesome": "~4.2.0",
-    "summernote": "~0.5.10",
-    "codemirror": "~4.7.0",
-    "tupi": "^0.1.83"
+    "tupi": "^0.1.83",
+    "bootstrapValidator": "~0.5.3",
+    "jquery.steps": "~1.1.0"
   },
   "license": "MIT",
   "devDependencies": {},
