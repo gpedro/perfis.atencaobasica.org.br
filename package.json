@@ -43,7 +43,8 @@
     "we-theme-admin-default": "0.0.4",
     "we-theme-engine": "0.0.16",
     "we-plugin-notification": "^0.2.2",
-    "we-plugin-oauth-provider": "0.0.8"
+    "we-plugin-oauth-provider": "0.0.8",
+    "we-plugin-cdp-profile": "0.2.0"
   },
   "devDependencies": {
     "grunt": "0.4.2",
