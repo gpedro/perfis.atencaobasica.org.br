@@ -14,7 +14,7 @@ module.exports = {
   index: function (req, res) {
     // index / homepage
     if(req.isAuthenticated()){
-      res.redirect('/user/' + req.user.id + '/edit');
+      res.redirect('/profile/' + req.user.id + '/edit');
     }else{
       res.redirect('login');
     }

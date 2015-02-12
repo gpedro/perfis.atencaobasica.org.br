@@ -3,6 +3,6 @@ App.HomeRoute.reopen({
     this._super();
     if ( !App.get('currentUser.id') )
       return this.transitionTo('authLogin');
-    this.transitionTo('user.edit', App.get('currentUser.id'));
+    this.transitionTo('profile.edit', App.get('currentUser.id'));
   }
 })

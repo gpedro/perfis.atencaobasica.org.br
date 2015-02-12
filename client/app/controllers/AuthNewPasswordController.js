@@ -9,16 +9,19 @@
 
     actions: {
       setNewPassword: function (){
+        NProgress.start();
+        NProgress.set(0.5);
         var _this = this;
         $.post( this.get('newPasswordURL') ,{
           newPassword: this.get('newPassword'),
           rNewPassword: this.get('rNewPassword')
         })
         .done(function(data) {
-          console.log(data);
+          NProgress.done(true);
           _this.transitionToRoute('home');
         })
         .fail(function(data) {
+          NProgress.done(true);
           if(data.responseText){
             var responseJSON = jQuery.parseJSON(data.responseText);
             console.log('responseJSON', responseJSON);

@@ -39,6 +39,7 @@ module.exports.assets = {
     'node_modules/*/client/app/adapters/*.js',
     // 'node_modules/*/client/app/routes/*.js',
     'node_modules/we-plugin-core/client/app/routes/*.js',
+    'node_modules/we-plugin-cdp-profile/client/app/routes/*.js',
     'node_modules/*/client/app/controllers/*.js',
     'node_modules/*/client/app/models/*.js',
     'node_modules/*/client/app/views/*.js',

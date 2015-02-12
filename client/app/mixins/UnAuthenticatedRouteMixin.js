@@ -6,5 +6,5 @@ App.UnAuthenticatedRouteMixin = Ember.Mixin.create({
       this.transitionTo( this.get('authenticatedRouteMixin'), App.get('currentUser.id'));
     }
   },
-  authenticatedRouteMixin: 'user.edit'
+  authenticatedRouteMixin: 'profile.edit'
 });

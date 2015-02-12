@@ -1,19 +1,20 @@
 App.AuthRegisterController.reopen({
   registerUrl: '/signup',
+  isChecked: false,
   actions: {
     register: function() {
-      alert('submit');
+      NProgress.start();
+      NProgress.set(0.5);
       var self = this;
       var user = this.get('user');
       self.set('messages',[]);
-      console.log(user);
       $.post(this.get('registerUrl'),user)
       .done(function(data) {
-        console.log('sucesso', data);
+        NProgress.done(true);
         location.href = '/';
       })
       .fail(function(data) {
-        console.log('erro', data);
+        NProgress.done(true);
         if (data.responseJSON.messages) {
           self.set('messages', data.responseJSON.messages);
         } else {

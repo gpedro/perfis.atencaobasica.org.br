@@ -14,18 +14,21 @@
     actions: {
       //Submit the modal
       login: function() {
-        alert('login');
+        NProgress.start();
+        NProgress.set(0.5);
         var _this = this;
         $.post( this.get('loginUrl') ,{
           email: this.get('email'),
           password: this.get('password')
         })
         .done(function(data) {
+          NProgress.done(true);
           if(data.id){
             location.reload();
           }
         })
         .fail(function(data) {
+          NProgress.done(true);
           if(data.responseText){
             var responseJSON = jQuery.parseJSON(data.responseText);
             console.log('responseJSON', responseJSON);

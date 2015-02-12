@@ -10,7 +10,7 @@
 
   });
 
-  App.AuthLoginRoute = Ember.Route.extend(App.UnAuthenticatedRouteMixin, {
+  App.AuthLoginRoute = Ember.Route.extend(App.ResetScrollMixin, App.UnAuthenticatedRouteMixin, {
     renderTemplate: function (){
       this.render('auth/Login');
     },
@@ -24,7 +24,7 @@
     }    
   });
 
-  App.AuthRegisterRoute = Ember.Route.extend(App.UnAuthenticatedRouteMixin, {
+  App.AuthRegisterRoute = Ember.Route.extend(App.ResetScrollMixin, App.UnAuthenticatedRouteMixin, {
     beforeModel: function (transition, queryParams) {
       this._super(transition, queryParams);
     },
@@ -42,7 +42,7 @@
     controllerName: 'AuthRegister'
   });
 
-  App.AuthForgotPasswordRoute = Ember.Route.extend(App.UnAuthenticatedRouteMixin, {
+  App.AuthForgotPasswordRoute = Ember.Route.extend(App.ResetScrollMixin, App.UnAuthenticatedRouteMixin, {
     renderTemplate: function() {
       this.render('auth/ForgotPassword');
     },
@@ -54,7 +54,7 @@
     }
   });  
 
-  App.AuthNewPasswordRoute = Ember.Route.extend(App.AuthenticatedRouteMixin, {
+  App.AuthNewPasswordRoute = Ember.Route.extend(App.ResetScrollMixin, App.AuthenticatedRouteMixin, {
     renderTemplate: function() {
       this.render('auth/NewPassword');
     },
