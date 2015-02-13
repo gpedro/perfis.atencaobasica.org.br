@@ -12,6 +12,8 @@ $( document ).ready(function() {
     }.property('App.configs.client.publicVars.blogHomeBg')
   });
 
+  // App.UserAdapter = DS.FixtureAdapter;
+
   // load we.js configs
   // TODO move ro ApplicationRoute
   we.bootstrap(function() {
