@@ -1,5 +1,6 @@
 App.AuthRegisterController.reopen({
   registerUrl: '/signup',
+  user: {},
   isChecked: false,
   actions: {
     register: function() {
@@ -8,6 +9,7 @@ App.AuthRegisterController.reopen({
       var self = this;
       var user = this.get('user');
       self.set('messages',[]);
+      console.log('user', user);
       $.post(this.get('registerUrl'),user)
       .done(function(data) {
         NProgress.done(true);
