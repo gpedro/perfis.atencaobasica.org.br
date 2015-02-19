@@ -34,7 +34,7 @@
     "we-helpers": "0.0.7",
     "we-plugin": "^0.2.2",
     "we-plugin-admin": "^0.2.0",
-    "we-plugin-auth": "^0.2.6",
+    "we-plugin-auth": "^0.2.7",
     "we-plugin-core": "^0.2.7",
     "we-plugin-file": "^0.2.1",
     "we-plugin-user": "^0.2.11",
