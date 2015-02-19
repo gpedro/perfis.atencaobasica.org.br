@@ -1,5 +1,5 @@
 App.UnknownRoute.reopen({
 	beforeModel: function () {
-		this.transitionTo('home');
+	  this.transitionTo('home');
 	}
 });
