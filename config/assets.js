@@ -37,7 +37,7 @@ module.exports.assets = {
     'node_modules/*/client/app/mixins/*.js',
     'node_modules/*/client/app/helpers/*.js',
     'node_modules/*/client/app/adapters/*.js',
-    // 'node_modules/*/client/app/routes/*.js',
+    'node_modules/*/client/app/routes/*.js',
     'node_modules/we-plugin-core/client/app/routes/*.js',
     'node_modules/we-plugin-cdp-profile/client/app/routes/*.js',
     'node_modules/*/client/app/controllers/*.js',
