@@ -30,5 +30,10 @@ module.exports.routes = {
   'get /emberjs/app.js': {
     controller: 'main',
     action: 'getEmberApp'
+  },
+
+  'get /current-user-profile': {
+    controller: 'main',
+    action: 'currentUserEditProfile'
   }
 }
