@@ -35,9 +35,9 @@ $( document ).ready(function() {
       serviceName: serviceName,
       token: we.configs.client.publicVars.authToken,
       domain: we.configs.server.providers.cookieDomain,
-      loginUrl: we.configs.server.providers.accounts+ '/auth/login',
+      loginUrl: we.configs.server.providers.accounts+ '/login',
       logoutUrl: we.configs.server.providers.accounts+ '/auth/logout',
-      register: we.configs.server.providers.accounts+ '/auth/regiter'
+      register: we.configs.server.providers.accounts+ '/signup'
     });
 
     App.advanceReadiness();
