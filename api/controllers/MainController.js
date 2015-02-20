@@ -50,5 +50,11 @@ module.exports = {
 	    res.send(emberAppFile);
 
     });
+  },
+
+  currentUserEditProfile: function(req, res) {
+    if (!req.isAuthenticated()) return res.redirect('/');
+    res.redirect('/profile/' + req.user.id + '/edit');
   }
+
 }
