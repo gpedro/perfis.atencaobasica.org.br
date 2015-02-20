@@ -1,0 +1,147 @@
+.img-caption {
+  display: inline-block;
+  position: relative;
+  margin: 10px; }
+  .img-caption img {
+    display: block;
+    max-width: 100%; }
+
+/* Show next to image: default */
+.img-caption--default::before, .img-caption--default::after {
+  position: absolute;
+  left: 100%;
+  width: 100%;
+  margin: 0 0 0 10%;
+  font-weight: 300;
+  color: #777777; }
+.img-caption--default::before {
+  content: attr(data-title);
+  top: 0;
+  height: 25%;
+  padding: 5px 30px 15px 10px;
+  font-size: 28px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+.img-caption--default::after {
+  content: attr(data-description);
+  top: 25%;
+  padding: 20px 10px 0;
+  font-size: 18px; }
+
+/* Show on hover (animate opacity) */
+.img-caption--opacity::before, .img-caption--opacity::after {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  color: #ffffff;
+  padding: 20px;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s; }
+.img-caption--opacity::before {
+  content: attr(data-title);
+  top: 0;
+  height: 30%;
+  background: #7fd049;
+  font-size: 26px;
+  font-weight: 300; }
+.img-caption--opacity::after {
+  content: attr(data-description);
+  top: 30%;
+  height: 70%;
+  background: #65b72f;
+  font-size: 16px;
+  text-align: right;
+  line-height: 1.5em; }
+.img-caption--opacity:hover::before, .img-caption--opacity:hover::after {
+  opacity: 1; }
+
+/* Slide in on hover (animate transforms) */
+.img-caption--slide {
+  overflow: hidden;
+  background: #000000; }
+  .img-caption--slide img {
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out; }
+  .img-caption--slide:hover img {
+    opacity: 0.5; }
+  .img-caption--slide:hover::after, .img-caption--slide:hover::before {
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    transform: translateY(0%); }
+  .img-caption--slide::after, .img-caption--slide::before {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    color: #ffffff;
+    z-index: 1;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    -moz-transition: -moz-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out; }
+  .img-caption--slide::after {
+    content: attr(data-title);
+    top: 0;
+    background: #7fd049;
+    font-size: 40px;
+    font-weight: 300;
+    padding: 30px;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    transform: translateY(-100%); }
+  .img-caption--slide::before {
+    content: attr(data-description);
+    top: 50%;
+    background: #65b72f;
+    font-size: 14px;
+    padding: 20px;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    transform: translateY(100%); }
+
+/* Side push (animate transforms) */
+.img-caption--push {
+  overflow: hidden;
+  background: rgba(101, 183, 47, 0.3);
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out; }
+  .img-caption--push:hover {
+    background: rgba(101, 183, 47, 0); }
+    .img-caption--push:hover img {
+      -webkit-transform: translateX(100%);
+      -moz-transform: translateX(100%);
+      transform: translateX(100%); }
+    .img-caption--push:hover::before, .img-caption--push:hover::after {
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      transform: translateX(0); }
+  .img-caption--push img {
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    -moz-transition: -moz-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out; }
+  .img-caption--push::before, .img-caption--push::after {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    background: #65b72f;
+    -webkit-transform: translateX(-30%);
+    -moz-transform: translateX(-30%);
+    transform: translateX(-30%);
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    -moz-transition: -moz-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out; }
+  .img-caption--push::before {
+    content: attr(data-title);
+    height: 30%;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 300;
+    padding: 30px; }
+  .img-caption--push::after {
+    content: attr(data-description);
+    top: 30%;
+    height: 70%;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.3em;
+    padding: 20px 30px; }

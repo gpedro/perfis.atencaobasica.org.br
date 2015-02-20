@@ -1,0 +1,375 @@
+/*
+* CdP Icons
+*/
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'icons-cdp';
+  src: url('/bower_components/tupi/icon/cdp/icons-cdp.eot?v=4.2.0');
+  src: url('/bower_components/tupi/icon/cdp/icons-cdp.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('/bower_components/tupi/icon/cdp/icons-cdp.woff?v=4.2.0') format('woff'), url('/bower_components/tupi/icon/cdp/icons-cdp.ttf?v=4.2.0') format('truetype'), url('/bower_components/tupi/icon/cdp/icons-cdp.svg?v=4.2.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+.cdp {
+  display: inline-block;
+  font: normal normal normal 14px/1 icons-cdp;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* makes the font 33% larger relative to the icon container */
+.cdp-lg {
+  font-size: 1.3333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%; }
+
+.cdp-2x {
+  font-size: 2em; }
+
+.cdp-3x {
+  font-size: 3em; }
+
+.cdp-4x {
+  font-size: 4em; }
+
+.cdp-5x {
+  font-size: 5em; }
+
+.cdp-fw {
+  width: 1.2857142857em;
+  text-align: center; }
+
+.cdp-ul {
+  padding-left: 0;
+  margin-left: 2.1428571429em;
+  list-style-type: none; }
+  .cdp-ul > li {
+    position: relative; }
+
+.cdp-li {
+  position: absolute;
+  left: -2.1428571429em;
+  width: 2.1428571429em;
+  top: 0.1428571429em;
+  text-align: center; }
+  .cdp-li.cdp-lg {
+    left: -1.8571428571em; }
+
+.cdp-border {
+  padding: 0.2em 0.25em 0.15em;
+  border: solid 0.08em #eee;
+  border-radius: 0.1em; }
+
+.pull-right {
+  float: right; }
+
+.pull-left {
+  float: left; }
+
+.cdp.pull-left {
+  margin-right: 0.3em; }
+.cdp.pull-right {
+  margin-left: 0.3em; }
+
+.cdp-spin {
+  -webkit-animation: cdp-spin 2s infinite linear;
+  animation: cdp-spin 2s infinite linear; }
+
+@-webkit-keyframes cdp-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+@keyframes cdp-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+.cdp-rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
+.cdp-rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.cdp-rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg); }
+
+.cdp-flip-horizontal {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1); }
+
+.cdp-flip-vertical {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1); }
+
+:root .cdp-rotate-90, :root .cdp-rotate-180, :root .cdp-rotate-270, :root .cdp-flip-horizontal, :root .cdp-flip-vertical {
+  filter: none; }
+
+.cdp-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle; }
+
+.cdp-stack-1x, .cdp-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center; }
+
+.cdp-stack-1x {
+  line-height: inherit; }
+
+.cdp-stack-2x {
+  font-size: 2em; }
+
+.cdp-inverse {
+  color: #fff; }
+
+/*
+* CdP Icons
+*/
+/****/
+.cdp-badge:before {
+  content: "\e016"; }
+
+.cdp-bell:before {
+  content: "\e009"; }
+
+.cdp-cdp-logo:before {
+  content: "\e012"; }
+
+.cdp-chat:before {
+  content: "\e01a"; }
+
+.cdp-compass:before {
+  content: "\e011"; }
+
+.cdp-contacts:before {
+  content: "\e017"; }
+
+.cdp-edit:before {
+  content: "\e015"; }
+
+.cdp-edit-marked:before {
+  content: "\e012"; }
+
+.cdp-erase:before {
+  content: "\e00c"; }
+
+.cdp-filter:before {
+  content: "\e008"; }
+
+.cdp-graph:before {
+  content: "\e00b"; }
+
+.cdp-help:before {
+  content: "\e001"; }
+
+.cdp-link:before {
+  content: "\e00f"; }
+
+.cdp-love:before {
+  content: "\e007"; }
+
+.cdp-message:before {
+  content: "\e013"; }
+
+.cdp-mobile:before {
+  content: "\e004"; }
+
+.cdp-moon:before {
+  content: "\e003"; }
+
+.cdp-people:before {
+  content: "\e022"; }
+
+.cdp-pin:before {
+  content: "\e01d"; }
+
+.cdp-print:before {
+  content: "\e01c"; }
+
+.cdp-question:before {
+  content: "\e021"; }
+
+.cdp-load:before {
+  content: "\e010"; }
+
+.cdp-reload:before {
+  content: "\e01e"; }
+
+.cdp-services:before {
+  content: "\e000"; }
+
+.cdp-report:before {
+  content: "\e023"; }
+
+.cdp-search:before {
+  content: "\e01b"; }
+
+.cdp-settings:before {
+  content: "\e018"; }
+
+.cdp-share:before {
+  content: "\e019"; }
+
+.cdp-star-full:before {
+  content: "\e002"; }
+
+.cdp-star-open:before {
+  content: "\e005"; }
+
+.cdp-sun:before {
+  content: "\e01f"; }
+
+.cdp-time:before {
+  content: "\e00d"; }
+
+.cdp-timeline-full:before {
+  content: "\e020"; }
+
+.cdp-timeline:before {
+  content: "\e00e"; }
+
+.cdp-user:before {
+  content: "\e00a"; }
+
+.cdp-alert:before {
+  content: "\e006"; }
+
+/*
+* CdP Icons
+*/
+/****/
+.cdp-badge:before {
+  content: "\e016"; }
+
+.cdp-bell:before {
+  content: "\e009"; }
+
+.cdp-cdp-logo:before {
+  content: "\e012"; }
+
+.cdp-chat:before {
+  content: "\e01a"; }
+
+.cdp-compass:before {
+  content: "\e011"; }
+
+.cdp-contacts:before {
+  content: "\e017"; }
+
+.cdp-edit:before {
+  content: "\e015"; }
+
+.cdp-edit-marked:before {
+  content: "\e012"; }
+
+.cdp-erase:before {
+  content: "\e00c"; }
+
+.cdp-filter:before {
+  content: "\e008"; }
+
+.cdp-graph:before {
+  content: "\e00b"; }
+
+.cdp-help:before {
+  content: "\e001"; }
+
+.cdp-link:before {
+  content: "\e00f"; }
+
+.cdp-love:before {
+  content: "\e007"; }
+
+.cdp-message:before {
+  content: "\e013"; }
+
+.cdp-mobile:before {
+  content: "\e004"; }
+
+.cdp-moon:before {
+  content: "\e003"; }
+
+.cdp-people:before {
+  content: "\e022"; }
+
+.cdp-pin:before {
+  content: "\e01d"; }
+
+.cdp-print:before {
+  content: "\e01c"; }
+
+.cdp-question:before {
+  content: "\e021"; }
+
+.cdp-load:before {
+  content: "\e010"; }
+
+.cdp-reload:before {
+  content: "\e01e"; }
+
+.cdp-services:before {
+  content: "\e000"; }
+
+.cdp-report:before {
+  content: "\e023"; }
+
+.cdp-search:before {
+  content: "\e01b"; }
+
+.cdp-settings:before {
+  content: "\e018"; }
+
+.cdp-share:before {
+  content: "\e019"; }
+
+.cdp-star-full:before {
+  content: "\e002"; }
+
+.cdp-star-open:before {
+  content: "\e005"; }
+
+.cdp-sun:before {
+  content: "\e01f"; }
+
+.cdp-time:before {
+  content: "\e00d"; }
+
+.cdp-timeline-full:before {
+  content: "\e020"; }
+
+.cdp-timeline:before {
+  content: "\e00e"; }
+
+.cdp-user:before {
+  content: "\e00a"; }
+
+.cdp-alert:before {
+  content: "\e006"; }
