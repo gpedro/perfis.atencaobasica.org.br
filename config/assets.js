@@ -16,6 +16,8 @@ module.exports.assets = {
   ],
   // user app css files only
   cssApp: [
+    'bower_components/bootstrap/dist/css/bootstrap.min.css',
+    'bower_components/bootstrap/dist/css/bootstrap-theme.min.css',
     'bower_components/tupi/css/build.css',
     'bower_components/tupi/css/icon/tupi-icon.awesome.css',
     'bower_components/tupi/css/icon/tupi-icon.line.css',

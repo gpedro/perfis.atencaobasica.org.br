@@ -14,7 +14,8 @@
   "dependencies": {
     "tupi": "^0.1.83",
     "bootstrapValidator": "~0.5.3",
-    "lodash": "~3.2.0"
+    "lodash": "~3.2.0",
+    "bootstrap": "~3.3.2"
   },
   "license": "MIT",
   "devDependencies": {},
