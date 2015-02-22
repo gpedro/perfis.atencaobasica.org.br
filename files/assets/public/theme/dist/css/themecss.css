@@ -10,7 +10,14 @@ CSS das Tabs
   padding-top: 20px;
   padding-bottom: 50px;  
 }
-
+.user-profile img.thumbnail {
+  padding: 0;
+  margin: 0;
+  line-height: auto;
+  background: transparent;
+  border: none;
+  border-radius: auto;
+}
 .tabs {
   background: #fff;
   border-radius: 3px;
@@ -805,6 +812,9 @@ input[type="date"], input[type="time"], input[type="datetime-local"], input[type
         right: 0; } }
     #header-main .main_menu-dropdown .dropdown-menu {
       margin-top: 20px;
+      position: absolute;
+      right: 0;
+      top: 35px;
       padding: 10px 25px 0 25px; }
       @media (max-width: 767px) {
         #header-main .main_menu-dropdown .dropdown-menu {
@@ -1374,4 +1384,14 @@ a.badge:hover, a.badge:focus {
     border-bottom-color: #ccc;
     border-width: 13px;
     margin-left: 3px; }
-    
+
+
+
+form .input-help {
+  font-size: 12px;
+  color: #8a8a8a;
+}
+form .input-help.error {
+  font-size: 12px;
+  color: #f00;
+}
