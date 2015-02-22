@@ -45,7 +45,7 @@
     "we-theme-engine": "0.0.16",
     "we-plugin-notification": "^0.2.2",
     "we-plugin-oauth-provider": "0.2.1",
-    "we-plugin-cdp-profile": "0.2.2",
+    "we-plugin-cdp-profile": "0.2.3",
     "we-plugin-location": "^0.2.1"
   },
   "devDependencies": {
