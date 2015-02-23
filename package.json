@@ -2,7 +2,7 @@
   "name": "perfis.atencaobasica.org.br",
   "private": true,
   "description": "Comunidade das Práticas",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "main": "./app.js",
   "scripts": {
     "start": "supervisor -i .tmp/,.git/,bower_components/,views/,assets/ -w node_modules app.js ",
@@ -37,7 +37,7 @@
     "we-plugin-auth": "0.2.10",
     "we-plugin-core": "0.2.9",
     "we-plugin-file": "0.2.2",
-    "we-plugin-user": "0.2.13",
+    "we-plugin-user": "0.2.14",
     "we-plugin-vocabulary": "0.2.1",
     "we-send-email": "0.2.1",
     "we-theme-accounts-perfis": "0.0.30",
@@ -45,7 +45,7 @@
     "we-theme-engine": "0.2.0",
     "we-plugin-notification": "0.2.2",
     "we-plugin-oauth-provider": "0.2.1",
-    "we-plugin-cdp-profile": "0.2.4",
+    "we-plugin-cdp-profile": "0.2.5",
     "we-plugin-location": "0.2.1"
   },
   "devDependencies": {
