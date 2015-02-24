@@ -1,14 +1,20 @@
 /*
 
 CSS das Tabs
-
+  
 */
-
 .user-profile{
   padding-top: 20px;
   padding-bottom: 50px;  
 }
-
+.user-profile img.thumbnail {
+  padding: 0;
+  margin: 0;
+  line-height: auto;
+  background: transparent;
+  border: none;
+  border-radius: auto;
+}
 .tabs {
   background: #fff;
   border-radius: 3px;
@@ -132,6 +138,10 @@ Fim do CSS das Tabs
 .user-profile .tabs .tab-content form .input-help {
   font-size: 12px;
   color: #8a8a8a;
+  display: inline;
+}
+.user-profile .tabs .tab-content form .required-indicator{
+  color: red;
 }
 .user-profile .tabs .tab-content h4.heading--text-sm {
   color: #8a8a8a;
