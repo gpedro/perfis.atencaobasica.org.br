@@ -60,10 +60,16 @@ module.exports.assets = {
     'node_modules/*/client/app/libs/*.js',
     'node_modules/*/client/appAdmin/libs/*.js',
 
+    'client/app/emberApp.js',
+
     'node_modules/*/client/appAdmin/emberApp.js',
+    'node_modules/*/client/app/mixins/*.js',
     'node_modules/*/client/appAdmin/mixins/*.js',
     'node_modules/*/client/appAdmin/helpers/*.js',
+
+    'node_modules/*/client/app/adapters/*.js',
     'node_modules/*/client/appAdmin/adapters/*.js',
+
     'node_modules/*/client/appAdmin/routes/*.js',
     'node_modules/*/client/appAdmin/controllers/*.js',
     'node_modules/*/client/appAdmin/models/*.js',
@@ -72,7 +78,9 @@ module.exports.assets = {
     'node_modules/*/client/app/components/*.js',
 
     'node_modules/*/client/appAdmin/components/*.js',
-    'node_modules/*/client/appAdmin/afterEmberFilesLoaded.js'
+    'node_modules/*/client/appAdmin/afterEmberFilesLoaded.js',
+
+    'client/appAdmin/afterEmberFilesLoaded.js' 
   ],
 
   bowerComponentsFoldersToCopy: [
