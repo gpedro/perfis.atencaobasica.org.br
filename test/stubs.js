@@ -16,7 +16,8 @@ stubs.userStub = function userStub() {
     password: '123',
     displayName: 'Afro Samuray',
     language: 'pt-br',
-    active: true
+    active: true,
+    cpf: '041.545.632-03'
   }
 }
 
