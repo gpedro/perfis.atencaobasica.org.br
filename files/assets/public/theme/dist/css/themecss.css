@@ -4,7 +4,7 @@ div.growlUI h1, div.growlUI h2 {
 /*
 
 CSS das Tabs
-
+  
 */
 .user-profile{
   padding-top: 20px;
@@ -143,6 +143,11 @@ Fim do CSS das Tabs
   color: #8a8a8a;
   display: inline;
 }
+
+.user-profile .tabs .tab-content form .text-field-count{
+  float: right;
+}
+
 .user-profile .tabs .tab-content form .required-indicator{
   color: red;
 }
@@ -174,6 +179,15 @@ Courses Component
 .we-courses .we-courses-table > td{
   font-size: 14px;
   color: gray;
+}
+
+/*
+
+Missing Basic Info Alert Message
+
+*/
+.missing-info-msg .alert{
+  margin-top: 22px;
 }
 /**
  * importer.less
