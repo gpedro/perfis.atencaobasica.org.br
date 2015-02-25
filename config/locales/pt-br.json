@@ -215,6 +215,7 @@
   "": "",
 
   "auth.change-password.success": "Senha alterada com sucesso",
+  "auth.change-password.reset-password": "Alteração de Senha",
 
   "auth.register.email.label": "Seu email",
   "auth.register.confirmEmail.label": "Repetir o email",
