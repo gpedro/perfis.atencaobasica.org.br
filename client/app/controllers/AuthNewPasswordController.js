@@ -14,17 +14,19 @@ App.AuthNewPasswordController.reopen({
         newPassword: newPassword,
         rNewPassword: rNewPassword
       })
-      .done(function(data) {
-        NProgress.done(true);
+      .done(function(data) {        
         self.transitionToRoute('home');
       })
-      .fail(function(data) {
-        NProgress.done(true);        
+      .fail(function(data) {                
         if (data.responseJSON.messages) {
           self.set('messages', data.responseJSON.messages);  
         } else {
           Ember.Logger.error('Unknow error on change password:', data.responseJSON);
         }        
+      })
+      .always(function (){
+        NProgress.done(true);
+        $("html, body").animate({ scrollTop: 0 });
       });
     }		
 	},

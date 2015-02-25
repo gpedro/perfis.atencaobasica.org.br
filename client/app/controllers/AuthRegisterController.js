@@ -9,19 +9,24 @@ App.AuthRegisterController.reopen({
       var self = this;
       var user = this.get('user');
       self.set('messages',[]);
-      console.log('user', user);
       $.post(this.get('registerUrl'),user)
       .done(function(data) {
-        NProgress.done(true);
-        location.href = '/';
+        if (data.messages) {
+          self.set('messages', data.messages);
+        } else {
+          Ember.Logger.info( 'Unknow success message on register: ', data );
+        }
       })
       .fail(function(data) {
-        NProgress.done(true);
         if (data.responseJSON.messages) {
           self.set('messages', data.responseJSON.messages);
         } else {
           Ember.Logger.error( 'Unknow error on register: ', data );
         }
+      })
+      .always(function (){
+        NProgress.done(true);
+        $("html, body").animate({ scrollTop: 0 });
       });
     }
   },

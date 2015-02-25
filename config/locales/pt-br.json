@@ -145,7 +145,7 @@
   "sort.label.desc": "Maior",
   "sort.label.asc": "Menor",
   "we.email.AccontActivationEmail.subject": "{{site.name}} | Email de validação de conta de usuário",
-  "Account created but is need an email validation\n, One email was send to %s with instructions to validate your account": "Account created but is need an email validation\n, One email was send to %s with instructions to validate your account",
+  "Account created but is need an email validation\n, One email was send to %s with instructions to validate your account": "A sua conta foi criada, porém é necessário uma validação por email. Um email foi enviado para você com instruções de como ativar a sua conta.",
   "contact.button.requested": "Aguardando",
   "contact.button.requestsToYou": "Aceitar contato",
   "contact.button.accepted": "Contato",
