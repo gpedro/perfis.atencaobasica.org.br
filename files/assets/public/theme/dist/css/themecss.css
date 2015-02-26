@@ -226,25 +226,61 @@ body {
   font-family: "Open Sans",sans-serif;
   font-size: 1.428571429;
 }
-.auth-form .form-group input[type="text"].form-control,
-.auth-form .form-group input[type="email"].form-control,
-.auth-form .form-group input[type="password"].form-control {
+.form-control {
+  display: block;
+  width: 100%;
+  height: 36px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555555;
+  background-color: #eeeeee;
+  background-image: none;
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+  -webkit-transition: border-color ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s;
+}
+.form-control:focus {
+  border-color: #eeeeee;
+  outline: 0;
   box-shadow: none;
-  background: #f2f2f2;
-  border: none;
+}
+.form-control::-moz-placeholder {
+  color: #777777;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #777777;
+}
+.form-control::-webkit-input-placeholder {
+  color: #777777;
+}
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  cursor: not-allowed;
+  background-color: #777777;
+  opacity: 1;
 }
 .auth-form .input-group label {
-  background: #f2f2f2;
+  background: #eeeeee;
   border: none;
 }
 .auth-form .input-group label i.line {
   font-size: 1.5em;
   color: #333;
 }
-.auth-form .form-group .submit {
-  padding: 10px 20px;
-  font-size: 16px;
+.auth-form .input-group.has-success .form-control,
+.auth-form .input-group.has-error .form-control {
+  border: none;
 }
+.has-error .form-control:focus,
+.has-success .form-control:focus {
+  box-shadow: none;
+}
+.auth-form .form-group .submit {}
 .auth-form {
   border-radius: 5px;
   background: #fff;
