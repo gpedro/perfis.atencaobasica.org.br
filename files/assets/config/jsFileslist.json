@@ -35,6 +35,7 @@
   "public/plugin/we-plugin-auth/app/mixins/App.LoggedInMixin.js",
   "public/plugin/we-plugin-auth/app/mixins/AuthenticatedRouteMixin.js",
   "public/plugin/we-plugin-auth/app/mixins/UnAuthenticatedRouteMixin.js",
+  "public/plugin/we-plugin-cdp-profile/app/mixins/AccountMixin.js",
   "public/plugin/we-plugin-cdp-profile/app/mixins/BasicInvalidMixin.js",
   "public/plugin/we-plugin-cdp-profile/app/mixins/CheckProfileRouteMixin.js",
   "public/plugin/we-plugin-cdp-profile/app/mixins/MoreAboutYouMixin.js",
