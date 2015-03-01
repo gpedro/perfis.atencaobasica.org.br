@@ -6,7 +6,7 @@
 var Sails = require('sails');
 var themeEngine = require('we-theme-engine');
 var WP = require('we-plugin');
-var _ = require('lodash')
+var _ = require('lodash');
 var testUtils = require('./testUtils');
 
 global.DOMAIN = 'http://localhost';

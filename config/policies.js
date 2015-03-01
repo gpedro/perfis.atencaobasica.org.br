@@ -5,6 +5,18 @@ module.exports.policies = {
 }
 
 function defaultPolicy(req, res, next) {
+
+  if (!req.isAuthenticated() || !req.user.isAdmin) {
+    if (req.options && req.options.action) {
+      if (req.options.action == 'find' || req.options.action == 'findOne') {
+        if( req.param('email') || req.param('cpf')) {
+          sails.log.warn('Only admins can search users by cpf | TODO change to check if user can update with acl:', req.param('email'), req.param('cpf'));
+          return res.forbidden();  
+        }
+      }
+    }
+  }
+
   if (!req.options) return next();
   req._sails.acl.canPolicy(req, function(err, can) {
     if(err) return res.serverError(err);
