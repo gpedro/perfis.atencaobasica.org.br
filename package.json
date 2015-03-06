@@ -34,8 +34,8 @@
     "we-helpers": "0.0.7",
     "we-plugin": "0.2.3",
     "we-plugin-admin": "0.2.1",
-    "we-plugin-auth": "0.2.11",
-    "we-plugin-core": "0.2.15",
+    "we-plugin-auth": "0.2.13",
+    "we-plugin-core": "0.2.19",
     "we-plugin-file": "0.2.2",
     "we-plugin-user": "0.2.16",
     "we-plugin-vocabulary": "0.2.1",
@@ -45,7 +45,7 @@
     "we-theme-engine": "0.2.0",
     "we-plugin-notification": "0.2.3",
     "we-plugin-oauth-provider": "0.2.3",
-    "we-plugin-cdp-profile": "0.2.10",
+    "we-plugin-cdp-profile": "0.2.11",
     "we-plugin-location": "0.2.1"
   },
   "devDependencies": {

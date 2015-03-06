@@ -98,6 +98,8 @@
   "public/plugin/we-plugin-core/app/components/App.AutoExpandingTextAreaComponent.js",
   "public/plugin/we-plugin-core/app/components/App.FocusTextAreaComponent.js",
   "public/plugin/we-plugin-core/app/components/App.WeTootipComponent.js",
+  "public/plugin/we-plugin-core/app/components/CountableInputComponent.js",
+  "public/plugin/we-plugin-core/app/components/CountableTextareaComponent.js",
   "public/plugin/we-plugin-core/app/components/DateFieldComponent.js",
   "public/plugin/we-plugin-core/app/components/FocusInputComponent.js",
   "public/plugin/we-plugin-core/app/components/WeAnchorFocusComponent.js",
