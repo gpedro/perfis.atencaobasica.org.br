@@ -35,5 +35,11 @@ module.exports.routes = {
   'get /current-user-profile': {
     controller: 'main',
     action: 'currentUserEditProfile'
+  },
+
+  // dev test routes
+  'get /test/testSendAccountValidationEmail': {
+    controller: 'main',
+    action: 'testSendAccountValidationEmail'
   }
 }
