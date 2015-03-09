@@ -41,5 +41,33 @@ module.exports.routes = {
   'get /test/testSendAccountValidationEmail': {
     controller: 'main',
     action: 'testSendAccountValidationEmail'
+  },
+
+  'get /test/testAuthChangePasswordEmail': {
+    controller: 'main',
+    action: 'testAuthChangePasswordEmail'
+  },
+
+  'get /test/testAuthResetPasswordEmail': {
+    controller: 'main',
+    action: 'testAuthResetPasswordEmail'
+  },
+  'get /test/testMembershipInviteEmail': {
+    controller: 'main',
+    action: 'testMembershipInviteEmail'
+  },
+  'get /test/testRelatoInviteEmail': {
+    controller: 'main',
+    action: 'testRelatoInviteEmail'
+  }, 
+
+  'get /test/testRelatoInviteNewUserEmail': {
+    controller: 'main',
+    action: 'testRelatoInviteNewUserEmail'
+  },
+
+  'get /test/testuserNotifications': {
+    controller: 'main',
+    action: 'testuserNotifications'
   }
 }
