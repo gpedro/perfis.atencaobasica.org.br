@@ -130,6 +130,22 @@ The script will ask you if you want to create an user, type 'y' to confirm and h
 
 3 - Take the email and password provided on the step above and login in the drop down menu on the navbar
 
+## Como testar o envio dos templates de email
+
+- Atualizar os projetos do perfis.atencaobasica.org.br e we-theme-accounts.perfis
+- Instalar o postfix no chrome
+- Configurar o defaultService no local.js para usar o Mandrill e configurar o email e chave de acesso do mandrill
+- Alterar o hostname no local.js para https://perfis.atencaobasica.org.br
+- usar o postfix para acessar algumas das rotas abaixo trocar [seu email] pelo email que vai receber a mensagem e [seu host] pelo seu host:
+
+>  [seu host]/test/testSendAccountValidationEmail?email=[seu email]
+>  [seu host]/test/testAuthChangePasswordEmail?email=[seu email]
+>  [seu host]/test/testAuthResetPasswordEmail?email=[seu email]
+>  [seu host]/test/testMembershipInviteEmail?email=[seu email]
+>  [seu host]/test/testRelatoInviteEmail?email=[seu email]
+>  [seu host]/test/testRelatoInviteNewUserEmail?email=[seu email]
+>  [seu host]/test/testuserNotifications?email=[seu email]
+
 ## Credits
 
 team and contributors
