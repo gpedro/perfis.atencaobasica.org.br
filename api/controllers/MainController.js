@@ -69,29 +69,30 @@ module.exports = {
 
     var email = req.param('email');
 
+    if (!email) return res.status(400).send('adicione o email na url para testar ?email=[eu email]');
+    var user  =  {
+      displayName: 'Afro Samuray',
+      username: 'afrosamuray',
+      email: email
+    };
+
     var sendAccontActivationEmail = require(sails.config.appPath + '/node_modules/we-plugin-auth/lib/email/accontActivationEmail.js');
 
-    var user = sails.models.user.findOne(51144)
-    .exec(function (err, user) {
-      if (err) return res.serverError(err);
-      if (email) user.email = email;
+    return sendAccontActivationEmail(user, 'https://perfis.atencaobasica.org.br', sails, function(err) {
+      if(err) {
+        sails.log.error('Action:Login sendAccontActivationEmail:',err);
+        return res.serverError('Error on send activation email for new user', user);
+      }
 
-      return sendAccontActivationEmail(user, 'https://perfis.atencaobasica.org.br', sails, function(err) {
-        if(err) {
-          sails.log.error('Action:Login sendAccontActivationEmail:',err);
-          return res.serverError('Error on send activation email for new user', user);
-        }
-
-        res.send('201',{
-          messages: [
-            {
-              status: 'warning',
-              message: 'Mandei o email para:' + user.email
-            }
-          ]
-        });
-
+      res.send('201',{
+        messages: [
+          {
+            status: 'warning',
+            message: 'Mandei o email para:' + user.email
+          }
+        ]
       });
+
     })
   },
 
