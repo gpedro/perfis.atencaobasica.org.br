@@ -285,7 +285,10 @@ module.exports = {
         name: appName,
         url: sails.config.hostname
       },
-      inviteUrl: 'https://perfis.atencaobasica.org.br'
+      inviteUrl: 'https://perfis.atencaobasica.org.br',
+      group: {
+         name: 'Grupo Legal'
+      }
     };
 
     sails.email.sendEmail(options, 'MembershipInviteEmail', templateVariables, function(err , emailResp){
