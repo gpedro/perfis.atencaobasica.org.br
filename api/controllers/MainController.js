@@ -102,116 +102,51 @@ module.exports = {
     if (sails.config.environment == 'production') return res.notFound();
 
     var email = req.param('email');
+    if (!email) return res.status(400).send('adicione o email na url para testar ?email=[eu email]');
+
+    var user  =  {
+      displayName: 'Afro Samuray',
+      username: 'afrosamuray',
+      email: email
+    };
 
     var sendAccontActivationEmail = require(sails.config.appPath + '/node_modules/we-plugin-auth/lib/email/accontActivationEmail.js');
 
-    var user = sails.models.user.findOne(51144)
-    .exec(function (err, user) {
-      if (err) return res.serverError(err);
-      if (email) user.email = email;
+    var options = {
+      email: user.email,
+      subject: req._sails.config.appName + ' - ' + req.__('auth.change-password.reset-password'),
+      from: req._sails.config.email.siteEmail
+    };
 
-      var options = {
-        email: user.email,
-        subject: req._sails.config.appName + ' - ' + req.__('auth.change-password.reset-password'),
-        from: req._sails.config.email.siteEmail
-      };
+    var templateVariables = {
+      user: {
+        name: user.username,
+        displayName: user.displayName
+      },
+      site: {
+        name: req._sails.config.appName,
+        url: sails.config.hostname
+      }
+    };  
 
-      user = user.toJSON();
-
-      if (!user.displayName) {
-        user.displayName = user.username;
+    sails.email.sendEmail(options, 'AuthChangePasswordEmail', templateVariables, function(err , emailResp){
+      if (err) {
+        sails.log.error('Error on send email AuthChangePasswordEmail', err, emailResp);
       }
 
-      var templateVariables = {
-        user: {
-          name: user.username,
-          displayName: user.displayName
-        },
-        site: {
-          name: req._sails.config.appName,
-          url: sails.config.hostname
-        }
-      };  
+      res.locals.messages = [{
+        status: 'success',
+        type: 'updated',
+        message: req.__('auth.change-password.success')
+      }];
 
-      sails.email.sendEmail(options, 'AuthChangePasswordEmail', templateVariables, function(err , emailResp){
-        if (err) {
-          sails.log.error('Error on send email AuthChangePasswordEmail', err, emailResp);
-        }
+      sails.log.info('AuthChangePasswordEmail: Email resp:', emailResp);
 
-        res.locals.messages = [{
-          status: 'success',
-          type: 'updated',
-          message: req.__('auth.change-password.success')
-        }];
-
-        sails.log.info('AuthChangePasswordEmail: Email resp:', emailResp);
-
-        if (req.wantsJSON) {
-          return res.send('200',{ messages: res.locals.messages });
-        }
-        return sails.controllers.auth.changePasswordPage(req, res, next);
-
-      });
-
-    })
-
-
-  },
-
-  testAuthResetPasswordEmail: function (req, res) {
-    var sails = req._sails;
-
-    if (sails.config.environment == 'production') return res.notFound();
-
-    var email = req.param('email');
-
-    var user = sails.models.user.findOne(51144)
-    .exec(function (err, user) {
-      if (err) return res.serverError(err);
-      if (email) user.email = email;
-
-      var appName = req._sails.config.appName;
-
-      var options = {
-        email: user.email,
-        subject: appName + ' - ' + req.__('auth.forgot-password.reset-password'),
-        from: req._sails.config.email.siteEmail
-      };
-
-      user = user.toJSON();
-
-      if (!user.displayName) {
-        user.displayName = user.username;
+      if (req.wantsJSON) {
+        return res.send('200',{ messages: res.locals.messages });
       }
+      return sails.controllers.auth.changePasswordPage(req, res, next);
 
-      var templateVariables = {
-        user: {
-          name: user.username,
-          displayName: user.displayName
-        },
-        site: {
-          name: appName,
-          slogan: 'MIMI one slogan here',
-          url: sails.config.hostname
-        },
-        resetPasswordUrl: 'https://perfis.atencaobasica.org.br'
-      };
-
-      sails.email.sendEmail(options, 'AuthResetPasswordEmail', templateVariables, function(err , emailResp){
-        if (err) {
-          sails.log.error('Error on send email AuthResetPasswordEmail', err, emailResp);
-        }
-
-        sails.log.info('AuthResetPasswordEmail: Email resp:', emailResp);
-        
-        res.send({
-          success: [{
-            type: 'email_send',
-            status: 'success',
-            message: 'Enviei um email para :' + options.email
-          }]
-        });
-      });
     });
   },
 
@@ -221,54 +156,103 @@ module.exports = {
     if (sails.config.environment == 'production') return res.notFound();
 
     var email = req.param('email');
+    if (!email) return res.status(400).send('adicione o email na url para testar ?email=[eu email]');
 
-    var user = sails.models.user.findOne(51144)
-    .exec(function (err, user) {
-      if (err) return res.serverError(err);
-      if (email) user.email = email;
+    var user  =  {
+      displayName: 'Afro Samuray',
+      username: 'afrosamuray',
+      email: email
+    };
 
-      var appName = req._sails.config.appName;
+    var appName = req._sails.config.appName;
 
-      var options = {
-        email: user.email,
-        subject: appName + ' - ' + req.__('auth.forgot-password.reset-password'),
-        from: req._sails.config.email.siteEmail
-      };
+    var options = {
+      email: user.email,
+      subject: appName + ' - ' + req.__('auth.forgot-password.reset-password'),
+      from: req._sails.config.email.siteEmail
+    };
 
-      user = user.toJSON();
+    var templateVariables = {
+      user: {
+        name: user.username,
+        displayName: user.displayName
+      },
+      site: {
+        name: appName,
+        slogan: 'MIMI one slogan here',
+        url: sails.config.hostname
+      },
+      resetPasswordUrl: 'https://perfis.atencaobasica.org.br'
+    };
 
-      if (!user.displayName) {
-        user.displayName = user.username;
+    sails.email.sendEmail(options, 'AuthResetPasswordEmail', templateVariables, function(err , emailResp){
+      if (err) {
+        sails.log.error('Error on send email AuthResetPasswordEmail', err, emailResp);
       }
 
-      var templateVariables = {
-        user: {
-          name: user.username,
-          displayName: user.displayName
-        },
-        site: {
-          name: appName,
-          slogan: 'MIMI one slogan here',
-          url: sails.config.hostname
-        },
-        resetPasswordUrl: 'https://perfis.atencaobasica.org.br'
-      };
-
-      sails.email.sendEmail(options, 'AuthResetPasswordEmail', templateVariables, function(err , emailResp){
-        if (err) {
-          sails.log.error('Error on send email AuthResetPasswordEmail', err, emailResp);
-        }
-
-        sails.log.info('AuthResetPasswordEmail: Email resp:', emailResp);
-        
-        res.send({
-          success: [{
-            type: 'email_send',
-            status: 'success',
-            message: 'Enviei um email para :' + options.email
-          }]
-        });
+      sails.log.info('AuthResetPasswordEmail: Email resp:', emailResp);
+      
+      res.send({
+        success: [{
+          type: 'email_send',
+          status: 'success',
+          message: 'Enviei um email para :' + options.email
+        }]
       });
+ 
+    });
+  },
+
+  testAuthResetPasswordEmail: function (req, res) {
+    var sails = req._sails;
+
+    if (sails.config.environment == 'production') return res.notFound();
+
+    var email = req.param('email');
+    if (!email) return res.status(400).send('adicione o email na url para testar ?email=[eu email]');
+
+    var user  =  {
+      displayName: 'Afro Samuray',
+      username: 'afrosamuray',
+      email: email
+    };
+
+    var appName = req._sails.config.appName;
+
+    var options = {
+      email: user.email,
+      subject: appName + ' - ' + req.__('auth.forgot-password.reset-password'),
+      from: req._sails.config.email.siteEmail
+    };
+
+    var templateVariables = {
+      user: {
+        name: user.username,
+        displayName: user.displayName
+      },
+      site: {
+        name: appName,
+        slogan: 'MIMI one slogan here',
+        url: sails.config.hostname
+      },
+      resetPasswordUrl: 'https://perfis.atencaobasica.org.br'
+    };
+
+    sails.email.sendEmail(options, 'AuthResetPasswordEmail', templateVariables, function(err , emailResp){
+      if (err) {
+        sails.log.error('Error on send email AuthResetPasswordEmail', err, emailResp);
+      }
+
+      sails.log.info('AuthResetPasswordEmail: Email resp:', emailResp);
+      
+      res.send({
+        success: [{
+          type: 'email_send',
+          status: 'success',
+          message: 'Enviei um email para :' + options.email
+        }]
+      });
+ 
     });
   },
 
