@@ -73,14 +73,16 @@ module.exports = {
     var user  =  {
       displayName: 'Afro Samuray',
       username: 'afrosamuray',
-      email: email
+      email: email,
+      id: 1,
+      userId: 1
     };
 
     var sendAccontActivationEmail = require(sails.config.appPath + '/node_modules/we-plugin-auth/lib/email/accontActivationEmail.js');
 
     return sendAccontActivationEmail(user, 'https://perfis.atencaobasica.org.br', sails, function(err) {
       if(err) {
-        sails.log.error('Action:Login sendAccontActivationEmail:',err);
+        sails.log.error('Action:Login sendAccontActivationEmail:',err, user);
         return res.serverError('Error on send activation email for new user', user);
       }
 
