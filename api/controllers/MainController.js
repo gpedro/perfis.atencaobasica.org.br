@@ -263,6 +263,8 @@ module.exports = {
     var sails = req._sails;
     if (sails.config.environment == 'production') return res.notFound();
 
+    var appName = req._sails.config.appName;
+
     var email = req.param('email');
 
     if (!email) email = 'contato@albertosouza.net';
