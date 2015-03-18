@@ -41,7 +41,7 @@
     "we-plugin-file": "0.2.2",
     "we-plugin-location": "0.2.1",
     "we-plugin-notification": "0.2.3",
-    "we-plugin-oauth-provider": "0.2.3",
+    "we-plugin-oauth-provider": "0.2.4",
     "we-plugin-user": "0.2.18",
     "we-plugin-vocabulary": "0.2.1",
     "we-send-email": "0.2.3",
