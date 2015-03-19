@@ -30,9 +30,10 @@ CSS das Tabs
   font-size: 0;
 }
 .tabs .tabs-controller li {
-  display: inline-block;
   list-style: none;
-  width: 25%;
+  /*width: 25%;*/
+  display: inline-block;
+  width: 50%;
 }
 .tabs .tabs-controller h4.tab-controller {
   margin: 0;
@@ -43,6 +44,10 @@ CSS das Tabs
   text-align: center;
   padding: 20px 10px;
   border-right: 1px solid #c38926;
+  border-bottom: 1px solid #c38926;
+}
+.tabs .tabs-controller li:nth-child(2n+0) h4.tab-controller {
+  border-right: none;
 }
 .tabs .tabs-controller h4.tab-controller:hover {
   background: #f9b13d;
@@ -74,6 +79,9 @@ Fim do CSS das Tabs
   width: 50%;
 }
 
+.we-courses {
+  overflow: auto;
+}
 .table-form {
   border-bottom: 2px solid #444;
 }
@@ -81,11 +89,19 @@ Fim do CSS das Tabs
   border-bottom: 3px solid #444;
 }
 .table-form thead tr th {
-  font-size: 18px;
+  /*font-size: 18px;*/
+  font-size:  12px;
   color: #454545;
   font-weight: bold;
   padding: 10px 0 20px 0;
   width: 25%;
+  white-space: nowrap;
+}
+.table-form tbody tr {
+  border-bottom: 1px solid #e1e1e1;
+}
+.table-form tbody tr:last-child {
+  border-bottom: none;
 }
 .table-form tbody tr td {
   padding: 35px 5px;
@@ -109,7 +125,7 @@ Fim do CSS das Tabs
   margin-top: 20px;
 }
 .block-up-picture .content .user-picture {
-  width: 215px;
+  max-width: 215px;
   height: auto;
   border-radius: 50%;
   margin: auto;
@@ -202,4 +218,22 @@ We-Avatar-Modal-Component
 
 .jcrop-keymgr {
   opacity: 0;
+}
+
+@media (min-width: 992px) { 
+  .tabs .tabs-controller li {
+    width: 25%;
+  }
+  .tabs .tabs-controller h4.tab-controller {
+    border-bottom: none;
+  }
+  .tabs .tabs-controller li:nth-child(2n+0) h4.tab-controller {
+    border-right: 1px solid #c38926;
+  }
+  .tabs .tabs-controller li:last-child h4.tab-controller {
+    border-right: none;
+  }
+  .table-form thead tr th {
+    font-size: 18px;
+  }
 }
