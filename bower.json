@@ -12,7 +12,7 @@
     "assets/bower_components"
   ],
   "dependencies": {
-    "tupi": "^0.1.83",
+    "tupi": "^0.1.85",
     "bootstrapValidator": "~0.5.3",
     "lodash": "~3.2.0",
     "bootstrap": "~3.3.2"

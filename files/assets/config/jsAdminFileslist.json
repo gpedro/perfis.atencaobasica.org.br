@@ -76,6 +76,8 @@
   "public/plugin/we-plugin-core/appAdmin/controllers/PermissionsController.js",
   "public/plugin/we-plugin-core/appAdmin/controllers/RegionController.js",
   "public/plugin/we-plugin-core/appAdmin/controllers/RegionsListController.js",
+  "public/plugin/we-plugin-core/appAdmin/controllers/RolesController.js",
+  "public/plugin/we-plugin-core/appAdmin/controllers/RolesCreateController.js",
   "public/plugin/we-plugin-user/appAdmin/controllers/UserEditController.js",
   "public/plugin/we-plugin-user/appAdmin/controllers/UserIndexController.js",
   "public/plugin/we-plugin-vocabulary/appAdmin/controllers/VocabularyCreateController.js",

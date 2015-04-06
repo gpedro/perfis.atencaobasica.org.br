@@ -1,6 +1,11 @@
 
 module.exports.clientside = {
   publicVars: {
+    links: {
+      timeline: 'https://cursos.atencaobasica.org.br',
+      redeSocial: 'https://hnovo.atencaobasica.org.br/'
+    },
+
     menus: {
       // your app main menu
       main: {

@@ -53,8 +53,8 @@ body {
 .form-control[readonly],
 fieldset[disabled] .form-control {
   cursor: not-allowed;
-  background-color: #777777;
-  opacity: 1;
+  background-color: #e1e1e1;
+  opacity: 0.8;
 }
 .auth-form .input-group label {
   background: #eeeeee;
@@ -177,8 +177,8 @@ fieldset[disabled] .form-control {
     color: #777777; }
   .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
     cursor: not-allowed;
-    background-color: #777777;
-    opacity: 1; }
+    background-color: #e1e1e1;
+    opacity: 0.8; }
 
 textarea.form-control {
   height: auto; }
@@ -1253,4 +1253,68 @@ form .input-help {
 form .input-help.error {
   font-size: 12px;
   color: #f00;
+}
+
+
+
+.cdp_http_responses_error {
+  overflow: hidden;
+  width: 100%;
+  height: 650px;
+  text-align: center;
+  background: #000;
+  position: relative;
+}
+.cdp_http_responses_error .video {
+  width: 100%;
+}
+.cdp_http_responses_error .mascara {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.3);
+}
+
+.cdp_http_responses_error .msg {
+  z-index: 3;
+  position: absolute;
+  background: rgba(255,255,255,0.8);
+  border-radius: 3px;
+  padding: 20px;
+  width: 300px;
+  height: 240px;
+  left: 50%;
+  top: 50%;
+  margin: -140px 0 0 -170px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5)
+}
+
+.cdp_http_responses_error .msg h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 82px;
+  color: #237db9;
+  line-height: 1em;
+}
+.cdp_http_responses_error .msg h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  color: #717173;
+}
+.cdp_http_responses_error .msg p {
+  font-size: 14px;
+  color: #000;
+  line-height: 1.5em;
+  margin: 10px 0;
+}
+
+.cdp_http_responses_error  a.back {
+  color: #247DB5;
+  font-weight: bold;
+  font-size: 14px;
 }

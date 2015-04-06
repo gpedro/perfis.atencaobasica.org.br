@@ -20,6 +20,10 @@ module.exports = function (sails) {
             req.setLocale(sails.config.i18n.defaultLocale);
           }
 
+          if (!res.locals.metadata) {
+            res.locals.metadata = {};
+          }
+
           next();
         }
       }
