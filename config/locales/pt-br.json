@@ -205,6 +205,8 @@
   "auth.new-password.form.newPassword": "Nova Senha",
   "auth.new-password.form.confirmPassword": "Confirmar Senha",
 
+  "auth.new-password.success": "Nova senha definida com sucesso",
+
   "auth.forgot-password.field.email.required": "Campo <strong>Email</strong> é necessário para gerar um email de resetar senha",
   "auth.forgot-password.email.send": "Solicitação realizada com sucesso. Verifique sua caixa de emails para realizar os próximos passos.",
 

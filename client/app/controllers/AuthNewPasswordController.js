@@ -14,10 +14,17 @@ App.AuthNewPasswordController.reopen({
         newPassword: newPassword,
         rNewPassword: rNewPassword
       })
-      .done(function(data) {        
-        self.transitionToRoute('home');
+      .done(function(data) {
+        if (data && data.messages) {
+          self.set('messages', data.messages);
+        } else {
+          Ember.Logger.info('Unknown success message:', data.responseJSON);
+        }
+        setTimeout(function (){
+          self.transitionToRoute('home');
+        }, 3000);        
       })
-      .fail(function(data) {                
+      .fail(function(data) {
         if (data.responseJSON.messages) {
           self.set('messages', data.responseJSON.messages);  
         } else {
