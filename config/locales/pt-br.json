@@ -227,6 +227,7 @@
   "auth.register.password.label": "Digite uma senha",
   "auth.register.confirmPassword.label": "Repetir a senha",
   "auth.register.language.label": "Linguagem",
+  "auth.validation.unique": "Um registro com esse `{{fieldName}}` já existe: `{{value}}`.",
 
   "admin.permissions.title": "Permissões de acesso",
   "admin.create.role": "Criar perfil",
