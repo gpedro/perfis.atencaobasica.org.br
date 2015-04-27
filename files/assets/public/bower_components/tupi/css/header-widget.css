@@ -1328,7 +1328,7 @@ output {
   line-height: 1.428571429;
   color: #555555; }
 
-.form-control {
+.form-control, .note-editor {
   display: block;
   width: 100%;
   height: 36px;
@@ -1340,23 +1340,47 @@ output {
   background-image: none;
   border: 1px solid #eeeeee;
   border-radius: 4px; }
-  .form-control:focus {
+  .form-control:focus, .note-editor:focus {
     border-color: #eeeeee;
     outline: 0; }
-  .form-control::-moz-placeholder {
+  .form-control::-moz-placeholder, .note-editor::-moz-placeholder {
     color: #777777;
     opacity: 1; }
-  .form-control:-ms-input-placeholder {
+  .form-control:-ms-input-placeholder, .note-editor:-ms-input-placeholder {
     color: #777777; }
-  .form-control::-webkit-input-placeholder {
+  .form-control::-webkit-input-placeholder, .note-editor::-webkit-input-placeholder {
     color: #777777; }
-  .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+  .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control, .note-editor[disabled], .note-editor[readonly], fieldset[disabled] .note-editor {
     cursor: not-allowed;
-    background-color: #777777;
-    opacity: 1; }
+    background-color: #e1e1e1;
+    opacity: 0.8; }
 
-textarea.form-control {
-  height: auto; }
+.note-editor {
+  height: auto;
+  width: auto;
+  position: relative;
+  padding-top: 90px; }
+  .note-editor .note-toolbar {
+    border: none;
+    background: #e1e1e1;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0; }
+    .note-editor .note-toolbar button.btn.btn-default {
+      background: transparent;
+      margin-left: 9px !important; }
+
+@media (min-width: 735px) {
+  .note-editor {
+    padding-top: 50px; }
+ }
+
+.comment-form .user-avatar-area {
+  position: relative;
+  z-index: 5; }
 
 input[type="search"] {
   -webkit-appearance: none; }
@@ -1674,8 +1698,8 @@ output {
     color: #777777; }
   .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
     cursor: not-allowed;
-    background-color: #777777;
-    opacity: 1; }
+    background-color: #e1e1e1;
+    opacity: 0.8; }
 
 textarea.form-control {
   height: auto; }
@@ -2237,9 +2261,9 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 .close {
   font-weight: bold;
   line-height: 1;
-  color: #000; }
+  color: #727275; }
   .close:hover, .close:focus {
-    color: #000;
+    color: #727275;
     text-decoration: none;
     cursor: pointer; }
 
@@ -2933,7 +2957,7 @@ button.close {
       width: 220px;
       position: absolute;
       top: -5px;
-      left: -20px; }
+      left: -21px; }
       #header-main .app-main-logo .logo-cdp .logo-text {
         display: block; } }
   @media (max-width: 767px) {
@@ -4160,8 +4184,8 @@ output {
     color: #777777; }
   .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
     cursor: not-allowed;
-    background-color: #777777;
-    opacity: 1; }
+    background-color: #e1e1e1;
+    opacity: 0.8; }
 
 textarea.form-control {
   height: auto; }
