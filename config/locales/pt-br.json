@@ -188,7 +188,7 @@
   "articles.subTitle": " ",
   "article.create": "Criar artigo",
 
-  "auth.login.title": "Bem Vindo à CdP",
+  "auth.login.title": "Bem-vindo à CdP",
 
   "auth.login.user.not-found": " O email e/ou a senha estão errados",
   "auth.login.user.not.active": "Essa conta de usuário ainda não foi ativada, acesse o link de validação enviado no email ou entre em contato com o suporte pelo email contato@atencaobasica.org.br",
