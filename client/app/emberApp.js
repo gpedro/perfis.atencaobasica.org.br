@@ -20,6 +20,22 @@ App.Router.reopen({
         'title': this.get('url')
       });
   }.on('didTransition'),
+
+  checkMessages: function (){
+    var handler = this.get('router.currentHandlerInfos')[this.get('router.currentHandlerInfos').length - 1].handler;
+    var controllerForRoute = handler.get('controller');
+
+    var messages = $.cookie('messages');
+    if ( !messages ) return;
+
+    try {
+      var msgJson = JSON.parse(messages);
+      controllerForRoute.set('messages', msgJson);
+      $.removeCookie('messages',{path: '/'});
+    } catch (e) {
+      console.log('Could not parse JSON message', messages);
+    }
+  }.on('didTransition')
 });
 
 // Ember breadcrumbs configs

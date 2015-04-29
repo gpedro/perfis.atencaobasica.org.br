@@ -214,7 +214,7 @@
   "auth.forgot-password.reset-password": "Alterar senha",
 
   "auth.change-password.forbiden": "Você não tem permissão para alterar a senha de usuário, entre em contato com o suporte para mais informações e ajuda no email contato@atencaobasica.org.br",
-  "": "",
+  "auth.consumeForgotPasswordToken.token.invalid": "Token inválido. Se deseja alterar sua senha, por favor, realize novamente o procedimento abaixo.",
 
   "auth.change-password.success": "Senha alterada com sucesso",
   "auth.change-password.reset-password": "Alteração de Senha",
