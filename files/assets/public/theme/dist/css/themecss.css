@@ -1134,7 +1134,7 @@ a.badge:hover, a.badge:focus {
   .navbar-collapse:after {
     clear: both; }
   .navbar-collapse.in {
-    overflow-y: auto; }
+     }
   @media (min-width: 768px) {
     .navbar-collapse {
       width: auto;
@@ -1146,7 +1146,7 @@ a.badge:hover, a.badge:focus {
         overflow: visible !important;
         position: relative; }
       .navbar-collapse.in {
-        overflow-y: visible; }
+         }
       .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
         padding-left: 0;
         padding-right: 0; } }
