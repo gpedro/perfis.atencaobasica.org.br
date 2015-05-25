@@ -88,6 +88,7 @@
   "public/plugin/we-plugin-auth/app/components/WeAuthModalLoginComponent.js",
   "public/plugin/we-plugin-auth/app/components/WeAuthModalNeedLoginComponent.js",
   "public/plugin/we-plugin-cdp-profile/app/components/WeCoursesComponent.js",
+  "public/plugin/we-plugin-cdp-profile/app/components/WeIframeActivitesComponent.js",
   "public/plugin/we-plugin-cdp-profile/app/components/WeSmallModalComponent.js",
   "public/plugin/we-plugin-cdp-profile/app/components/WeTermSelect2Component.js",
   "public/plugin/we-plugin-cdp-profile/app/components/WeTermSimpleSelectComponent.js",
