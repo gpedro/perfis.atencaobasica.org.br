@@ -15308,16 +15308,8 @@ Novo modelo para titulos de pagina
   .section-story.section-story-edit .story-header .story-banner--header-summary .editable-field .btn, .section-story.section-story-edit .story-header .story-banner--header-summary .editable-field .story-main-content .story-main-content--media .story-main-content--media-tabs .btn-image, .section-story.section-story-edit .story-main-content .story-main-content--media .story-main-content--media-tabs .story-header .story-banner--header-summary .editable-field .btn-image, .section-story.section-story-edit .story-header .story-banner--header-summary .editable-field .story-main-content .story-main-content--media .story-main-content--media-tabs .btn-audio, .section-story.section-story-edit .story-main-content .story-main-content--media .story-main-content--media-tabs .story-header .story-banner--header-summary .editable-field .btn-audio, .section-story.section-story-edit .story-header .story-banner--header-summary .editable-field .story-main-content .story-main-content--media .story-main-content--media-tabs .btn-video, .section-story.section-story-edit .story-main-content .story-main-content--media .story-main-content--media-tabs .story-header .story-banner--header-summary .editable-field .btn-video, .section-story.section-story-edit .story-header .story-banner--header-summary .editable-field .story-main-content .story-main-content--media .story-main-content--media-tabs .btn-docs, .section-story.section-story-edit .story-main-content .story-main-content--media .story-main-content--media-tabs .story-header .story-banner--header-summary .editable-field .btn-docs, .section-story.section-story-edit .story-header .story-banner--header-summary .editable-field .story-main-content .story-main-content--media .story-main-content--media-tabs .btn-map, .section-story.section-story-edit .story-main-content .story-main-content--media .story-main-content--media-tabs .story-header .story-banner--header-summary .editable-field .btn-map, .section-story.section-story-edit .story-header .story-banner--header-summary .editable-field .story-main-content .story-main-content--form .story-main-content--form-wrapper .btn-send, .section-story.section-story-edit .story-main-content .story-main-content--form .story-main-content--form-wrapper .story-header .story-banner--header-summary .editable-field .btn-send, .section-story.section-story-edit .story-header .story-banner--header-summary .editable-field .story-main-content .btn-comment, .section-story.section-story-edit .story-main-content .story-header .story-banner--header-summary .editable-field .btn-comment, .section-story.section-story-edit .story-header .story-banner--header-summary .editable-field .story-modal-edit .story-main-content--form .story-main-content--form-wrapper .btn-send, .story-modal-edit .story-main-content--form .story-main-content--form-wrapper .section-story.section-story-edit .story-header .story-banner--header-summary .editable-field .btn-send, .section-story.section-story-edit .story-header .story-banner--header-summary .editable-field .story-modal-edit .story-main-content--form .story-main-content--form-wrapper .btn-cancel, .story-modal-edit .story-main-content--form .story-main-content--form-wrapper .section-story.section-story-edit .story-header .story-banner--header-summary .editable-field .btn-cancel, .section-story.section-story-edit .story-header .story-banner--header-summary .editable-field .file-input-wrapper, .section-story.section-story-edit .story-header .story-banner--header-summary .editable-field .file-input-wrapper-2 {
     margin-top: 10px; }
 .section-story.section-story-edit .story-header .story-banner--header-edit-cover {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
   margin-top: -6px;
-  padding-left: 60px; }
-  @media (min-width: 1200px) {
-    .section-story.section-story-edit .story-header .story-banner--header-edit-cover {
-      float: left;
-      width: 41.6666666667%; } }
+  overflow: hidden; }
   .section-story.section-story-edit .story-header .story-banner--header-edit-cover .fa-stack, .section-story.section-story-edit .story-header .story-banner--header-edit-cover .collapse-blocks .block-collapse .panel-heading .panel-title .panel-title--icon, .collapse-blocks .block-collapse .panel-heading .panel-title .section-story.section-story-edit .story-header .story-banner--header-edit-cover .panel-title--icon {
     width: 60px;
     height: 60px; }
@@ -15327,17 +15319,10 @@ Novo modelo para titulos de pagina
     .section-story.section-story-edit .story-header .story-banner--header-edit-cover .fa-stack .icons-outline-stack-1x, .section-story.section-story-edit .story-header .story-banner--header-edit-cover .collapse-blocks .block-collapse .panel-heading .panel-title .panel-title--icon .icons-outline-stack-1x, .collapse-blocks .block-collapse .panel-heading .panel-title .section-story.section-story-edit .story-header .story-banner--header-edit-cover .panel-title--icon .icons-outline-stack-1x {
       line-height: 2.25em; }
   .section-story.section-story-edit .story-header .story-banner--header-edit-cover .edit-cover-btns {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
     padding-top: 10px;
-    height: 40px;
-    margin-left: 20px; }
-    @media (min-width: 1200px) {
-      .section-story.section-story-edit .story-header .story-banner--header-edit-cover .edit-cover-btns {
-        float: left;
-        width: 75%; } }
+    min-height: 40px;
+    overflow: hidden;
+    margin-left: 80px; }
     .section-story.section-story-edit .story-header .story-banner--header-edit-cover .edit-cover-btns .small-text-info {
       display: block;
       font-size: 12px;
@@ -15363,31 +15348,16 @@ Novo modelo para titulos de pagina
       .section-story.section-story-edit .story-header .story-banner--header-edit-cover .edit-cover--small {
         margin-left: 8.3333333333%; } }
 .section-story.section-story-edit .story-header .story-banner--footer-actions {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
   background: rgba(255, 255, 255, 0.2);
-  height: 90px;
-  padding-top: 16px;
+  min-height: 90px;
+  padding: 16px 0;
   position: relative;
   top: -40px;
   clear: both;
-  border-radius: 5px; }
-  @media (min-width: 1200px) {
-    .section-story.section-story-edit .story-header .story-banner--footer-actions {
-      float: left;
-      width: 100%; } }
+  border-radius: 5px;
+  overflow: hidden; }
   .section-story.section-story-edit .story-header .story-banner--footer-actions .story-edit-warning {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
     padding-top: 18px; }
-    @media (min-width: 1200px) {
-      .section-story.section-story-edit .story-header .story-banner--footer-actions .story-edit-warning {
-        float: left;
-        width: 58.3333333333%; } }
     .section-story.section-story-edit .story-header .story-banner--footer-actions .story-edit-warning .icons-outline-loading {
       font-size: 40px;
       position: relative;
@@ -15396,39 +15366,26 @@ Novo modelo para titulos de pagina
       color: #fff;
       font-size: 16px; }
     .section-story.section-story-edit .story-header .story-banner--footer-actions .story-edit-warning .story-edit-warning--text {
-      margin-left: -15px;
-      margin-right: -15px;
       position: relative;
       top: -13px;
-      height: 50px;
+      min-height: 50px;
       color: #fff;
       font-size: 16px;
       line-height: 24px; }
-      .section-story.section-story-edit .story-header .story-banner--footer-actions .story-edit-warning .story-edit-warning--text:before, .section-story.section-story-edit .story-header .story-banner--footer-actions .story-edit-warning .story-edit-warning--text:after {
-        content: " ";
-        display: table; }
-      .section-story.section-story-edit .story-header .story-banner--footer-actions .story-edit-warning .story-edit-warning--text:after {
-        clear: both; }
       .section-story.section-story-edit .story-header .story-banner--footer-actions .story-edit-warning .story-edit-warning--text .text .not_published {
         margin-top: -4px; }
       .section-story.section-story-edit .story-header .story-banner--footer-actions .story-edit-warning .story-edit-warning--text .icons-outline-circle-approved, .section-story.section-story-edit .story-header .story-banner--footer-actions .story-edit-warning .story-edit-warning--text .icons-outline-loading {
-        position: relative;
-        min-height: 1px;
-        padding-left: 15px;
-        padding-right: 15px;
         width: 40px;
         margin: 0 15px;
         font-size: 2.5em; }
-        @media (min-width: 1200px) {
-          .section-story.section-story-edit .story-header .story-banner--footer-actions .story-edit-warning .story-edit-warning--text .icons-outline-circle-approved, .section-story.section-story-edit .story-header .story-banner--footer-actions .story-edit-warning .story-edit-warning--text .icons-outline-loading {
-            float: left;
-            width: 8.3333333333%; } }
       .section-story.section-story-edit .story-header .story-banner--footer-actions .story-edit-warning .story-edit-warning--text .icons-outline-circle-approved {
         color: #00a182; }
       .section-story.section-story-edit .story-header .story-banner--footer-actions .story-edit-warning .story-edit-warning--text .icons-outline-loading {
         color: #f9ae31; }
   .section-story.section-story-edit .story-header .story-banner--footer-actions .nav-edit-buttons {
-    list-style: none; }
+    list-style: none;
+    overflow: hidden;
+    padding: 0; }
     .section-story.section-story-edit .story-header .story-banner--footer-actions .nav-edit-buttons li {
       float: left;
       margin-right: 6px; }
@@ -15990,6 +15947,22 @@ Novo modelo para titulos de pagina
         color: #55a4f3; }
     .relatos-header .breadcrumbs > li:before {
       color: #fff; }
+  .relatos-header .relatos-search {
+    position: relative; }
+    .relatos-header .relatos-search input[type="text"] {
+      padding-right: 40px; }
+    .relatos-header .relatos-search .clear-search-field {
+      color: #ADADAD;
+      font-weight: bold;
+      font-size: 32px;
+      cursor: pointer;
+      line-height: 1em;
+      text-align: center;
+      width: 36px;
+      position: absolute;
+      right: 60px;
+      top: 7px;
+      z-index: 3; }
   .relatos-header .enviar-relato-container {
     text-align: center;
     font-size: 12px; }

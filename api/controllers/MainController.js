@@ -59,7 +59,7 @@ module.exports = {
 
 
   // - rotas de teste de email
-  // 
+  //
 
   // /test/testSendAccountValidationEmail?email=[seuemailaqui]
   testSendAccountValidationEmail: function(req, res) {
@@ -130,7 +130,7 @@ module.exports = {
         name: req._sails.config.appName,
         url: sails.config.hostname
       }
-    };  
+    };
 
     sails.email.sendEmail(options, 'AuthChangePasswordEmail', templateVariables, function(err , emailResp){
       if (err) {
@@ -194,7 +194,7 @@ module.exports = {
       }
 
       sails.log.info('AuthResetPasswordEmail: Email resp:', emailResp);
-      
+
       res.send({
         success: [{
           type: 'email_send',
@@ -202,7 +202,7 @@ module.exports = {
           message: 'Enviei um email para :' + options.email
         }]
       });
- 
+
     });
   },
 
@@ -247,7 +247,7 @@ module.exports = {
       }
 
       sails.log.info('AuthResetPasswordEmail: Email resp:', emailResp);
-      
+
       res.send({
         success: [{
           type: 'email_send',
@@ -255,7 +255,7 @@ module.exports = {
           message: 'Enviei um email para :' + options.email
         }]
       });
- 
+
     });
   },
 
@@ -297,7 +297,7 @@ module.exports = {
       }
 
       sails.log.info('AuthResetPasswordEmail: Email resp:', emailResp);
-      
+
       res.send({
         success: [{
           type: 'email_send',
@@ -342,10 +342,10 @@ module.exports = {
     sails.email.sendEmail(options, 'RelatoInviteEmail', templateVariables, function (err, emailRes){
       if(err){
         sails.log.error(err);
-      }            
+      }
       res.status(201);
       res.send({massage: 'Opa mandei o email: ' + email});
-    }) 
+    })
   },
 
   testRelatoInviteNewUserEmail: function(req, res) {
@@ -361,7 +361,7 @@ module.exports = {
     var options = {
       email: email,
       subject: appName + ' - ' + res.i18n('Relato Ator')
-    };            
+    };
 
     var templateVariables = {
       email: email,
@@ -378,7 +378,7 @@ module.exports = {
     var emailTemplateToUse = 'RelatoInviteNewUserEmail';
 
 
-    options.email = email;              
+    options.email = email;
     templateVariables.user = {
       displayName: 'Afro Samuray',
       username: 'afrosamuray'
@@ -394,12 +394,12 @@ module.exports = {
     sails.email.sendEmail(options, emailTemplateToUse, templateVariables, function (err, emailRes){
       if(err){
         sails.log.error(err);
-      }            
+      }
 
       res.status(201);
       res.send({message: 'mandei o email para: '+email});
 
-    }) 
+    })
   },
 
   testuserNotifications: function(req, res) {
@@ -415,7 +415,7 @@ module.exports = {
     var options = {
       email: email,
       subject: appName + ' - ' + res.i18n('Relato Ator')
-    }; 
+    };
 
     var templateVariables = {
       email: email,
@@ -435,7 +435,7 @@ module.exports = {
         {
           emailLink: 'https://perfis.atencaobasica.org.br',
           emailText: 'O Super man salvou o planeta'
-        }        
+        }
 
       ]
     };
@@ -444,7 +444,7 @@ module.exports = {
     sails.email.sendEmail(options, 'userNotifications', templateVariables, function (err, emailRes){
       if(err){
         sails.log.error(err);
-      }            
+      }
 
       res.status(201);
       res.send({message: 'mandei o email para: '+email});

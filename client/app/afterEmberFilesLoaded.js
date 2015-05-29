@@ -5,11 +5,23 @@
 // wait document ready ...
 $( document ).ready(function() {
 
-  App.HomeController.reopen({  
+  App.HomeController.reopen({
     blogBgImageStyle: function () {
       var url = App.get('configs.client.publicVars.blogHomeBg');
       return 'background-image: url("' + url + '")';
     }.property('App.configs.client.publicVars.blogHomeBg')
+  });
+
+  App.ApplicationView = Ember.View.extend({
+    didInsertElement: function() {
+      window.cdp.renderFooterText();
+    }
+  });
+
+  App.UserUsermenuView = Ember.View.extend({
+    didInsertElement: function() {
+      window.cdp.renderUserMenuText();
+    }
   });
 
   // App.UserAdapter = DS.FixtureAdapter;

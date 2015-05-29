@@ -19,9 +19,6 @@ module.exports.assets = {
     'bower_components/bootstrap/dist/css/bootstrap.min.css',
     'bower_components/bootstrap/dist/css/bootstrap-theme.min.css',
     'bower_components/tupi/css/build.css',
-    'bower_components/tupi/css/icon/tupi-icon.awesome.css',
-    'bower_components/tupi/css/icon/tupi-icon.line.css',
-    'bower_components/tupi/css/icon/tupi-icon.cdp.css',
     'bower_components/bootstrapValidator/src/css/bootstrapValidator.css'
   ],
   // admin pages ( /admin ) css files
@@ -49,7 +46,7 @@ module.exports.assets = {
 
     'client/app/controllers/*.js',
     'client/app/routes/*.js',
-    'client/app/views/*.js',    
+    'client/app/views/*.js',
 
     'client/app/afterEmberFilesLoaded.js'
   ],
@@ -80,7 +77,7 @@ module.exports.assets = {
     'node_modules/*/client/appAdmin/components/*.js',
     'node_modules/*/client/appAdmin/afterEmberFilesLoaded.js',
 
-    'client/appAdmin/afterEmberFilesLoaded.js' 
+    'client/appAdmin/afterEmberFilesLoaded.js'
   ],
 
   bowerComponentsFoldersToCopy: [
