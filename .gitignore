@@ -114,8 +114,7 @@ dump.rdb
 nbproject
 .idea
 
-
-
+*.rdb
 
 
 files/uploads

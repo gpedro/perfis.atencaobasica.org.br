@@ -59,7 +59,7 @@ module.exports.routes = {
   'get /test/testRelatoInviteEmail': {
     controller: 'main',
     action: 'testRelatoInviteEmail'
-  }, 
+  },
 
   'get /test/testRelatoInviteNewUserEmail': {
     controller: 'main',
