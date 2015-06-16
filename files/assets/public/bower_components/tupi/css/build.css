@@ -3693,7 +3693,7 @@ body {
     clear: both;
     overflow: hidden; }
     #footer-main .copyright .text-muted {
-      margin: 10px 0 0 150px; }
+      margin: 10px 0 0 0; }
 
 #footer-main--blog, #footer-main--facebook, #footer-main--links, #footer-main--about, #footer-main--sponsor, #footer-main--partner {
   padding-top: 10px; }
@@ -14102,9 +14102,6 @@ Novo modelo para titulos de pagina
     padding-top: 50px;
     top: -445px;
     z-index: 0; }
-  .section-story .story-header img {
-    width: 100%;
-    height: 445px; }
   .section-story .story-header .story-header--filter {
     margin-left: -15px;
     margin-right: -15px; }
@@ -14315,11 +14312,13 @@ Novo modelo para titulos de pagina
       .section-story .story-main-list .featured-tags .title .text a {
         font-weight: normal; }
   .section-story .story-main-list .featured-tags .featured-tag-list .badge {
-    padding: 8px 10px;
+    padding: 6px 8px;
     background: #4887cc;
     border-radius: 15px;
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 10px; }
+    .section-story .story-main-list .featured-tags .featured-tag-list .badge a {
+      color: #fff; }
     .section-story .story-main-list .featured-tags .featured-tag-list .badge i {
       vertical-align: middle;
       font-size: 15px;
@@ -14336,6 +14335,10 @@ Novo modelo para titulos de pagina
       .section-story .story-main-list .filtros-total-relatos .info .total {
         display: block;
         font-size: 22px; }
+  @media (max-width: 767px) {
+    .section-story .story-main-list .filter-order {
+      margin-top: 20px; }
+ }
 .section-story .story-featured-list--wrapper {
   position: relative;
   min-height: 1px;
@@ -15168,7 +15171,7 @@ Novo modelo para titulos de pagina
         .section-story .story-main-content .story-main-content--comment .story-main-content--comment-wrapper .comment-form .comment-textarea textarea {
           height: 130px; }
     .section-story .story-main-content .story-main-content--comment .comment-login-message {
-      padding: 0 10px 30px 86px;
+      padding: 0 10px 30px 30px;
       clear: both; }
   .section-story .story-main-content .story-main-content--form {
     position: relative;
@@ -15787,7 +15790,6 @@ Novo modelo para titulos de pagina
   height: 40px;
   padding: 10px 0;
   color: #fff;
-  margin-bottom: -50px;
   border-bottom: 1px solid #fff;
   opacity: 1;
   position: relative;
@@ -15927,13 +15929,18 @@ Novo modelo para titulos de pagina
 
  */
 .relatos-header {
-  background: url(/example/meus-relatos/flash_dest-1275x526.jpg) no-repeat center;
+  background: url(/example/meus-relatos/topo-relatos-lista.jpg) no-repeat center;
   background-size: cover;
-  min-height: 455px;
+  min-height: 475px;
   color: #fff;
   margin-bottom: 35px;
   padding-bottom: 30px;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-top: 1px;
+  position: relative; }
+  .relatos-header .container {
+    position: relative;
+    z-index: 2; }
   .relatos-header .main-title .subtext {
     color: #fff; }
   .relatos-header .breadcrumbs {
@@ -15960,7 +15967,7 @@ Novo modelo para titulos de pagina
       text-align: center;
       width: 36px;
       position: absolute;
-      right: 60px;
+      right: 140px;
       top: 7px;
       z-index: 3; }
   .relatos-header .enviar-relato-container {
@@ -15981,7 +15988,8 @@ Novo modelo para titulos de pagina
     color: #fff;
     text-align: center;
     font-weight: bold;
-    margin: 0 0 40px 0; }
+    margin: 0 0 40px 0;
+    font-family: Roboto, "Open Sans", sans-serif; }
   .relatos-header .input-group-lg {
     margin-bottom: 40px; }
     .relatos-header .input-group-lg input[type="text"] {
@@ -16008,6 +16016,62 @@ Novo modelo para titulos de pagina
         padding-right: 15px; } }
     .relatos-header .filtros-list .btn-mais-filtros-container button .caret {
       margin-right: 10px; }
+  .relatos-header:before {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    content: " "; }
+
+.select2-container.form-control {
+  display: block;
+  width: 100%;
+  height: 36px;
+  padding: 6px 6px 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555555 !important;
+  background-color: #eeeeee;
+  background-image: none;
+  border: 1px solid #eeeeee;
+  border-radius: 3px;
+  transition: border-color ease-in-out 0.15s;
+  outline: none;
+  border: none; }
+  .select2-container.form-control:focus {
+    outline: none;
+    border: none; }
+  .select2-container.form-control .select2-chosen {
+    color: #555 !important; }
+  .select2-container.form-control .select2-choice {
+    background: transparent;
+    padding: 0;
+    border: none;
+    outline: none;
+    border: none; }
+    .select2-container.form-control .select2-choice:focus {
+      outline: none;
+      border: none; }
+  .select2-container.form-control .select2-dropdown-open {
+    border: none; }
+  .select2-container.form-control .select2-arrow {
+    background: transparent;
+    border: none;
+    right: -5px; }
+
+.select2-drop {
+  background: #eeeeee; }
+
+.select2-drop-active {
+  border: none; }
+
+.select2-dropdown-open .select2-choice {
+  box-shadow: none;
+  border: none;
+  outline: none; }
 
 .group-section .sidebar-blocks {
   position: relative;
@@ -17346,3 +17410,66 @@ COMPATIBILIDADE DE PERFIL / SUSANA
       @media (min-width: 992px) {
         .info-blocks .info-blocks--help_center .info-blocks--help_center-content .info-blocks--help_center-content-description {
           font-size: 15px; } }
+
+.block-estatisticas .block-estatistica {
+  border-radius: 3px;
+  border: 1px solid #e5e3e4;
+  overflow: hidden; }
+  .block-estatisticas .block-estatistica .block-header {
+    background: #ccc;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    display: table;
+    width: 100%; }
+    .block-estatisticas .block-estatistica .block-header .block-header-inner {
+      display: table-cell;
+      vertical-align: middle;
+      height: 240px;
+      text-align: center;
+      width: 100%; }
+      .block-estatisticas .block-estatistica .block-header .block-header-inner h2 {
+        font-weight: bold;
+        font-size: 46px;
+        margin: 10px 0 0 0;
+        color: #fff; }
+  .block-estatisticas .block-estatistica .block-content h3 {
+    margin: 0;
+    padding: 20px 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #55a4f1;
+    font-weight: bold; }
+    .block-estatisticas .block-estatistica .block-content h3 b {
+      color: #767676;
+      font-weight: normal;
+      display: block; }
+  .block-estatisticas .block-estatistica .block-content .content-list {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #e1e1e1; }
+    .block-estatisticas .block-estatistica .block-content .content-list li {
+      list-style: none;
+      display: block;
+      margin-left: 60px;
+      position: relative;
+      border-top: 1px solid #e1e1e1;
+      font-size: 12px;
+      padding: 10px 0; }
+      .block-estatisticas .block-estatistica .block-content .content-list li h4 {
+        font-weight: bold;
+        color: #444;
+        margin: 0;
+        font-size: 12px; }
+      .block-estatisticas .block-estatistica .block-content .content-list li img {
+        border-radius: 50%;
+        position: absolute;
+        left: -45px;
+        top: 50%;
+        margin-top: -16px; }
+.block-estatisticas .block-estatistica-relatos .block-header {
+  background: #55a4f1; }
+.block-estatisticas .block-estatistica-comunidades .block-header {
+  background: #3591de; }
+.block-estatisticas .block-estatistica-usuarios .block-header {
+  background: #facd4c; }
