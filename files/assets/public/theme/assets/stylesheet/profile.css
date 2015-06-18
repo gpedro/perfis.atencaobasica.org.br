@@ -113,6 +113,10 @@ Fim do CSS das Tabs
   margin-top: 20px;
 }
 
+.block-up-picture {
+  position: relative;
+  min-height: 100px;
+}
 .block-up-picture h2.title {
   margin: 0;
 }
@@ -124,15 +128,42 @@ Fim do CSS das Tabs
 .block-up-picture .content {
   margin-top: 20px;
 }
-.block-up-picture .content .user-picture {
-  max-width: 215px;
-  height: auto;
-  border-radius: 50%;
-  margin: auto;
-  overflow: hidden;
+@media (max-width: 767px) {
+  .block-up-picture h2.title {
+    margin-left: 110px;
+    padding-top: 30px;
+  }
+  .block-up-picture .content .user-picture {
+    max-width: 90px;
+    height: auto;
+    border-radius: 50%;
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .block-up-picture .content .btn.btn-warning {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    width: auto;
+  }
 }
-.block-up-picture .content .user-picture+.btn {
-  margin-top: 20px;
+@media (min-width: 768px) {
+  .block-up-picture h2.title {
+    margin-left: 0;
+  }
+  .block-up-picture .content .user-picture {
+    max-width: 215px;
+    height: auto;
+    border-radius: 50%;
+    margin: auto;
+    overflow: hidden;
+  }
+  .block-up-picture .content .user-picture+.btn {
+    margin-top: 20px;
+  }
 }
 .block-up-picture .content .btn.btn-warning {
   background: #f9ae31;
@@ -260,4 +291,22 @@ We-Avatar-Modal-Component
   .table-form thead tr th {
     font-size: 18px;
   }
+}
+
+.select2-container-multi .select2-choices {
+  background: transparent;
+}
+
+.select2-container-active .select2-choice,
+.select2-container-active .select2-choices,
+.select2-container-multi.select2-container-active .select2-choices {
+  border: none !important;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.select2-dropdown-open .select2-choice {
+  box-shadow: none !important;
+  border: none !important;
 }

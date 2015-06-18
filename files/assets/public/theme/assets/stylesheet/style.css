@@ -17,6 +17,7 @@ body {
   background: #fafafa;
   font-family: "Open Sans",sans-serif;
   font-size: 1.428571429;
+  overflow-x: hidden;
 }
 .form-control {
   display: block;
@@ -85,6 +86,7 @@ fieldset[disabled] .form-control {
 }
 .auth-form .form-icon {
   text-align: center;
+  display: none;
 }
 .auth-form .form-icon i {
   font-size: 10em;
@@ -92,6 +94,7 @@ fieldset[disabled] .form-control {
 }
 .user-signup-form .user-signup-logo-cdp {
   text-align: center;
+  display: none;
 }
 .user-signup-form .user-signup-logo-cdp svg {
   width: 96px;
@@ -100,8 +103,11 @@ fieldset[disabled] .form-control {
 .auth-form h2.form-heading {
   color: #797979;
   font-weight: bold;
-  margin: 35px 0 0 0;
+  /*margin: 35px 0 35px 0;*/
+  margin: 0 0 35px 0;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 34px;
 }
 .auth-form h3,
 .auth-form h4 {
@@ -112,6 +118,20 @@ fieldset[disabled] .form-control {
 .auth-form h3+.form-group,
 .auth-form h4+.form-group {
   margin-top: 50px;
+}
+@media (max-width: 767px) {
+  .auth-form h2.form-heading {
+    font-size: 26px;
+    margin: 0 0 25px 0;
+  }
+  .auth-form h3,
+  .auth-form h4 {
+    font-size: 16px;
+  }
+  .auth-form h3+.form-group,
+  .auth-form h4+.form-group {
+    margin-top: 30px;
+  }
 }
 .auth-form .form-footer {
   background: #f2f2f2;
@@ -733,6 +753,7 @@ input[type="date"], input[type="time"], input[type="datetime-local"], input[type
     }
     #header-main .dropdown-menu-user .btn-danger {
       width: 200px;
+      box-shadow: none;
       margin: 0 10px 10px 10px; }
     #header-main .dropdown-menu-user li {
       margin: 0; }
@@ -1258,6 +1279,7 @@ form .input-help.error {
 
 
 
+
 .cdp_http_responses_error {
   overflow: hidden;
   width: 100%;
@@ -1318,4 +1340,43 @@ form .input-help.error {
   color: #247DB5;
   font-weight: bold;
   font-size: 14px;
+}
+
+.user-avatar-image.thumbnail {
+  padding: 0;
+  display: inline-block;
+  margin: 0;
+  line-height: auto;
+  border: none;
+  background: transparent;
+  transition: none;
+}
+
+.select2-container-multi .select2-choices {
+  background: transparent;
+}
+
+.select2-container-active .select2-choice,
+.select2-container-active .select2-choices,
+.select2-container-multi.select2-container-active .select2-choices {
+  border: none !important;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.select2-dropdown-open .select2-choice {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+
+#navbar .login-link {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #navbar .login-link {
+    float: right;
+    padding-top: 15px;
+  }
 }

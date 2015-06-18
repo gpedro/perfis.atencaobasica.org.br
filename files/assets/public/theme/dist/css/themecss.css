@@ -116,6 +116,10 @@ Fim do CSS das Tabs
   margin-top: 20px;
 }
 
+.block-up-picture {
+  position: relative;
+  min-height: 100px;
+}
 .block-up-picture h2.title {
   margin: 0;
 }
@@ -127,15 +131,42 @@ Fim do CSS das Tabs
 .block-up-picture .content {
   margin-top: 20px;
 }
-.block-up-picture .content .user-picture {
-  max-width: 215px;
-  height: auto;
-  border-radius: 50%;
-  margin: auto;
-  overflow: hidden;
+@media (max-width: 767px) {
+  .block-up-picture h2.title {
+    margin-left: 110px;
+    padding-top: 30px;
+  }
+  .block-up-picture .content .user-picture {
+    max-width: 90px;
+    height: auto;
+    border-radius: 50%;
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .block-up-picture .content .btn.btn-warning {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    width: auto;
+  }
 }
-.block-up-picture .content .user-picture+.btn {
-  margin-top: 20px;
+@media (min-width: 768px) {
+  .block-up-picture h2.title {
+    margin-left: 0;
+  }
+  .block-up-picture .content .user-picture {
+    max-width: 215px;
+    height: auto;
+    border-radius: 50%;
+    margin: auto;
+    overflow: hidden;
+  }
+  .block-up-picture .content .user-picture+.btn {
+    margin-top: 20px;
+  }
 }
 .block-up-picture .content .btn.btn-warning {
   background: #f9ae31;
@@ -264,6 +295,24 @@ We-Avatar-Modal-Component
     font-size: 18px;
   }
 }
+
+.select2-container-multi .select2-choices {
+  background: transparent;
+}
+
+.select2-container-active .select2-choice,
+.select2-container-active .select2-choices,
+.select2-container-multi.select2-container-active .select2-choices {
+  border: none !important;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.select2-dropdown-open .select2-choice {
+  box-shadow: none !important;
+  border: none !important;
+}
 /**
  * importer.less
  * Use this file to import and organize the processing order of theme less files
@@ -277,6 +326,10 @@ We-Avatar-Modal-Component
 /* example */
 .navbar-default .navbar-brand {
   color: red;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 body {
@@ -343,7 +396,7 @@ fieldset[disabled] .form-control {
   border-radius: 5px;
   background: #fff;
   box-shadow: 0 0 4px #b5b5b5;
-  max-width: 400px;
+  width: 400px;
   margin: 75px auto 150px auto;
 }
 .auth-form .form-content {
@@ -361,7 +414,6 @@ fieldset[disabled] .form-control {
   text-align: center;
   display: none;
 }
-
 .user-signup-form .user-signup-logo-cdp svg {
   width: 96px;
   height: 96px;
@@ -1035,21 +1087,6 @@ input[type="date"], input[type="time"], input[type="datetime-local"], input[type
       height: 38px;
       padding: 8px 10px 8px 10px; }
 
-#navbar .login-link {}
-
-@media (max-width: 767px) {
-  #navbar .login-link {
-    text-align: center;
-  }
-}
-@media (min-width: 768px) {
-  #navbar .login-link {
-    float: right;
-    padding-top: 15px;
-  }
-}
-
-
 .dropdown-services .main_menu-item--wrapper {
   cursor: pointer; }
 .dropdown-services li {
@@ -1559,6 +1596,7 @@ form .input-help.error {
 
 
 
+
 .cdp_http_responses_error {
   overflow: hidden;
   width: 100%;
@@ -1619,4 +1657,43 @@ form .input-help.error {
   color: #247DB5;
   font-weight: bold;
   font-size: 14px;
+}
+
+.user-avatar-image.thumbnail {
+  padding: 0;
+  display: inline-block;
+  margin: 0;
+  line-height: auto;
+  border: none;
+  background: transparent;
+  transition: none;
+}
+
+.select2-container-multi .select2-choices {
+  background: transparent;
+}
+
+.select2-container-active .select2-choice,
+.select2-container-active .select2-choices,
+.select2-container-multi.select2-container-active .select2-choices {
+  border: none !important;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.select2-dropdown-open .select2-choice {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+
+#navbar .login-link {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #navbar .login-link {
+    float: right;
+    padding-top: 15px;
+  }
 }
