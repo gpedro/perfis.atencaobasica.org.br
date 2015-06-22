@@ -59,7 +59,8 @@ html {
   -webkit-text-size-adjust: 100%; }
 
 body {
-  margin: 0; }
+  margin: 0;
+  overflow-x: hidden; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
@@ -17105,9 +17106,6 @@ COMPATIBILIDADE DE PERFIL / SUSANA
     .compatibilidade-perfil .cp-center small {
       color: #8c8c8c;
       font-size: 11px; }
-
-.select2-container-multi .select2-choices {
-  background: transparent; }
 
 .collapse-blocks {
   margin-left: -15px;
