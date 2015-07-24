@@ -3,8 +3,14 @@ module.exports.clientside = {
   publicVars: {
     links: {
       timeline: 'https://cursos.atencaobasica.org.br',
-      redeSocial: 'https://novo.atencaobasica.org.br/relato'
+      redeSocial: 'https://novo.atencaobasica.org.br/relato',
     },
+
+    allowNotifications: false,
+
+    messenger: {
+      minViewport: 600
+    },    
 
     menus: {
       // your app main menu
