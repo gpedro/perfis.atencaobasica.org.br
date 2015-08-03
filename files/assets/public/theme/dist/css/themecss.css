@@ -329,13 +329,10 @@ We-Avatar-Modal-Component
 }
 
 body {
-  overflow-x: hidden;
-}
-
-body {
   background: #fafafa;
   font-family: "Open Sans",sans-serif;
   font-size: 1.428571429;
+  overflow-x: hidden;
 }
 .form-control {
   display: block;
@@ -1071,6 +1068,7 @@ input[type="date"], input[type="time"], input[type="datetime-local"], input[type
     }
     #header-main .dropdown-menu-user .btn-danger {
       width: 200px;
+      box-shadow: none;
       margin: 0 10px 10px 10px; }
     #header-main .dropdown-menu-user li {
       margin: 0; }
@@ -1102,7 +1100,7 @@ input[type="date"], input[type="time"], input[type="datetime-local"], input[type
   @media (min-width: 1200px) {
     .dropdown-services li {
       float: left;
-      width: 33.3333333333%; } }
+      width: 25%; } }
   .dropdown-services li:last-child {
     border: none; }
   .dropdown-services li a {

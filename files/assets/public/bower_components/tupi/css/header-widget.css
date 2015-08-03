@@ -3516,15 +3516,15 @@ button.close {
   @media (min-width: 768px) {
     .dropdown-services li {
       float: left;
-      width: 33.3333333333%; } }
+      width: 25%; } }
   @media (min-width: 992px) {
     .dropdown-services li {
       float: left;
-      width: 33.3333333333%; } }
+      width: 25%; } }
   @media (min-width: 1200px) {
     .dropdown-services li {
       float: left;
-      width: 33.3333333333%; } }
+      width: 25%; } }
   .dropdown-services li:last-child {
     border: none; }
   .dropdown-services li a {
@@ -3546,6 +3546,10 @@ button.close {
     color: #777777; }
     .dropdown-services li.style_help a:hover {
       color: #cd0102; }
+  .dropdown-services li.style_eventos a {
+    color: #777777; }
+    .dropdown-services li.style_eventos a:hover {
+      color: #db467a; }
   .dropdown-services li .cdp {
     font-size: 32px; }
   .dropdown-services li .icons-outline {

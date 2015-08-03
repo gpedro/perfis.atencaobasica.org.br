@@ -785,7 +785,7 @@ input[type="date"], input[type="time"], input[type="datetime-local"], input[type
   @media (min-width: 1200px) {
     .dropdown-services li {
       float: left;
-      width: 33.3333333333%; } }
+      width: 25%; } }
   .dropdown-services li:last-child {
     border: none; }
   .dropdown-services li a {
