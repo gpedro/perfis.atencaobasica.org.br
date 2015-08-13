@@ -30,7 +30,7 @@
     "sails-hook-send-html-to-bots": "0.2.0",
     "sails-mysql": "^0.10.11",
     "sget": "^0.1.5",
-    "we-grunt-tasks": "0.2.11",
+    "we-grunt-tasks": "0.2.13",
     "we-helpers": "0.0.7",
     "we-plugin": "0.2.3",
     "we-plugin-admin": "0.2.1",
@@ -70,7 +70,8 @@
     "sails-memory": "^0.10.1",
     "sinon": "~1.8.1",
     "supertest": ">= 0.14.0",
-    "supervisor": "~0.6.0"
+    "supervisor": "~0.6.0",
+    "grunt-apidoc": "^0.10.1"
   },
   "license": "MIT"
 }
