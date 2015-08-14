@@ -14,6 +14,7 @@ $( document ).ready(function() {
 
   App.ApplicationView = Ember.View.extend({
     didInsertElement: function() {
+      window.cdp.url = Ember.get(we, 'configs.server.hostname');
       window.cdp.renderAll();
     }
   });
