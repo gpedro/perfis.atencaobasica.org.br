@@ -241,5 +241,23 @@
   "nextMonth"     : "Mês Seguinte",
   "months"        : ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"],
   "weekdays"      : ["Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado"],
-  "weekdaysShort" : ["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"]
+  "weekdaysShort" : ["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"],
+
+  "navbar.link.community": "Comunidade",
+  "navbar.link.relatos": "Relatos",
+
+  "navbar.link.search": "Faça sua busca",
+  
+  "navbar.link.login": "Entrar",
+  "navbar.link.register": "Registrar",
+  "navbar.link.forgot-password": "Esqueci minha senha",
+  
+  "navbar.link.my_relatos": "Meus Relatos",
+  "navbar.link.my_profile": "Meu Perfil",
+  "navbar.link.edit_profile": "Editar Perfil",
+  "navbar.link.notifications_via_email": "Notificação por Email",
+  "navbar.link.notes_rating": "Notas de Avaliações",
+  "navbar.link.administrator": "Administrar",
+
+  "navbar.link.logout": "Sair"
 }
