@@ -14,13 +14,7 @@ $( document ).ready(function() {
 
   App.ApplicationView = Ember.View.extend({
     didInsertElement: function() {
-      window.cdp.renderFooterText();
-    }
-  });
-
-  App.UserUsermenuView = Ember.View.extend({
-    didInsertElement: function() {
-      window.cdp.renderUserMenuText();
+      window.cdp.renderAll();
     }
   });
 
@@ -53,6 +47,5 @@ $( document ).ready(function() {
     });
 
     App.advanceReadiness();
-
   });
 });

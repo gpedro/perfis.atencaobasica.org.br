@@ -57,6 +57,43 @@ module.exports = {
     res.redirect('/profile/' + req.user.id + '/edit');
   },
 
+  /**
+    Rendering raw header
+   */
+  renderMenu: function (req, res) {
+    var objData = {
+      isLogged: req.isAuthenticated(),
+      user: req.isAuthenticated() ? req.user : {}
+    };
+
+    var renderHtml = function (obj) {
+      async.parallel({
+        header: function (callback) {
+          res.render('menu/main_menu', obj, callback);
+        },
+        footer: function (callback) {
+          res.render('partials/footer-base', callback);
+        }
+      }, function (err, results) {
+        if (err) console.error(err);
+
+        return res.json(results);
+      });
+
+    };
+
+    if (objData.isLogged) {
+      var acl = req._sails.acl;
+      acl.can('view_menu_admin', objData.user, undefined, function (err, can) {
+        if (err) console.error(err);
+        objData.isAdmin = can;
+        renderHtml(objData);
+      });
+    } else {
+      renderHtml(objData);
+    }
+  },
+
 
   // - rotas de teste de email
   //
